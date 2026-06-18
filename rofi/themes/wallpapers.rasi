@@ -1,0 +1,77 @@
+* {
+    /* Цветовая палитра Catppuccin Mocha */
+    bg-col:      #1e1e2e;
+    border-col:  #89b4fa;
+    selected-col:#313244;
+    text-col:    #cdd6f4;
+    accent-col:  #a6e3a1;
+
+    background-color: @bg-col;
+    text-color:       @text-col;
+}
+
+window {
+    width:            750px;
+    height:           500px;
+    border:           2px;
+    border-color:     @border-col;
+    border-radius:    12px;
+    padding:          20px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 15px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @selected-col;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @accent-col;
+    margin: 0px 10px 0px 0px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @text-col;
+}
+
+listview {
+    columns:      3;
+    lines:        2;
+    spacing:      15px;
+    fixed-columns: true;
+}
+
+element {
+    orientation:      vertical;
+    padding:          15px;
+    border-radius:    8px;
+    background-color: @selected-col;
+}
+
+element-icon {
+    size:             120px;
+    horizontal-align: 0.5;
+    background-color: transparent;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+element selected {
+    background-color: @border-col;
+}
+
+element selected text {
+    text-color: #11111b;
+}

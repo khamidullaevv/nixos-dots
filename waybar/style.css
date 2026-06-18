@@ -1,0 +1,97 @@
+* {
+  min-height: 0;
+  min-width: 0;
+  font-family: "Lexend", "JetBrainsMono NFP", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Сама панель теперь абсолютно сплошная и глубокая */
+window#waybar {
+  background-color: #11111b; /* Глухой Catppuccin Crust */
+  border-bottom: 1px solid #313244; /* Чёткая граница вместо прозрачной */
+}
+
+/* Модули — плотные, контрастные плашки */
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris,
+#network,
+#battery,
+#language { 
+  padding: 0.2rem 0.7rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 8px;
+  background-color: #1e1e2e; 
+  border: 1px solid #313244;
+}
+
+/* Рабочие столы (Workspaces) */
+#workspaces button {
+  padding: 0.2rem 0.6rem;
+  margin: 0.4rem 0.2rem;
+  border-radius: 8px;
+  background-color: #1e1e2e; /* Сплошной фон */
+  color: #cdd6f4;
+  transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+  color: #11111b;
+  background-color: #89b4fa; /* Синий при наведении */
+}
+
+#workspaces button.active {
+  background-color: #313244; /* Поверхность Surface0 для активного */
+  color: #a6e3a1;            /* Зелёный акцент */
+  border: 1px solid #a6e3a1;
+}
+
+#workspaces button.urgent {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+/* Цветовые акценты текста и иконок */
+#network { color: #a6e3a1; }
+#cpu { color: #94e2d5; }
+#memory { color: #cba6f7; }
+#battery { color: #f9e2af; }
+#battery.charging, #battery.plugged { color: #a6e3a1; }
+#battery.critical:not(.charging) {
+  color: #f38ba8;
+  animation: blink 0.5s alternate infinite linear;
+}
+#pulseaudio { color: #b4befe; }
+#pulseaudio.muted { color: #6c7086; }
+#mpris.playing { color: #a6e3a1; }
+#mpris.paused { color: #9399b2; }
+#clock { color: #74c7ec; }
+#clock.simpleclock { color: #89b4fa; }
+
+#custom-notification { color: #fab387; }
+#custom-power {
+  color: #f38ba8;
+  padding: 0.2rem 0.8rem;
+}
+#custom-power:hover {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+/* Всплывающие подсказки */
+tooltip {
+  background-color: #181825;
+  border: 2px solid #89b4fa;
+  border-radius: 10px;
+  padding: 8px;
+}
+tooltip label { color: #cdd6f4; }
