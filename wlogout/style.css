@@ -1,0 +1,29 @@
+window {
+    background-color: rgba(30, 30, 46, 0.5); /* Полупрозрачный темный фон */
+}
+
+button {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border: 2px solid #89b4fa;
+    border-radius: 15px;
+    margin: 15px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+button:focus, button:hover {
+    background-color: #89b4fa;
+    color: #11111b;
+    border: 2px solid #b4befe;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Иконки встроенные (или можно использовать текст) */
+#lock { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
+#logout { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
+#shutdown { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }
+#reboot { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }
