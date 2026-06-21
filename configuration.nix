@@ -180,6 +180,8 @@
    xarchiver
    kdePackages.dolphin
    kdePackages.ark   
+   prismlauncher
+   steam-run
 
 ];
 fonts = {
