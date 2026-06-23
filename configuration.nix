@@ -182,7 +182,7 @@
    kdePackages.ark   
    prismlauncher
    steam-run
-
+   matugen
 ];
 fonts = {
     packages = with pkgs; [
