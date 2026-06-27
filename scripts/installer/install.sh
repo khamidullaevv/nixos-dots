@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 source "$SCRIPT_DIR/lib.sh"
 
-logo
+banner
 
 run_step "Checking Environment" "$SCRIPT_DIR/steps/01-check.sh"
 run_step "User Configuration" "$SCRIPT_DIR/steps/02-user.sh"

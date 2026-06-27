@@ -193,3 +193,19 @@ run_step() {
     success "$title completed"
 }
 }
+run_step() {
+    local title="$1"
+    local script="$2"
+
+    section "$title"
+
+    if [[ ! -f "$script" ]]; then
+        error "Step not found: $script"
+    fi
+
+    if source "$script"; then
+        success "$title completed"
+    else
+        error "$title failed"
+    fi
+}
