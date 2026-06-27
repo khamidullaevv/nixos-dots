@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
 
 set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
 STATE_DIR="$SCRIPT_DIR/state"
+
 CONFIG_FILE="$STATE_DIR/config.env"
 
 mkdir -p "$STATE_DIR"
 
+source "$SCRIPT_DIR/lib.sh"
+
+echo
+
+info "Let's configure your system."
 
 echo
 

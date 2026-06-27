@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-set -e
-
 # ==========================================================
 # Sairex Installer Library
 # ==========================================================
 
-RESET="\033[0m"
+# ---------- Colors ----------
 
+RESET="\033[0m"
 BOLD="\033[1m"
 
 RED="\033[38;5;196m"
@@ -20,15 +19,14 @@ GRAY="\033[38;5;245m"
 
 LINE="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-clear_screen() {
-    clear
-}
+# ---------- Banner ----------
 
 banner() {
+
 clear
 
 printf "${PURPLE}"
-cat << "EOF"
+cat <<'EOF'
 
    ███████╗ █████╗ ██╗██████╗ ███████╗██╗  ██╗
    ██╔════╝██╔══██╗██║██╔══██╗██╔════╝╚██╗██╔╝
@@ -39,173 +37,127 @@ cat << "EOF"
 
 EOF
 
-printf "${CYAN}                 NixOS Installer\n"
-printf "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}\n\n"
+printf "${CYAN}                 NixOS Installer${RESET}\n"
+printf "${GRAY}${LINE}${RESET}\n\n"
+
 }
+
+# ---------- UI ----------
 
 section() {
 
-printf "\n${BLUE}${BOLD}▶ %s${RESET}\n" "$1"
-printf "${GRAY}%s${RESET}\n" "$LINE"
+echo
+printf "${BLUE}${BOLD}▶ %s${RESET}\n" "$1"
+printf "${GRAY}${LINE}${RESET}\n\n"
 
 }
 
 info() {
+
 printf "${CYAN}●${RESET} %s\n" "$1"
+
 }
 
 success() {
+
 printf "${GREEN}✔${RESET} %s\n" "$1"
+
 }
 
 warning() {
+
 printf "${YELLOW}▲${RESET} %s\n" "$1"
+
 }
 
 error() {
+
 printf "${RED}✘${RESET} %s\n" "$1"
 exit 1
+
 }
 
-step() {
+divider() {
 
-printf "\n${PURPLE}[%s]${RESET} %s\n" "$1" "$2"
+printf "${GRAY}${LINE}${RESET}\n"
 
 }
 
 pause() {
-read -rp "$(printf "${GRAY}Press ENTER to continue...${RESET}")"
-}
 
-spinner() {
-
-local pid=$!
-
-local spin='⠋⠙⠸⠴⠦⠇'
-
-local i=0
-
-while kill -0 "$pid" 2>/dev/null
-do
-    i=$(( (i+1) %6 ))
-    printf "\r${CYAN}%s${RESET}" "${spin:$i:1}"
-    sleep 0.08
-done
-
-printf "\r \r"
+read -rp "Press ENTER to continue..."
 
 }
 
-run() {
+# ---------- Step Runner ----------
+
+run_step() {
 
 local title="$1"
+local script="$2"
 
-shift
+section "$title"
 
-info "$title"
-
-"$@" &
-spinner
-
-success "Done"
+if bash "$script"
+then
+    echo
+    success "$title completed"
+else
+    echo
+    error "$title failed"
+fi
 
 }
+
+# ---------- Ask ----------
 
 ask() {
 
-local question="$1"
+local prompt="$1"
+local default="$2"
+local answer
 
-printf "\n${YELLOW}?${RESET} %s " "$question"
-
-read -r ans
-
-echo "$ans"
+if [[ -n "$default" ]]; then
+    read -rp "$prompt [$default]: " answer
+    echo "${answer:-$default}"
+else
+    read -rp "$prompt: " answer
+    echo "$answer"
+fi
 
 }
 
-yesno() {
+# ---------- Yes / No ----------
+
+confirm() {
+
+local answer
 
 while true
 do
 
-printf "${YELLOW}?${RESET} %s [Y/n] " "$1"
+read -rp "$1 [Y/n]: " answer
 
-read -r yn
-
-case "$yn" in
-
-""|Y|y) return 0;;
-
-N|n) return 1;;
-
+case "$answer" in
+    ""|Y|y|yes|YES)
+        return 0
+        ;;
+    N|n|no|NO)
+        return 1
+        ;;
 esac
 
 done
 
 }
 
-divider() {
+# ---------- Finish ----------
 
-printf "${GRAY}%s${RESET}\n" "$LINE"
+finish() {
 
-}
-
-finished() {
-
-printf "\n"
-
+echo
+divider
+success "Installation completed successfully."
 divider
 
-printf "${GREEN}${BOLD}"
-
-cat << EOF
-
-      ✔ Installation completed successfully
-
-EOF
-
-printf "${RESET}"
-
-divider
-logo() {
-    banner
-}
-
-run_step() {
-
-    local title="$1"
-    local script="$2"
-
-    section "$title"
-
-    if [[ ! -f "$script" ]]; then
-        error "Missing script: $script"
-    fi
-
-    if [[ ! -x "$script" ]]; then
-        chmod +x "$script"
-    fi
-
-    info "Running $(basename "$script")"
-
-    bash "$script"
-
-    success "$title completed"
-}
-}
-run_step() {
-    local title="$1"
-    local script="$2"
-
-    section "$title"
-
-    if [[ ! -f "$script" ]]; then
-        error "Step not found: $script"
-    fi
-
-    if source "$script"; then
-        success "$title completed"
-    else
-        error "$title failed"
-    fi
 }
