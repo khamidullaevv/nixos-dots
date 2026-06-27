@@ -1,11 +1,8 @@
-boot.loader.systemd-boot.enable = true;
-boot.loader.efi.canTouchEfiVariables = true;
+{ pkgs, ... }:
 
-boot.kernelPackages = pkgs.linuxPackages_latest;
+{
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-boot.kernelModules = [
-  "nvidia"
-  "nvidia_modeset"
-  "nvidia_uvm"
-  "nvidia_drm"
-];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+}
