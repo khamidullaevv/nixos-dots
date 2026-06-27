@@ -6,9 +6,14 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 source "$SCRIPT_DIR/lib.sh"
 
-run_step "Checking system" "$SCRIPT_DIR/steps/01-check.sh"
-run_step "User configuration" "$SCRIPT_DIR/steps/02-user.sh"
-run_step "Hardware detection" "$SCRIPT_DIR/steps/03-hardware.sh"
-run_step "Generating configuration" "$SCRIPT_DIR/steps/04-system.sh"
-run_step "Building NixOS" "$SCRIPT_DIR/steps/05-build.sh"
-run_step "Finish" "$SCRIPT_DIR/steps/99-finish.sh"
+logo
+
+run_step "Checking Environment" "$SCRIPT_DIR/steps/01-check.sh"
+run_step "User Configuration" "$SCRIPT_DIR/steps/02-user.sh"
+run_step "Hardware Detection" "$SCRIPT_DIR/steps/03-hardware.sh"
+run_step "Generating Configuration" "$SCRIPT_DIR/steps/04-system.sh"
+run_step "Building System" "$SCRIPT_DIR/steps/05-build.sh"
+run_step "Finishing Installation" "$SCRIPT_DIR/steps/99-finish.sh"
+
+echo
+success "Installation completed successfully."
