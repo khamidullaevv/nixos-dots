@@ -1,10 +1,30 @@
 #!/usr/bin/env bash
 
+set -Eeuo pipefail
+
 # ==========================================================
-# Sairex Installer Library
+# Sairex NixOS Installer Library
 # ==========================================================
 
-# ---------- Colors ----------
+# ----------------------------------------------------------
+# Paths
+# ----------------------------------------------------------
+
+INSTALLER_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(realpath "$INSTALLER_DIR/../..")"
+
+STATE_DIR="$INSTALLER_DIR/state"
+OUTPUT_DIR="$INSTALLER_DIR/output"
+TEMPLATE_DIR="$INSTALLER_DIR/templates"
+GENERATOR_DIR="$INSTALLER_DIR/generators"
+
+mkdir -p \
+    "$STATE_DIR" \
+    "$OUTPUT_DIR"
+
+# ----------------------------------------------------------
+# Colors
+# ----------------------------------------------------------
 
 RESET="\033[0m"
 BOLD="\033[1m"
@@ -19,14 +39,17 @@ GRAY="\033[38;5;245m"
 
 LINE="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# ---------- Banner ----------
+# ----------------------------------------------------------
+# Banner
+# ----------------------------------------------------------
 
 banner() {
 
 clear
 
 printf "${PURPLE}"
-cat <<'EOF'
+
+cat << "EOF"
 
    ███████╗ █████╗ ██╗██████╗ ███████╗██╗  ██╗
    ██╔════╝██╔══██╗██║██╔══██╗██╔════╝╚██╗██╔╝
@@ -38,58 +61,91 @@ cat <<'EOF'
 EOF
 
 printf "${CYAN}                 NixOS Installer${RESET}\n"
-printf "${GRAY}${LINE}${RESET}\n\n"
+printf "${GRAY}%s${RESET}\n\n" "$LINE"
 
 }
 
-# ---------- UI ----------
+logo() {
+    banner
+}
+
+# ----------------------------------------------------------
+# UI
+# ----------------------------------------------------------
 
 section() {
 
-echo
-printf "${BLUE}${BOLD}▶ %s${RESET}\n" "$1"
-printf "${GRAY}${LINE}${RESET}\n\n"
+printf "\n${BLUE}${BOLD}▶ %s${RESET}\n" "$1"
+printf "${GRAY}%s${RESET}\n\n" "$LINE"
 
 }
 
 info() {
-
-printf "${CYAN}●${RESET} %s\n" "$1"
-
+    printf "${CYAN}●${RESET} %s\n" "$1"
 }
 
 success() {
-
-printf "${GREEN}✔${RESET} %s\n" "$1"
-
+    printf "${GREEN}✔${RESET} %s\n" "$1"
 }
 
 warning() {
-
-printf "${YELLOW}▲${RESET} %s\n" "$1"
-
+    printf "${YELLOW}▲${RESET} %s\n" "$1"
 }
 
 error() {
+    printf "\n${RED}✘${RESET} %s\n" "$1"
+    exit 1
+}
 
-printf "${RED}✘${RESET} %s\n" "$1"
-exit 1
+# ----------------------------------------------------------
+# Prompt
+# ----------------------------------------------------------
+
+ask() {
+
+local prompt="$1"
+local default="${2:-}"
+
+if [[ -n "$default" ]]; then
+    read -rp "$prompt [$default]: " value
+    echo "${value:-$default}"
+else
+    read -rp "$prompt: " value
+    echo "$value"
+fi
 
 }
 
-divider() {
+# ----------------------------------------------------------
+# Template Engine
+# ----------------------------------------------------------
 
-printf "${GRAY}${LINE}${RESET}\n"
+render_template() {
+
+local template="$1"
+local output="$2"
+
+[[ -f "$template" ]] || error "Template not found: $template"
+
+cp "$template" "$output"
+
+if [[ -f "$STATE_DIR/config.env" ]]; then
+    source "$STATE_DIR/config.env"
+fi
+
+sed -i \
+    -e "s|__USERNAME__|${USERNAME:-}|g" \
+    -e "s|__HOSTNAME__|${HOSTNAME:-}|g" \
+    -e "s|__TIMEZONE__|${TIMEZONE:-}|g" \
+    -e "s|__LOCALE__|${LOCALE:-}|g" \
+    -e "s|__SHELL__|${SHELL:-}|g" \
+    "$output"
 
 }
 
-pause() {
-
-read -rp "Press ENTER to continue..."
-
-}
-
-# ---------- Step Runner ----------
+# ----------------------------------------------------------
+# Runner
+# ----------------------------------------------------------
 
 run_step() {
 
@@ -98,66 +154,40 @@ local script="$2"
 
 section "$title"
 
-if bash "$script"
-then
+if bash "$script"; then
     echo
     success "$title completed"
 else
-    echo
     error "$title failed"
 fi
 
 }
 
-# ---------- Ask ----------
+# ----------------------------------------------------------
+# Utilities
+# ----------------------------------------------------------
 
-ask() {
+require_command() {
 
-local prompt="$1"
-local default="$2"
-local answer
-
-if [[ -n "$default" ]]; then
-    read -rp "$prompt [$default]: " answer
-    echo "${answer:-$default}"
-else
-    read -rp "$prompt: " answer
-    echo "$answer"
-fi
+command -v "$1" >/dev/null 2>&1 \
+    || error "'$1' is required."
 
 }
 
-# ---------- Yes / No ----------
+require_root() {
 
-confirm() {
-
-local answer
-
-while true
-do
-
-read -rp "$1 [Y/n]: " answer
-
-case "$answer" in
-    ""|Y|y|yes|YES)
-        return 0
-        ;;
-    N|n|no|NO)
-        return 1
-        ;;
-esac
-
-done
+[[ $EUID -eq 0 ]] \
+    || error "Run this command as root."
 
 }
 
-# ---------- Finish ----------
+# ----------------------------------------------------------
+# Finish
+# ----------------------------------------------------------
 
-finish() {
+finished() {
 
 echo
-divider
-success "Installation completed successfully."
-divider
+printf "${GREEN}${BOLD}✔ Installation completed successfully.${RESET}\n"
 
 }
