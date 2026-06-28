@@ -1,15 +1,16 @@
-generate_home() {
+{ config, pkgs, inputs, unstable, ... }:
 
-    source "$STATE_DIR/config.env"
+{
+  imports = [
+    ../../modules/home
+  ];
 
-    local HOME_DIR="$ROOT_DIR/home/$USERNAME"
+  home = {
+    username = "__USERNAME__";
+    homeDirectory = "/home/__USERNAME__";
 
-    ensure_dir "$HOME_DIR"
+    stateVersion = "26.05";
+  };
 
-    render_template \
-        "$TEMPLATE_DIR/default.nix.in" \
-        "$HOME_DIR/default.nix"
-
-    success "Home configuration generated"
-    info "File: $HOME_DIR/default.nix"
+  programs.home-manager.enable = true;
 }
