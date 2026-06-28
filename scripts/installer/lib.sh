@@ -122,24 +122,24 @@ fi
 
 render_template() {
 
-local template="$1"
-local output="$2"
+    local template="$1"
+    local output="$2"
 
-[[ -f "$template" ]] || error "Template not found: $template"
+    [[ -f "$template" ]] \
+        || error "Template not found: $template"
 
-cp "$template" "$output"
-
-if [[ -f "$STATE_DIR/config.env" ]]; then
     source "$STATE_DIR/config.env"
-fi
 
-sed -i \
-    -e "s|__USERNAME__|${USERNAME:-}|g" \
-    -e "s|__HOSTNAME__|${HOSTNAME:-}|g" \
-    -e "s|__TIMEZONE__|${TIMEZONE:-}|g" \
-    -e "s|__LOCALE__|${LOCALE:-}|g" \
-    -e "s|__SHELL__|${SHELL:-}|g" \
-    "$output"
+    cp "$template" "$output"
+
+    while IFS='=' read -r key value; do
+
+        value="${value%\"}"
+        value="${value#\"}"
+
+        sed -i "s|__${key}__|$value|g" "$output"
+
+    done < "$STATE_DIR/config.env"
 
 }
 
