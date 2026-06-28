@@ -1,0 +1,29 @@
+{ config, pkgs, inputs, unstable, ... }:
+
+{
+  imports = [
+    ./hardware-configuration.nix
+
+    ../../modules/boot
+    ../../modules/networking
+    ../../modules/nix
+
+    ../../modules/users
+
+    ../../modules/services
+
+    ../../modules/hardware
+
+    ../../modules/security
+
+    ../../modules/system
+  ];
+
+  networking.hostName = "__HOSTNAME__";
+
+  time.timeZone = "__TIMEZONE__";
+
+  i18n.defaultLocale = "__LOCALE__";
+
+  system.stateVersion = "26.05";
+}
