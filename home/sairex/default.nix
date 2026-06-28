@@ -1,10 +1,16 @@
-{ pkgs, ... }:
+{ config, pkgs, inputs, unstable, ... }:
 
 {
-  home.username = "sairex";
-  home.homeDirectory = "/home/sairex";
+  imports = [
+    ../../modules/home
+  ];
 
-  home.stateVersion = "26.05";
+  home = {
+    username = "sairex";
+    homeDirectory = "/home/sairex";
+
+    stateVersion = "26.05";
+  };
 
   programs.home-manager.enable = true;
 }
