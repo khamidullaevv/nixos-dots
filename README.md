@@ -1,40 +1,32 @@
-# 🚀 Sairex NixOS Dots
+# Sairex
 
-> A modern, modular and reproducible NixOS configuration built around **Hyprland**, **Home Manager**, and an interactive installer.
+A modern, modular NixOS configuration built around Hyprland.
 
----
-
-## ✨ Features
-
-* 🧩 Modular NixOS configuration
-* 🏠 Home Manager integration
-* 🖥️ Hyprland desktop environment
-* 🎨 Material You dynamic theming *(planned)*
-* ⚡ Interactive terminal installer
-* 📦 Flake-based configuration
-* 🔒 Reproducible system builds
-* 🧹 Clean repository structure
-* 📚 Well documented source code
+Sairex provides a clean installation experience, a modular configuration layout, and an automated installer designed to work on different hardware with minimal manual setup.
 
 ---
 
-## 📂 Repository Structure
+## Features
+
+- Modular NixOS configuration
+- Home Manager integration
+- Hyprland desktop
+- Automatic hardware detection
+- Interactive installer
+- Flake-based configuration
+- Easy customization
+- Material You support *(coming soon)*
+
+---
+
+## Project Structure
 
 ```text
 .
 ├── assets/
 ├── home/
 ├── hosts/
-├── lib/
 ├── modules/
-│   ├── boot/
-│   ├── desktop/
-│   ├── development/
-│   ├── gaming/
-│   ├── hardware/
-│   ├── networking/
-│   ├── services/
-│   └── themes/
 ├── overlays/
 ├── pkgs/
 ├── scripts/
@@ -46,16 +38,16 @@
 
 ---
 
-## 🚀 Installation
+## Installation
 
-Clone the repository.
+Clone the repository:
 
 ```bash
-git clone https://github.com/<username>/nixos-dots.git
-cd nixos-dots
+git clone https://github.com/<username>/sairex.git
+cd sairex
 ```
 
-Run the installer.
+Run the installer:
 
 ```bash
 bash scripts/installer/install.sh
@@ -63,88 +55,71 @@ bash scripts/installer/install.sh
 
 The installer will:
 
-* verify your environment
-* collect user preferences
-* detect hardware
-* generate configuration
-* prepare the system
-* build the configuration
+- verify your environment
+- detect your hardware
+- generate `configuration.nix`
+- generate `hardware-configuration.nix`
+- generate your Home Manager configuration
 
 ---
 
-## 🖥️ Technologies
+## Requirements
 
-* NixOS
-* Nix Flakes
-* Home Manager
-* Hyprland
-* Quickshell
-* Fish Shell
-* Kitty
-* Rofi
-* Dunst
-* Neovim
+- NixOS
+- Flakes enabled
+- Git
+- Internet connection
 
 ---
 
-## 📸 Screenshots
+## Configuration
 
-Screenshots will be added after the first stable release.
+Generated files are placed inside the repository.
 
----
+```
+hosts/<hostname>/
+├── configuration.nix
+└── hardware-configuration.nix
 
-## 🗺️ Roadmap
+home/<username>/
+└── default.nix
+```
 
-### Installer
-
-* [x] Installer framework
-* [x] Hardware detection
-* [x] User configuration
-* [ ] Automatic disk setup
-* [ ] Automatic configuration generation
-* [ ] Interactive installation
-* [ ] Error recovery
-
-### Desktop
-
-* [ ] Hyprland configuration
-* [ ] Quickshell desktop
-* [ ] Dynamic wallpapers
-* [ ] Material You colors
-* [ ] GTK theme generation
-* [ ] Icon theme generation
-
-### Development
-
-* [ ] Neovim
-* [ ] Git
-* [ ] Development environment
-* [ ] Programming language profiles
+Most system configuration lives in `modules/`, making customization straightforward.
 
 ---
 
-## 🎨 Vision
+## Roadmap
 
-The goal of this project is to create a beautiful, fast and reproducible Hyprland experience that anyone can install with a single command.
+### v0.1
 
-The repository focuses on:
+- Interactive installer
+- Hardware detection
+- Configuration generator
+- Home Manager generator
 
-* simplicity
-* modularity
-* maintainability
-* reproducibility
-* excellent documentation
+### v0.2
+
+- Material You theming
+- Wallpaper color extraction
+- Waybar integration
+- GTK theme generation
+- Qt theme generation
+
+### v0.3
+
+- Additional desktop modules
+- Installer improvements
+- More customization options
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions, ideas and bug reports are welcome.
-
-Feel free to open an issue or submit a pull request.
+Contributions, bug reports, and feature suggestions are welcome.
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License.
+MIT License.
