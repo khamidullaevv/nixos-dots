@@ -1,12 +1,9 @@
-{ config, lib, ... }:
+{ ... }:
 
-let
-  username = config.sairex.user.name;
-in
 {
-  users.users.${username} = {
+  users.users.sairex = {
     isNormalUser = true;
-    description = username;
+    description = "Sairex";
 
     extraGroups = [
       "wheel"
