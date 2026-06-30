@@ -1,14 +1,9 @@
-{ config, pkgs, inputs, unstable, ... }:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ../../modules/users
-  ];
-
   home = {
     username = "sairex";
     homeDirectory = "/home/sairex";
-
     stateVersion = "26.05";
   };
 
