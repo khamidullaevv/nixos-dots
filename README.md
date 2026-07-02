@@ -1,7 +1,7 @@
 # Sairex
 
 A modern, modular NixOS configuration built around Hyprland.
-
+Only nixos!! dont run on arch based or debian based distro
 Sairex provides a clean installation experience, a modular configuration layout, and an automated installer designed to work on different hardware with minimal manual setup.
 
 ---
