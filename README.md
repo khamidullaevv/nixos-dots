@@ -1,4 +1,4 @@
-# Sairex
+# Metior shell
 
 A modern, modular NixOS configuration built around Hyprland.
 Only nixos!! dont run on arch based or debian based distro
