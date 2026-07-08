@@ -1,3 +1,4 @@
+# flake nix for laptops
 {
   description = "Sairex's NixOS configuration";
 
