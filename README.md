@@ -1,7 +1,7 @@
 # Metior shell
 
 A modern, modular NixOS configuration built around Hyprland.
-Only nixos!! dont run on arch based or debian based distro
+Only nixos!! dont run on arch based or debian based distro and for laptop everything 
 Sairex provides a clean installation experience, a modular configuration layout, and an automated installer designed to work on different hardware with minimal manual setup.
 
 ---
