@@ -10,13 +10,23 @@ fi
 
 cd "$WALLPAPER_DIR" || exit 1
 
-FILES=$(ls -1 | grep -E '\.(mp4|mkv|png|jpg|jpeg|webp)$')
+# Получаем список изображений и видео
+FILES=$(find . -maxdepth 1 -type f \
+    \( -iname "*.mp4" -o -iname "*.mkv" \
+    -o -iname "*.png" -o -iname "*.jpg" \
+    -o -iname "*.jpeg" -o -iname "*.webp" \) \
+    -printf "%f\n")
 
 if [ -z "$FILES" ]; then
+    notify-send "Ошибка" "Обои не найдены"
     exit 1
 fi
 
-SELECTED=$(rofi -dmenu -i -p "󰸉 Обои:" -theme-str 'window {width: 40%;} listview {lines: 8;}' <<< "$FILES")
+# Выбор обоев
+SELECTED=$(printf '%s\n' "$FILES" | \
+    rofi -dmenu -i \
+    -p "󰸉 Обои:" \
+    -theme-str 'window {width: 40%;} listview {lines: 8;}')
 
 if [ -z "$SELECTED" ]; then
     exit 0
@@ -24,62 +34,64 @@ fi
 
 FULL_PATH="$WALLPAPER_DIR/$SELECTED"
 
+# Сохраняем текущие обои
 echo "$FULL_PATH" > "$HOME/.current_wallpaper"
 
-matugen image "$FULL_PATH"
+echo "Wallpaper: $FULL_PATH"
 
-pkill mpvpaper 2>/dev/null
-mpvpaper -o "no-audio --loop-playlist --panscan=1.0" '*' "$FULL_PATH" >/dev/null 2>&1 &
+# --------------------------------------------------
+# MATUGEN
+# --------------------------------------------------
 
-kill -SIGUSR1 $(pgrep kitty) 2>/dev/null
-pkill waybar
-sleep 0.2
-waybar >/dev/null 2>&1 &
+echo "Running matugen..."
 
-if command -v notify-send &> /dev/null; then
-    notify-send "Тема и обои обновлены" "$SELECTED"
-fi
-#!/usr/bin/env bash
+# Запускаем Matugen без интерактивного выбора цвета.
+# Matugen сам анализирует изображение.
+matugen image "$FULL_PATH" \
+    -m dark \
+    --type scheme-tonal-spot \
+    --source-color-index 0
 
-export PATH="/run/current-system/sw/bin:$HOME/.nix-profile/bin:$PATH"
+MATUGEN_EXIT=$?
 
-WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
+echo "Matugen exit code: $MATUGEN_EXIT"
 
-if [ ! -d "$WALLPAPER_DIR" ]; then
-    WALLPAPER_DIR="$HOME/Downloads"
-fi
-
-cd "$WALLPAPER_DIR" || exit 1
-
-FILES=$(ls -1 | grep -E '\.(mp4|mkv|png|jpg|jpeg|webp)$')
-
-if [ -z "$FILES" ]; then
+if [ "$MATUGEN_EXIT" -ne 0 ]; then
+    notify-send "Ошибка Matugen" "Не удалось применить цветовую схему"
     exit 1
 fi
 
-SELECTED=$(rofi -dmenu -i -p "󰸉 Обои:" -theme-str 'window {width: 40%;} listview {lines: 8;}' <<< "$FILES")
+# --------------------------------------------------
+# WALLPAPER
+# --------------------------------------------------
 
-if [ -z "$SELECTED" ]; then
-    exit 0
-fi
-
-FULL_PATH="$WALLPAPER_DIR/$SELECTED"
-
-# Сохраняем путь для автозагрузки
-echo "$FULL_PATH" > "$HOME/.current_wallpaper"
-
-# --- ИСПРАВЛЕННЫЙ ВЫЗОВ MATUGEN (Путь строго в конце) ---
-matugen image -m dark --type scheme-tonal-spot "$FULL_PATH"
-
-# Перезапуск сервисов и обоев
 pkill mpvpaper 2>/dev/null
-mpvpaper -o "no-audio --loop-playlist --panscan=1.0" '*' "$FULL_PATH" >/dev/null 2>&1 &
 
-kill -SIGUSR1 $(pgrep kitty) 2>/dev/null
-pkill waybar
+mpvpaper \
+    -o "no-audio --loop-playlist --panscan=1.0" \
+    '*' \
+    "$FULL_PATH" \
+    >/dev/null 2>&1 &
+
+# --------------------------------------------------
+# KITTY
+# --------------------------------------------------
+
+kill -SIGUSR1 "$(pgrep kitty)" 2>/dev/null
+
+# --------------------------------------------------
+# WAYBAR
+# --------------------------------------------------
+
+pkill waybar 2>/dev/null
 sleep 0.2
+
 waybar >/dev/null 2>&1 &
 
-if command -v notify-send &> /dev/null; then
-    notify-send "Тема и обои обновлены" "$SELECTED"
+# --------------------------------------------------
+# NOTIFICATION
+# --------------------------------------------------
+
+if command -v notify-send &>/dev/null; then
+    notify-send "󰸉 Тема и обои обновлены" "$SELECTED"
 fi
