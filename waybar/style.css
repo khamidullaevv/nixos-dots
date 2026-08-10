@@ -1,0 +1,77 @@
+@import "colors.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-weight: 800; 
+  font-size: 15px;    
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background-color: @bg;
+  color: @fg;
+  border-bottom: 3px solid @primary; 
+}
+
+#custom-launcher {
+  background-color: @primary;
+  color: @bg;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+#workspaces {
+  padding: 0 10px;
+}
+
+#workspaces button {
+  padding: 0 12px;
+  color: @fg;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+  color: @primary;
+  border-bottom: 3px solid @primary;
+  background-color: @bg-col-light;
+}
+
+#window {
+  padding: 0 20px;
+  color: @accent;
+}
+
+#clock {
+  color: @primary;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+/* Правая часть: Виджеты */
+#cpu, #memory, #language, #wireplumber, #backlight, #battery, #tray {
+  padding: 0 16px; /* Широкие отступы между модулями */
+  color: @fg;
+}
+
+#cpu { color: @accent; }
+#memory { color: @secondary; }
+#language { color: @primary; }
+#wireplumber { color: @fg; }
+#battery.charging { color: @primary; }
+#battery.warning { color: #f38ba8; }
+
+#tray {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+#custom-power {
+  background-color: @accent;
+  color: @bg;
+  padding: 0 20px;
+  font-size: 18px;
+}
