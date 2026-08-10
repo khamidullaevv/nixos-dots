@@ -17,18 +17,20 @@
   time.timeZone = "Asia/Tashkent";
   i18n.defaultLocale = "en_US.UTF-8";
 
+  programs.fish.enable = true;
+
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
   };
 
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";               
+    NIXOS_OZONE_WL = "1";
     LIBVA_DRIVER_NAME = "nvidia";
     XDG_SESSION_TYPE = "wayland";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    WLR_NO_HARDWARE_CURSORS = "1";      
+    WLR_NO_HARDWARE_CURSORS = "1";
     XCURSOR_THEME = "Bibata-Modern-Classic";
     XCURSOR_SIZE = "24";
   };
@@ -61,10 +63,21 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "catppuccin-mocha-mauve";
+    theme = "catppuccin-mocha";
+    extraPackages = with pkgs; [
+      bibata-cursors
+      kdePackages.qt5compat
+      kdePackages.qtdeclarative
+      kdePackages.qtsvg
+    ];
     settings = {
       Theme = {
         CursorTheme = "Bibata-Modern-Classic";
+        CursorSize = "24";
+      };
+      General = {
+        DisplayServer = "wayland";
+        GreeterEnvironment = "QT_WAYLAND_DISABLE_WINDOWDECORATION=1,WLR_NO_HARDWARE_CURSORS=1";
       };
     };
   };
@@ -85,65 +98,64 @@
   };
 
   services.printing.enable = true;
-  services.gvfs.enable = true;          
-  services.tumbler.enable = true;      
-  services.upower.enable = true;        
-
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+  services.upower.enable = true;
 
   users.users."sairex" = {
     isNormalUser = true;
     description = "Sairex";
+    shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" "video" "audio" "input" ];
   };
 
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    wget 
-    git 
-    python3 
-    nodejs_22 
-    unzip 
-    fastfetch 
+    wget
+    git
+    python3
+    nodejs_22
+    unzip
+    fastfetch
     htop
     brightnessctl
     playerctl
     cava
     btop
     nautilus
-    firefox 
-    telegram-desktop 
-    spotify 
-    obsidian 
-    vscodium 
+    firefox
+    telegram-desktop
+    spotify
+    obsidian
+    vscodium
     neovim
-    kitty                     
-    waybar                  
-    rofi             
-    swww                      
+    kitty
+    waybar
+    rofi
+    swww
     mpvpaper
     mpv
-    dunst                     
-    wlogout                   
-    hyprlock                 
-    hypridle                
+    dunst
+    wlogout
+    hyprlock
+    hypridle
     matugen
-    polkit_gnome              
-    yazi                     
-    xfce.thunar               
-    loupe                     
-    mpv                       
-    grim                      
-    slurp                     
-    swappy                    
+    polkit_gnome
+    yazi
+    xfce.thunar
+    loupe
+    grim
+    slurp
+    swappy
     libnotify
-    wl-clipboard              
-    cliphist                  
-    pavucontrol               
-    lsd                       
-    bibata-cursors            
-    papirus-icon-theme        
-    catppuccin-gtk            
+    wl-clipboard
+    cliphist
+    pavucontrol
+    lsd
+    bibata-cursors
+    papirus-icon-theme
+    catppuccin-gtk
     (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "mauve";
