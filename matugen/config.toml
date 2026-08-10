@@ -12,3 +12,28 @@ output_path = '/home/sairex/.config/waybar/colors.css'
 [templates.rofi]
 input_path = '/home/sairex/.config/matugen/templates/rofi-colors.rasi'
 output_path = '/home/sairex/.config/rofi/colors.rasi'
+
+[templates.gtk-colors]
+input_path = '/home/sairex/.config/matugen/templates/gtk-colors.css'
+output_path = '/home/sairex/.config/gtk-3.0/colors.css'
+
+[templates.gtk3]
+input_path = '/home/sairex/.config/matugen/templates/gtk.css'
+output_path = '/home/sairex/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4-colors]
+input_path = '/home/sairex/.config/matugen/templates/gtk-colors.css'
+output_path = '/home/sairex/.config/gtk-4.0/colors.css'
+
+[templates.gtk4]
+input_path = '/home/sairex/.config/matugen/templates/gtk.css'
+output_path = '/home/sairex/.config/gtk-4.0/gtk.css'
+
+[templates.wlogout]
+input_path = '/home/sairex/.config/matugen/templates/wlogout-colors.css'
+output_path = '/home/sairex/.config/wlogout/colors.css'
+
+[templates.dunst]
+input_path = '/home/sairex/.config/matugen/templates/dunstrc'
+output_path = '/home/sairex/.config/dunst/dunstrc'
+post_hook = 'dunstctl reload'
