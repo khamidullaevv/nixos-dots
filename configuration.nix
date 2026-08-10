@@ -118,6 +118,8 @@
     nodejs_22
     unzip
     fastfetch
+    cmatrix
+    tty-clock
     htop
     brightnessctl
     playerctl
