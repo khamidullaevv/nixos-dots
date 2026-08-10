@@ -37,3 +37,7 @@ output_path = '/home/sairex/.config/wlogout/colors.css'
 input_path = '/home/sairex/.config/matugen/templates/dunstrc'
 output_path = '/home/sairex/.config/dunst/dunstrc'
 post_hook = 'dunstctl reload'
+
+[templates.hyprlock]
+input_path = '/home/sairex/.config/matugen/templates/hyprlock-colors.conf'
+output_path = '/home/sairex/.config/hypr/colors.conf'
