@@ -17,17 +17,10 @@ output_path = '/home/sairex/.config/rofi/colors.rasi'
 input_path = '/home/sairex/.config/matugen/templates/gtk-colors.css'
 output_path = '/home/sairex/.config/gtk-3.0/colors.css'
 
-[templates.gtk3]
-input_path = '/home/sairex/.config/matugen/templates/gtk.css'
-output_path = '/home/sairex/.config/gtk-3.0/gtk.css'
-
-[templates.gtk4-colors]
+[templates.gtk4]
 input_path = '/home/sairex/.config/matugen/templates/gtk-colors.css'
 output_path = '/home/sairex/.config/gtk-4.0/colors.css'
-
-[templates.gtk4]
-input_path = '/home/sairex/.config/matugen/templates/gtk.css'
-output_path = '/home/sairex/.config/gtk-4.0/gtk.css'
+post_hook = 'adw-colors reload'
 
 [templates.wlogout]
 input_path = '/home/sairex/.config/matugen/templates/wlogout-colors.css'
