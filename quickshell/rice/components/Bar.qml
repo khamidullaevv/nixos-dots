@@ -3,30 +3,41 @@ import Quickshell
 import "."
 
 Rectangle {
+    id: root
+
+    property var shellState
+
     anchors.fill: parent
+
+    radius: 12
 
     color: "#111318"
 
-    // Левая часть
+    border.width: 1
+    border.color: "#292d35"
+
+    // =========================
+    // LEFT
+    // =========================
+
     Row {
         anchors.left: parent.left
-        anchors.leftMargin: 12
+        anchors.leftMargin: 14
         anchors.verticalCenter: parent.verticalCenter
 
         spacing: 10
 
-        // Название rice
         Text {
             text: "SAIREX"
 
             color: "#ffffff"
+
             font.pixelSize: 14
             font.bold: true
 
             anchors.verticalCenter: parent.verticalCenter
         }
 
-        // Разделитель
         Rectangle {
             width: 1
             height: 20
@@ -36,46 +47,106 @@ Rectangle {
             anchors.verticalCenter: parent.verticalCenter
         }
 
-        // Workspaces
         Workspaces {
             anchors.verticalCenter: parent.verticalCenter
         }
     }
 
-    // Центральная часть
+    // =========================
+    // CENTER
+    // =========================
+
     Text {
         anchors.centerIn: parent
 
         text: "Desktop"
 
         color: "#ffffff"
-        font.pixelSize: 14
+
+        font.pixelSize: 13
     }
 
-    // Правая часть
+    // =========================
+    // RIGHT
+    // =========================
+
     Row {
         anchors.right: parent.right
-        anchors.rightMargin: 12
+        anchors.rightMargin: 14
         anchors.verticalCenter: parent.verticalCenter
 
-        spacing: 12
+        spacing: 8
 
-        Text {
-            text: "󰖩  Online"
+        // WIFI
+        Rectangle {
+            width: 82
+            height: 30
 
-            color: "#ffffff"
-            font.pixelSize: 13
+            radius: 9
 
-            anchors.verticalCenter: parent.verticalCenter
+            color: wifiMouse.containsMouse
+                ? "#252830"
+                : "transparent"
+
+            Text {
+                anchors.centerIn: parent
+
+                text: "󰖩  Online"
+
+                color: "#ffffff"
+
+                font.pixelSize: 13
+            }
+
+            MouseArea {
+                id: wifiMouse
+
+                anchors.fill: parent
+
+                hoverEnabled: true
+
+                cursorShape: Qt.PointingHandCursor
+
+                onClicked: {
+                    shellState.toggleWifi()
+                }
+            }
         }
 
-        Text {
-            text: "󰕾  40%"
+        // AUDIO
+        Rectangle {
+            width: 62
+            height: 30
 
-            color: "#ffffff"
-            font.pixelSize: 13
+            radius: 9
 
-            anchors.verticalCenter: parent.verticalCenter
+            color: audioMouse.containsMouse
+                ? "#252830"
+                : "transparent"
+
+            Text {
+                anchors.centerIn: parent
+
+                text: "󰕾 40%"
+
+                color: "#ffffff"
+
+                font.pixelSize: 13
+            }
+
+            MouseArea {
+                id: audioMouse
+
+                anchors.fill: parent
+
+                hoverEnabled: true
+
+                cursorShape: Qt.PointingHandCursor
+
+                onClicked: {
+                    shellState.toggleAudio()
+                }
+            }
         }
 
         Rectangle {
@@ -87,12 +158,7 @@ Rectangle {
             anchors.verticalCenter: parent.verticalCenter
         }
 
-        Text {
-            text: "18:49"
-
-            color: "#ffffff"
-            font.pixelSize: 13
-
+        Clock {
             anchors.verticalCenter: parent.verticalCenter
         }
     }
