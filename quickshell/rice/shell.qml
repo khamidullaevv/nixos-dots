@@ -1,33 +1,96 @@
-import Quickshell
 import QtQuick
-import "./components"
+import Quickshell
+import "."
 
-ShellRoot {
-    Variants {
-        model: Quickshell.screens
+Rectangle {
+    anchors.fill: parent
 
-        PanelWindow {
-            required property var modelData
+    radius: 12
 
-            screen: modelData
+    color: "#111318"
 
-            anchors {
-                top: true
-                left: true
-                right: true
-            }
+    border.width: 1
+    border.color: "#292d35"
 
-            margins {
-                top: 8
-                left: 8
-                right: 8
-            }
+    // LEFT
+    Row {
+        anchors.left: parent.left
+        anchors.leftMargin: 14
+        anchors.verticalCenter: parent.verticalCenter
 
-            implicitHeight: 44
+        spacing: 10
 
-            color: "transparent"
+        Text {
+            text: "SAIREX"
 
-            Bar {}
+            color: "#ffffff"
+            font.pixelSize: 14
+            font.bold: true
+
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        Rectangle {
+            width: 1
+            height: 20
+
+            color: "#33363d"
+
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        Workspaces {
+            anchors.verticalCenter: parent.verticalCenter
+        }
+    }
+
+    // CENTER
+    Text {
+        anchors.centerIn: parent
+
+        text: "Desktop"
+
+        color: "#ffffff"
+        font.pixelSize: 13
+    }
+
+    // RIGHT
+    Row {
+        anchors.right: parent.right
+        anchors.rightMargin: 14
+        anchors.verticalCenter: parent.verticalCenter
+
+        spacing: 12
+
+        Text {
+            text: "󰖩 Online"
+
+            color: "#ffffff"
+            font.pixelSize: 13
+
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        Text {
+            text: "󰕾 40%"
+
+            color: "#ffffff"
+            font.pixelSize: 13
+
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        Rectangle {
+            width: 1
+            height: 20
+
+            color: "#33363d"
+
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        Clock {
+            anchors.verticalCenter: parent.verticalCenter
         }
     }
 }
