@@ -8,7 +8,9 @@ PanelWindow {
 
     required property var targetScreen
     property var shellState
+
     property bool opened: shellState ? shellState.audioOpen : false
+
     screen: targetScreen
 
     anchors {
@@ -25,8 +27,6 @@ PanelWindow {
     implicitHeight: 300
 
     color: "transparent"
-
-    property bool opened: true
 
     Rectangle {
         id: panel
