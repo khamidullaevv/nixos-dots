@@ -6,6 +6,7 @@ PanelWindow {
     id: root
 
     required property var targetScreen
+    property var shellState
 
     screen: targetScreen
 
@@ -18,7 +19,7 @@ PanelWindow {
         top: 60
         right: 16
     }
-
+    
     implicitWidth: 340
     implicitHeight: 420
 
