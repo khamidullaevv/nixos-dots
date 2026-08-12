@@ -1,11 +1,17 @@
 import Quickshell
 import QtQuick
 import "./components"
+import "./config"
 import "./popups"
 
 ShellRoot {
-    property bool wifiOpen: false
-    property bool audioOpen: false
+    ShellState {
+        id: shellState
+    }
+
+    // =========================
+    // TOP BAR
+    // =========================
 
     Variants {
         model: Quickshell.screens
@@ -31,9 +37,15 @@ ShellRoot {
 
             color: "transparent"
 
-            Bar {}
+            Bar {
+                shellState: shellState
+            }
         }
     }
+
+    // =========================
+    // WIFI POPUP
+    // =========================
 
     Variants {
         model: Quickshell.screens
@@ -42,10 +54,15 @@ ShellRoot {
             required property var modelData
 
             targetScreen: modelData
+            shellState: shellState
 
-            visible: wifiOpen
+            visible: shellState.wifiOpen
         }
     }
+
+    // =========================
+    // AUDIO POPUP
+    // =========================
 
     Variants {
         model: Quickshell.screens
@@ -54,8 +71,9 @@ ShellRoot {
             required property var modelData
 
             targetScreen: modelData
+            shellState: shellState
 
-            visible: audioOpen
+            visible: shellState.audioOpen
         }
     }
 }
