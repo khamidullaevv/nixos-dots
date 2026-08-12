@@ -1,96 +1,61 @@
-import QtQuick
 import Quickshell
-import "."
+import QtQuick
+import "./components"
+import "./popups"
 
-Rectangle {
-    anchors.fill: parent
+ShellRoot {
+    property bool wifiOpen: false
+    property bool audioOpen: false
 
-    radius: 12
+    Variants {
+        model: Quickshell.screens
 
-    color: "#111318"
+        PanelWindow {
+            required property var modelData
 
-    border.width: 1
-    border.color: "#292d35"
+            screen: modelData
 
-    // LEFT
-    Row {
-        anchors.left: parent.left
-        anchors.leftMargin: 14
-        anchors.verticalCenter: parent.verticalCenter
+            anchors {
+                top: true
+                left: true
+                right: true
+            }
 
-        spacing: 10
+            margins {
+                top: 8
+                left: 8
+                right: 8
+            }
 
-        Text {
-            text: "SAIREX"
+            implicitHeight: 44
 
-            color: "#ffffff"
-            font.pixelSize: 14
-            font.bold: true
+            color: "transparent"
 
-            anchors.verticalCenter: parent.verticalCenter
-        }
-
-        Rectangle {
-            width: 1
-            height: 20
-
-            color: "#33363d"
-
-            anchors.verticalCenter: parent.verticalCenter
-        }
-
-        Workspaces {
-            anchors.verticalCenter: parent.verticalCenter
+            Bar {}
         }
     }
 
-    // CENTER
-    Text {
-        anchors.centerIn: parent
+    Variants {
+        model: Quickshell.screens
 
-        text: "Desktop"
+        WifiPopup {
+            required property var modelData
 
-        color: "#ffffff"
-        font.pixelSize: 13
+            targetScreen: modelData
+
+            visible: wifiOpen
+        }
     }
 
-    // RIGHT
-    Row {
-        anchors.right: parent.right
-        anchors.rightMargin: 14
-        anchors.verticalCenter: parent.verticalCenter
+    Variants {
+        model: Quickshell.screens
 
-        spacing: 12
+        AudioPopup {
+            required property var modelData
 
-        Text {
-            text: "󰖩 Online"
+            targetScreen: modelData
 
-            color: "#ffffff"
-            font.pixelSize: 13
-
-            anchors.verticalCenter: parent.verticalCenter
-        }
-
-        Text {
-            text: "󰕾 40%"
-
-            color: "#ffffff"
-            font.pixelSize: 13
-
-            anchors.verticalCenter: parent.verticalCenter
-        }
-
-        Rectangle {
-            width: 1
-            height: 20
-
-            color: "#33363d"
-
-            anchors.verticalCenter: parent.verticalCenter
-        }
-
-        Clock {
-            anchors.verticalCenter: parent.verticalCenter
+            visible: audioOpen
         }
     }
 }
