@@ -16,6 +16,8 @@
 
   time.timeZone = "Asia/Tashkent";
   i18n.defaultLocale = "en_US.UTF-8";
+  
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   programs.fish.enable = true;
 
@@ -114,12 +116,12 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    tty-clock
+    cmatrix
     python3
     nodejs_22
     unzip
     fastfetch
-    cmatrix
-    tty-clock
     htop
     brightnessctl
     playerctl
