@@ -7,7 +7,8 @@ PanelWindow {
     id: root
 
     required property var targetScreen
-
+    property var shellState
+    property bool opened: shellState ? shellState.audioOpen : false
     screen: targetScreen
 
     anchors {
