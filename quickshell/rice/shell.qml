@@ -1,17 +1,22 @@
 import Quickshell
 import QtQuick
-import "./components"
+
 import "./config"
+import "./components"
 import "./popups"
+import "./dashboard"
 
 ShellRoot {
-    ShellState {
-        id: shellState
+    id: root
+
+    property var appState: ShellState {
+        id: state
     }
 
-    // =========================
+
+    // =========================================================
     // TOP BAR
-    // =========================
+    // =========================================================
 
     Variants {
         model: Quickshell.screens
@@ -20,6 +25,7 @@ ShellRoot {
             required property var modelData
 
             screen: modelData
+            color: "transparent"
 
             anchors {
                 top: true
@@ -33,19 +39,18 @@ ShellRoot {
                 right: 8
             }
 
-            implicitHeight: 44
-
-            color: "transparent"
+            implicitHeight: 48
 
             Bar {
-                shellState: shellState
+                appState: root.appState
             }
         }
     }
 
-    // =========================
+
+    // =========================================================
     // WIFI POPUP
-    // =========================
+    // =========================================================
 
     Variants {
         model: Quickshell.screens
@@ -54,15 +59,16 @@ ShellRoot {
             required property var modelData
 
             targetScreen: modelData
-            shellState: shellState
+            appState: root.appState
 
-            visible: shellState.wifiOpen
+            visible: root.appState.wifiOpen
         }
     }
 
-    // =========================
+
+    // =========================================================
     // AUDIO POPUP
-    // =========================
+    // =========================================================
 
     Variants {
         model: Quickshell.screens
@@ -71,9 +77,27 @@ ShellRoot {
             required property var modelData
 
             targetScreen: modelData
-            shellState: shellState
+            appState: root.appState
 
-            visible: shellState.audioOpen
+            visible: root.appState.audioOpen
+        }
+    }
+
+
+    // =========================================================
+    // DASHBOARD
+    // =========================================================
+
+    Variants {
+        model: Quickshell.screens
+
+        Dashboard {
+            required property var modelData
+
+            targetScreen: modelData
+            appState: root.appState
+
+            visible: root.appState.dashboardOpen
         }
     }
 }

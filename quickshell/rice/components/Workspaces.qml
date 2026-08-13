@@ -1,40 +1,67 @@
 import QtQuick
-import Quickshell
 import Quickshell.Hyprland
+import "../config"
 
 Row {
-    spacing: 6
+    id: root
+
+    spacing: 5
 
     Repeater {
-        model: Hyprland.workspaces
+        model: 5
 
         delegate: Rectangle {
-            required property var modelData
+            required property int index
 
-            width: 28
-            height: 28
-            radius: 8
+            property int workspaceId: index + 1
 
-            color: modelData.active
-                ? "#ffffff"
-                : "#252830"
+            property bool active:
+                Hyprland.focusedWorkspace &&
+                Hyprland.focusedWorkspace.id === workspaceId
+
+            width: active ? 30 : 24
+            height: 24
+            radius: 7
+
+            color: active
+                   ? Theme.accent
+                   : workspaceMouse.containsMouse
+                     ? Theme.surfaceVariant
+                     : "transparent"
+
+            Behavior on width {
+                NumberAnimation {
+                    duration: 120
+                    easing.type: Easing.OutCubic
+                }
+            }
 
             Text {
                 anchors.centerIn: parent
 
-                text: modelData.name
-                color: modelData.active
-                    ? "#111318"
-                    : "#ffffff"
+                text: workspaceId
 
-                font.pixelSize: 13
-                font.bold: modelData.active
+                color: active
+                       ? Theme.background
+                       : Theme.textSecondary
+
+                font.pixelSize: 11
+                font.bold: active
             }
 
             MouseArea {
-                anchors.fill: parent
+                id: workspaceMouse
 
-                onClicked: modelData.activate()
+                anchors.fill: parent
+                hoverEnabled: true
+
+                cursorShape: Qt.PointingHandCursor
+
+                onClicked: {
+                    Hyprland.dispatch(
+                        "workspace " + workspaceId
+                    )
+                }
             }
         }
     }

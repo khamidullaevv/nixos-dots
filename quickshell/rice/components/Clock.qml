@@ -1,24 +1,19 @@
 import QtQuick
 
 Text {
-    property string currentTime: ""
+    id: root
 
-    text: currentTime
+    property string timeText: Qt.formatDateTime(new Date(), "HH:mm")
 
-    color: "#ffffff"
+    text: timeText
+    color: "#f4f6f8"
     font.pixelSize: 13
+    font.bold: true
 
     Timer {
         interval: 1000
         running: true
         repeat: true
-
-        onTriggered: {
-            currentTime = Qt.formatTime(new Date(), "HH:mm")
-        }
-    }
-
-    Component.onCompleted: {
-        currentTime = Qt.formatTime(new Date(), "HH:mm")
+        onTriggered: root.timeText = Qt.formatDateTime(new Date(), "HH:mm")
     }
 }
