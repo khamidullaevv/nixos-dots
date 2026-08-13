@@ -3,8 +3,6 @@ import QtQuick
 
 import "./config"
 import "./components"
-import "./popups"
-import "./dashboard"
 
 ShellRoot {
     id: root
@@ -13,11 +11,6 @@ ShellRoot {
         id: state
     }
 
-
-    // =========================================================
-    // TOP BAR
-    // =========================================================
-
     Variants {
         model: Quickshell.screens
 
@@ -25,6 +18,7 @@ ShellRoot {
             required property var modelData
 
             screen: modelData
+
             color: "transparent"
 
             anchors {
@@ -39,65 +33,33 @@ ShellRoot {
                 right: 8
             }
 
-            implicitHeight: 48
+            /*
+             * Только верхние 48px занимают место
+             * в layout.
+             *
+             * Dashboard / Wi-Fi / Audio
+             * находятся поверх приложений.
+             */
+            exclusiveZone: 48
+
+            aboveWindows: true
+
+            /*
+             * 48px bar + 460px dashboard/popup space
+             */
+            implicitHeight: 508
 
             Bar {
+                id: bar
+
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    top: parent.top
+                }
+
                 appState: root.appState
             }
-        }
-    }
-
-
-    // =========================================================
-    // WIFI POPUP
-    // =========================================================
-
-    Variants {
-        model: Quickshell.screens
-
-        WifiPopup {
-            required property var modelData
-
-            targetScreen: modelData
-            appState: root.appState
-
-            visible: root.appState.wifiOpen
-        }
-    }
-
-
-    // =========================================================
-    // AUDIO POPUP
-    // =========================================================
-
-    Variants {
-        model: Quickshell.screens
-
-        AudioPopup {
-            required property var modelData
-
-            targetScreen: modelData
-            appState: root.appState
-
-            visible: root.appState.audioOpen
-        }
-    }
-
-
-    // =========================================================
-    // DASHBOARD
-    // =========================================================
-
-    Variants {
-        model: Quickshell.screens
-
-        Dashboard {
-            required property var modelData
-
-            targetScreen: modelData
-            appState: root.appState
-
-            visible: root.appState.dashboardOpen
         }
     }
 }

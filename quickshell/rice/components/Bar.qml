@@ -1,24 +1,52 @@
 import QtQuick
-import Quickshell
-import "../config"
 
-Rectangle {
+import "../config"
+import "../dashboard"
+import "../popups"
+
+Item {
     id: root
 
     property var appState
 
-    anchors.fill: parent
+    property int barHeight: 48
+    property int dashboardHeight: 460
 
-    radius: Theme.radiusMedium
-    color: Theme.surface
+    width: parent ? parent.width : 0
+    height: barHeight + dashboardHeight
 
-    border.width: 1
-    border.color: Theme.border
+    clip: false
 
+    /*
+     * =========================================================
+     * MAIN BAR
+     * =========================================================
+     */
 
-    // =========================================================
-    // LEFT SIDE
-    // =========================================================
+    Rectangle {
+        id: barBackground
+
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: parent.top
+        }
+
+        height: root.barHeight
+
+        radius: Theme.radiusMedium
+
+        color: Theme.surface
+
+        border.width: 1
+        border.color: Theme.border
+    }
+
+    /*
+     * =========================================================
+     * LEFT SIDE
+     * =========================================================
+     */
 
     Row {
         id: leftSide
@@ -26,16 +54,23 @@ Rectangle {
         anchors {
             left: parent.left
             leftMargin: 10
-            verticalCenter: parent.verticalCenter
+            top: parent.top
         }
+
+        height: root.barHeight
 
         spacing: 8
 
+        /*
+         * Logo
+         */
 
-        // Logo
         Rectangle {
             width: 32
             height: 32
+
+            anchors.verticalCenter: parent.verticalCenter
+
             radius: 10
 
             color: Theme.accentVariant
@@ -46,13 +81,16 @@ Rectangle {
                 text: "S"
 
                 color: Theme.accent
+
                 font.pixelSize: 15
                 font.bold: true
             }
         }
 
+        /*
+         * Name
+         */
 
-        // Name
         Text {
             anchors.verticalCenter: parent.verticalCenter
 
@@ -64,8 +102,10 @@ Rectangle {
             font.bold: true
         }
 
+        /*
+         * Divider
+         */
 
-        // Separator
         Rectangle {
             width: 1
             height: 20
@@ -75,38 +115,44 @@ Rectangle {
             color: Theme.border
         }
 
+        /*
+         * Workspaces
+         */
 
-        // Workspaces
         Workspaces {
             anchors.verticalCenter: parent.verticalCenter
         }
     }
 
-
-    // =========================================================
-    // CENTER
-    // =========================================================
+    /*
+     * =========================================================
+     * DASHBOARD BUTTON
+     * =========================================================
+     */
 
     Rectangle {
         id: dashboardButton
 
-        anchors.centerIn: parent
+        anchors {
+            top: parent.top
+            horizontalCenter: parent.horizontalCenter
+        }
 
         width: 130
-        height: 32
+        height: root.barHeight
 
         radius: 10
 
-        color: dashboardMouse.containsMouse
-               ? Theme.surfaceVariant
-               : "transparent"
-
+        color:
+            dashboardMouse.containsMouse ||
+            (root.appState && root.appState.dashboardOpen)
+            ? Theme.surfaceVariant
+            : "transparent"
 
         Row {
             anchors.centerIn: parent
 
             spacing: 8
-
 
             Text {
                 anchors.verticalCenter: parent.verticalCenter
@@ -118,7 +164,6 @@ Rectangle {
                 font.pixelSize: 17
             }
 
-
             Text {
                 anchors.verticalCenter: parent.verticalCenter
 
@@ -129,7 +174,6 @@ Rectangle {
                 font.pixelSize: 12
             }
         }
-
 
         MouseArea {
             id: dashboardMouse
@@ -146,7 +190,6 @@ Rectangle {
             }
         }
 
-
         Behavior on color {
             ColorAnimation {
                 duration: 120
@@ -154,10 +197,57 @@ Rectangle {
         }
     }
 
+    /*
+     * =========================================================
+     * DASHBOARD PANEL
+     * =========================================================
+     */
 
-    // =========================================================
-    // RIGHT SIDE
-    // =========================================================
+    Rectangle {
+        id: dashboardPanel
+
+        anchors {
+            top: dashboardButton.bottom
+            horizontalCenter: dashboardButton.horizontalCenter
+        }
+
+        width: 560
+
+        height:
+            root.appState &&
+            root.appState.dashboardOpen
+            ? root.dashboardHeight
+            : 0
+
+        color: Theme.surface
+
+        border.width: 1
+        border.color: Theme.border
+
+        radius: 24
+
+        clip: true
+
+        Dashboard {
+            anchors.fill: parent
+
+            appState: root.appState
+        }
+
+        Behavior on height {
+            NumberAnimation {
+                duration: 180
+
+                easing.type: Easing.OutCubic
+            }
+        }
+    }
+
+    /*
+     * =========================================================
+     * RIGHT SIDE
+     * =========================================================
+     */
 
     Row {
         id: rightSide
@@ -165,33 +255,39 @@ Rectangle {
         anchors {
             right: parent.right
             rightMargin: 10
-            verticalCenter: parent.verticalCenter
+            top: parent.top
         }
+
+        height: root.barHeight
 
         spacing: 3
 
-
-        // =====================================================
-        // WIFI
-        // =====================================================
+        /*
+         * =====================================================
+         * WIFI BUTTON
+         * =====================================================
+         */
 
         Rectangle {
+            id: wifiButton
+
             width: 92
             height: 34
 
+            anchors.verticalCenter: parent.verticalCenter
+
             radius: 10
 
-            color: wifiMouse.containsMouse ||
-                   (root.appState && root.appState.wifiOpen)
-                   ? Theme.surfaceVariant
-                   : "transparent"
-
+            color:
+                wifiMouse.containsMouse ||
+                (root.appState && root.appState.wifiOpen)
+                ? Theme.surfaceVariant
+                : "transparent"
 
             Row {
                 anchors.centerIn: parent
 
                 spacing: 7
-
 
                 Text {
                     anchors.verticalCenter: parent.verticalCenter
@@ -203,7 +299,6 @@ Rectangle {
                     font.pixelSize: 17
                 }
 
-
                 Text {
                     anchors.verticalCenter: parent.verticalCenter
 
@@ -214,7 +309,6 @@ Rectangle {
                     font.pixelSize: 12
                 }
             }
-
 
             MouseArea {
                 id: wifiMouse
@@ -231,7 +325,6 @@ Rectangle {
                 }
             }
 
-
             Behavior on color {
                 ColorAnimation {
                     duration: 120
@@ -239,28 +332,32 @@ Rectangle {
             }
         }
 
-
-        // =====================================================
-        // AUDIO
-        // =====================================================
+        /*
+         * =====================================================
+         * AUDIO BUTTON
+         * =====================================================
+         */
 
         Rectangle {
+            id: audioButton
+
             width: 82
             height: 34
 
+            anchors.verticalCenter: parent.verticalCenter
+
             radius: 10
 
-            color: audioMouse.containsMouse ||
-                   (root.appState && root.appState.audioOpen)
-                   ? Theme.surfaceVariant
-                   : "transparent"
-
+            color:
+                audioMouse.containsMouse ||
+                (root.appState && root.appState.audioOpen)
+                ? Theme.surfaceVariant
+                : "transparent"
 
             Row {
                 anchors.centerIn: parent
 
                 spacing: 7
-
 
                 Text {
                     anchors.verticalCenter: parent.verticalCenter
@@ -272,7 +369,6 @@ Rectangle {
                     font.pixelSize: 17
                 }
 
-
                 Text {
                     anchors.verticalCenter: parent.verticalCenter
 
@@ -283,7 +379,6 @@ Rectangle {
                     font.pixelSize: 12
                 }
             }
-
 
             MouseArea {
                 id: audioMouse
@@ -300,7 +395,6 @@ Rectangle {
                 }
             }
 
-
             Behavior on color {
                 ColorAnimation {
                     duration: 120
@@ -308,10 +402,9 @@ Rectangle {
             }
         }
 
-
-        // =====================================================
-        // SEPARATOR
-        // =====================================================
+        /*
+         * Divider
+         */
 
         Rectangle {
             width: 1
@@ -322,27 +415,29 @@ Rectangle {
             color: Theme.border
         }
 
-
-        // =====================================================
-        // CLOCK
-        // =====================================================
+        /*
+         * =====================================================
+         * CLOCK
+         * =====================================================
+         */
 
         Rectangle {
             width: 76
             height: 34
 
+            anchors.verticalCenter: parent.verticalCenter
+
             radius: 10
 
-            color: clockMouse.containsMouse
-                   ? Theme.surfaceVariant
-                   : "transparent"
-
+            color:
+                clockMouse.containsMouse
+                ? Theme.surfaceVariant
+                : "transparent"
 
             Column {
                 anchors.centerIn: parent
 
                 spacing: 0
-
 
                 Text {
                     id: timeText
@@ -360,7 +455,6 @@ Rectangle {
                     font.bold: true
                 }
 
-
                 Text {
                     anchors.horizontalCenter: parent.horizontalCenter
 
@@ -374,7 +468,6 @@ Rectangle {
                     font.pixelSize: 9
                 }
             }
-
 
             MouseArea {
                 id: clockMouse
@@ -391,26 +484,118 @@ Rectangle {
                 }
             }
 
-
             Timer {
                 interval: 1000
 
                 running: true
+
                 repeat: true
 
                 onTriggered: {
-                    timeText.text = Qt.formatDateTime(
-                        new Date(),
-                        "HH:mm"
-                    )
+                    timeText.text =
+                        Qt.formatDateTime(
+                            new Date(),
+                            "HH:mm"
+                        )
                 }
             }
-
 
             Behavior on color {
                 ColorAnimation {
                     duration: 120
                 }
+            }
+        }
+    }
+
+    /*
+     * =========================================================
+     * WIFI PANEL
+     * =========================================================
+     */
+
+    Rectangle {
+        id: wifiPanel
+
+        anchors {
+            top: wifiButton.bottom
+            right: wifiButton.right
+        }
+
+        width: 320
+
+        height:
+            root.appState &&
+            root.appState.wifiOpen
+            ? 360
+            : 0
+
+        color: Theme.surface
+
+        border.width: 1
+        border.color: Theme.border
+
+        radius: 22
+
+        clip: true
+
+        WifiPopup {
+            anchors.fill: parent
+
+            appState: root.appState
+        }
+
+        Behavior on height {
+            NumberAnimation {
+                duration: 180
+
+                easing.type: Easing.OutCubic
+            }
+        }
+    }
+
+    /*
+     * =========================================================
+     * AUDIO PANEL
+     * =========================================================
+     */
+
+    Rectangle {
+        id: audioPanel
+
+        anchors {
+            top: audioButton.bottom
+            right: audioButton.right
+        }
+
+        width: 320
+
+        height:
+            root.appState &&
+            root.appState.audioOpen
+            ? 360
+            : 0
+
+        color: Theme.surface
+
+        border.width: 1
+        border.color: Theme.border
+
+        radius: 22
+
+        clip: true
+
+        AudioPopup {
+            anchors.fill: parent
+
+            appState: root.appState
+        }
+
+        Behavior on height {
+            NumberAnimation {
+                duration: 180
+
+                easing.type: Easing.OutCubic
             }
         }
     }

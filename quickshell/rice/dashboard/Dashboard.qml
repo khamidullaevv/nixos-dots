@@ -1,62 +1,43 @@
 import QtQuick
-import Quickshell
-import "../config"
 
-PanelWindow {
+import "../config"
+import "./components"
+import "./pages"
+
+Item {
     id: root
 
-    required property var targetScreen
     property var appState
-
-    screen: targetScreen
-
-    color: "transparent"
-
-    anchors {
-        top: true
-        bottom: true
-        left: true
-        right: true
-    }
-
-    visible: appState ? appState.dashboardOpen : false
 
     property int currentPage: 0
 
-    Rectangle {
-        id: card
-
-        width: 760
-        height: 560
-
-        anchors.centerIn: parent
-
-        radius: 28
-
-        color: Theme.background
-
-        border.width: 1
-        border.color: Theme.border
-
-        scale: root.visible ? 1 : 0.94
-        opacity: root.visible ? 1 : 0
-
-        Behavior on scale {
-            NumberAnimation {
-                duration: 220
-                easing.type: Easing.OutCubic
-            }
-        }
-
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 180
-                easing.type: Easing.OutCubic
-            }
-        }
+    anchors.fill: parent
 
 
-        // Header
+    // =========================================================
+    // DASHBOARD CONTENT
+    // =========================================================
+
+Rectangle {
+    id: card
+
+    anchors.fill: parent
+
+    color: Theme.surface
+
+    topLeftRadius: 0
+    topRightRadius: 0
+    bottomLeftRadius: 24
+    bottomRightRadius: 24
+
+    border.width: 0
+
+    clip: true
+
+
+        // =====================================================
+        // HEADER
+        // =====================================================
 
         DashboardHeader {
             id: header
@@ -71,20 +52,24 @@ PanelWindow {
         }
 
 
-        // Pages
+        // =====================================================
+        // PAGE
+        // =====================================================
 
         Loader {
             id: pageLoader
 
             anchors {
                 top: header.bottom
+
                 left: parent.left
                 right: parent.right
+
                 bottom: navigation.top
 
                 topMargin: 10
-                leftMargin: 20
-                rightMargin: 20
+                leftMargin: 16
+                rightMargin: 16
                 bottomMargin: 10
             }
 
@@ -100,14 +85,19 @@ PanelWindow {
         }
 
 
-        // Navigation
+        // =====================================================
+        // NAVIGATION
+        // =====================================================
 
         DashboardNavigation {
             id: navigation
 
             anchors {
                 bottom: parent.bottom
+
                 horizontalCenter: parent.horizontalCenter
+
+                bottomMargin: 18
             }
 
             currentPage: root.currentPage
@@ -120,7 +110,7 @@ PanelWindow {
 
 
     // =========================================================
-    // PAGE COMPONENTS
+    // PAGES
     // =========================================================
 
     Component {

@@ -1,72 +1,47 @@
 import QtQuick
-import Quickshell
-import Quickshell.Networking
-import "../config"
-import "../components"
 
-PanelWindow {
+import "../config"
+
+Item {
     id: root
 
-    required property var targetScreen
     property var appState
-    property bool opened: appState ? appState.wifiOpen : false
 
-    screen: targetScreen
+    anchors.fill: parent
 
-    anchors {
-        top: true
-        right: true
-    }
-
-    margins {
-        top: 64
-        right: 16
-    }
-
-    implicitWidth: 360
-    implicitHeight: 480
-
-    color: "transparent"
-
-    // Ищем Wi-Fi адаптер
-    property var wifiDevice: {
-        for (var i = 0; i < Networking.devices.values.length; ++i) {
-            var device = Networking.devices.values[i]
-
-            if (device.mode !== undefined) {
-                return device
-            }
-        }
-
-        return null
-    }
-
-    // Включаем сканирование
-    Component.onCompleted: {
-        if (wifiDevice) {
-            wifiDevice.scannerEnabled = true
-        }
-    }
-
-    PopupSurface {
+    Rectangle {
         anchors.fill: parent
-        opened: root.opened
+
+        color: "transparent"
 
         Column {
-            anchors.fill: parent
-            anchors.margins: Theme.spacingLarge
-            spacing: Theme.spacingMedium
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
 
-            // Заголовок
+                topMargin: 20
+                leftMargin: 20
+                rightMargin: 20
+            }
+
+            spacing: 16
+
+            /*
+             * Header
+             */
+
             Row {
                 width: parent.width
+
                 spacing: 10
 
                 Text {
                     text: "󰖩"
+
                     color: Theme.accent
-                    font.pixelSize: 24
-                    anchors.verticalCenter: parent.verticalCenter
+
+                    font.pixelSize: 22
                 }
 
                 Column {
@@ -74,175 +49,166 @@ PanelWindow {
 
                     Text {
                         text: "Wi-Fi"
+
                         color: Theme.text
-                        font.pixelSize: 21
+
+                        font.pixelSize: 18
                         font.bold: true
                     }
 
                     Text {
-                        text: root.wifiDevice
-                              ? (root.wifiDevice.scannerEnabled
-                                 ? "Scanning networks..."
-                                 : "Scanner disabled")
-                              : "No Wi-Fi adapter"
+                        text: "Network connection"
+
                         color: Theme.textSecondary
-                        font.pixelSize: 12
+
+                        font.pixelSize: 11
                     }
                 }
             }
 
-            // Кнопка обновления
+            /*
+             * Current connection
+             */
+
             Rectangle {
                 width: parent.width
-                height: 42
-                radius: Theme.radiusMedium
-                color: refreshMouse.containsMouse
-                       ? Theme.surfaceVariant
-                       : Theme.surfaceVariant
+                height: 62
+
+                radius: 14
+
+                color: Theme.surfaceVariant
 
                 Row {
-                    anchors.centerIn: parent
-                    spacing: 8
-
-                    Text {
-                        text: "󰑐"
-                        color: Theme.accent
-                        font.pixelSize: 17
-                    }
-
-                    Text {
-                        text: "Scan for networks"
-                        color: Theme.text
-                        font.pixelSize: 13
-                    }
-                }
-
-                MouseArea {
-                    id: refreshMouse
-
                     anchors.fill: parent
-                    hoverEnabled: true
-                    cursorShape: Qt.PointingHandCursor
 
-                    onClicked: {
-                        if (root.wifiDevice) {
-                            root.wifiDevice.scannerEnabled = false
-                            root.wifiDevice.scannerEnabled = true
+                    anchors.leftMargin: 16
+                    anchors.rightMargin: 16
+
+                    spacing: 12
+
+                    Text {
+                        anchors.verticalCenter: parent.verticalCenter
+
+                        text: "󰤨"
+
+                        color: Theme.success
+
+                        font.pixelSize: 22
+                    }
+
+                    Column {
+                        anchors.verticalCenter: parent.verticalCenter
+
+                        spacing: 2
+
+                        Text {
+                            text: "Connected"
+
+                            color: Theme.text
+
+                            font.pixelSize: 13
+                            font.bold: true
                         }
+
+                        Text {
+                            text: "Online"
+
+                            color: Theme.success
+
+                            font.pixelSize: 11
+                        }
+                    }
+
+                    Item {
+                        width: 1
+                        height: 1
                     }
                 }
             }
 
             Text {
-                text: "Available networks"
+                text: "Networks"
+
                 color: Theme.textSecondary
-                font.pixelSize: 13
-                font.bold: true
+
+                font.pixelSize: 12
             }
 
-            // Список сетей
-            ListView {
-                id: networkList
+            /*
+             * Network
+             */
 
+            Rectangle {
                 width: parent.width
-                height: parent.height - 160
+                height: 52
 
-                clip: true
-                spacing: 6
+                radius: 13
 
-                model: root.wifiDevice
-                       ? root.wifiDevice.networks
-                       : null
+                color: Theme.surfaceVariant
 
-                delegate: Rectangle {
-                    required property var modelData
+                Row {
+                    anchors.fill: parent
 
-                    width: networkList.width
-                    height: 58
+                    anchors.leftMargin: 14
+                    anchors.rightMargin: 14
 
-                    radius: Theme.radiusMedium
+                    spacing: 12
 
-                    color: modelData.connected
-                           ? Theme.accentVariant
-                           : networkMouse.containsMouse
-                             ? Theme.surfaceVariant
-                             : Theme.surfaceVariant
+                    Text {
+                        anchors.verticalCenter: parent.verticalCenter
 
-                    Row {
-                        anchors.fill: parent
-                        anchors.margins: 12
-                        spacing: 12
+                        text: "󰤨"
 
-                        Text {
-                            text: modelData.connected
-                                  ? "󰤨"
-                                  : "󰤯"
+                        color: Theme.accent
 
-                            color: modelData.connected
-                                   ? Theme.accent
-                                   : Theme.textSecondary
-
-                            font.pixelSize: 22
-
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-
-                        Column {
-                            anchors.verticalCenter: parent.verticalCenter
-
-                            width: parent.width - 50
-                            spacing: 3
-
-                            Text {
-                                text: modelData.name || "Hidden network"
-
-                                color: Theme.text
-                                font.pixelSize: 13
-                                font.bold: modelData.connected
-
-                                width: parent.width
-                                elide: Text.ElideRight
-                            }
-
-                            Text {
-                                text: modelData.connected
-                                      ? "Connected"
-                                      : modelData.known
-                                        ? "Saved network"
-                                        : "Available"
-
-                                color: Theme.textSecondary
-                                font.pixelSize: 11
-                            }
-                        }
+                        font.pixelSize: 20
                     }
 
-                    MouseArea {
-                        id: networkMouse
+                    Column {
+                        anchors.verticalCenter: parent.verticalCenter
 
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.PointingHandCursor
+                        spacing: 2
 
-                        onClicked: {
-                            if (!modelData.connected) {
-                                modelData.connect()
-                            }
+                        Text {
+                            text: "Current Network"
+
+                            color: Theme.text
+
+                            font.pixelSize: 12
+                            font.bold: true
+                        }
+
+                        Text {
+                            text: "Connected"
+
+                            color: Theme.textSecondary
+
+                            font.pixelSize: 10
                         }
                     }
                 }
+            }
+
+            /*
+             * Footer
+             */
+
+            Rectangle {
+                width: parent.width
+                height: 42
+
+                radius: 12
+
+                color: Theme.surfaceVariant
 
                 Text {
                     anchors.centerIn: parent
 
-                    visible: networkList.count === 0
-
-                    text: root.wifiDevice
-                          ? "No networks found"
-                          : "Wi-Fi adapter not found"
+                    text: "Network settings"
 
                     color: Theme.textSecondary
-                    font.pixelSize: 13
+
+                    font.pixelSize: 11
                 }
             }
         }

@@ -1,197 +1,206 @@
 import QtQuick
-import QtQuick.Controls
-import Quickshell
-import Quickshell.Services.Pipewire
-import "../config"
-import "../components"
 
-PanelWindow {
+import "../config"
+
+Item {
     id: root
 
-    required property var targetScreen
     property var appState
-    property bool opened: appState ? appState.audioOpen : false
 
-    screen: targetScreen
+    anchors.fill: parent
 
-    anchors {
-        top: true
-        right: true
-    }
+    Column {
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
 
-    margins {
-        top: 64
-        right: 16
-    }
+            topMargin: 20
+            leftMargin: 20
+            rightMargin: 20
+        }
 
-    implicitWidth: 360
-    implicitHeight: 300
+        spacing: 16
 
-    color: "transparent"
+        /*
+         * Header
+         */
 
-    // Привязываем текущий audio sink,
-    // чтобы volume и muted были доступны для изменения.
-    PwObjectTracker {
-        objects: [Pipewire.defaultAudioSink]
-    }
+        Row {
+            width: parent.width
 
-    property var sink: Pipewire.defaultAudioSink
+            spacing: 10
 
-    PopupSurface {
-        anchors.fill: parent
-        opened: root.opened
+            Text {
+                text: "󰕾"
 
-        Column {
-            anchors.fill: parent
-            anchors.margins: Theme.spacingLarge
-            spacing: 16
+                color: Theme.accent
 
-            // Header
-            Row {
-                width: parent.width
-                spacing: 10
+                font.pixelSize: 22
+            }
+
+            Column {
+                spacing: 2
 
                 Text {
-                    text: root.sink && root.sink.audio && root.sink.audio.muted
-                          ? "󰖁"
-                          : "󰕾"
+                    text: "Audio"
+
+                    color: Theme.text
+
+                    font.pixelSize: 18
+                    font.bold: true
+                }
+
+                Text {
+                    text: "Sound output"
+
+                    color: Theme.textSecondary
+
+                    font.pixelSize: 11
+                }
+            }
+        }
+
+        /*
+         * Output device
+         */
+
+        Rectangle {
+            width: parent.width
+            height: 62
+
+            radius: 14
+
+            color: Theme.surfaceVariant
+
+            Row {
+                anchors.fill: parent
+
+                anchors.leftMargin: 16
+                anchors.rightMargin: 16
+
+                spacing: 12
+
+                Text {
+                    anchors.verticalCenter: parent.verticalCenter
+
+                    text: "󰓃"
 
                     color: Theme.accent
-                    font.pixelSize: 25
 
-                    anchors.verticalCenter: parent.verticalCenter
+                    font.pixelSize: 22
                 }
 
                 Column {
+                    anchors.verticalCenter: parent.verticalCenter
+
                     spacing: 2
 
                     Text {
-                        text: "Audio"
+                        text: "Default Output"
+
                         color: Theme.text
-                        font.pixelSize: 21
+
+                        font.pixelSize: 13
                         font.bold: true
                     }
 
                     Text {
-                        text: root.sink
-                              ? (root.sink.description || root.sink.name)
-                              : "No audio device"
+                        text: "Speakers"
 
                         color: Theme.textSecondary
-                        font.pixelSize: 12
 
-                        width: 270
-                        elide: Text.ElideRight
+                        font.pixelSize: 11
                     }
                 }
             }
+        }
 
-            // Volume
+        /*
+         * Volume
+         */
+
+        Text {
+            text: "Volume"
+
+            color: Theme.textSecondary
+
+            font.pixelSize: 12
+        }
+
+        Rectangle {
+            width: parent.width
+            height: 10
+
+            radius: 5
+
+            color: Theme.surfaceVariant
+
+            Rectangle {
+                width: parent.width * 0.65
+
+                height: parent.height
+
+                radius: 5
+
+                color: Theme.accent
+            }
+        }
+
+        Text {
+            text: "65%"
+
+            color: Theme.text
+
+            font.pixelSize: 12
+        }
+
+        /*
+         * Output devices
+         */
+
+        Text {
+            text: "Output devices"
+
+            color: Theme.textSecondary
+
+            font.pixelSize: 12
+        }
+
+        Rectangle {
+            width: parent.width
+            height: 50
+
+            radius: 13
+
+            color: Theme.surfaceVariant
+
             Row {
-                width: parent.width
-                spacing: 10
+                anchors.fill: parent
+
+                anchors.leftMargin: 14
+
+                spacing: 12
 
                 Text {
-                    text: root.sink && root.sink.audio && root.sink.audio.muted
-                          ? "Muted"
-                          : Math.round(
-                                root.sink && root.sink.audio
-                                ? root.sink.audio.volume * 100
-                                : 0
-                            ) + "%"
+                    anchors.verticalCenter: parent.verticalCenter
+
+                    text: "󰓃"
+
+                    color: Theme.accent
+
+                    font.pixelSize: 19
+                }
+
+                Text {
+                    anchors.verticalCenter: parent.verticalCenter
+
+                    text: "Speakers"
 
                     color: Theme.text
-                    font.pixelSize: 14
-                    font.bold: true
 
-                    width: 45
-                    anchors.verticalCenter: parent.verticalCenter
+                    font.pixelSize: 12
                 }
-
-                Slider {
-                    id: volumeSlider
-
-                    width: parent.width - 55
-
-                    from: 0
-                    to: 1
-
-                    value: root.sink && root.sink.audio
-                           ? root.sink.audio.volume
-                           : 0
-
-                    onMoved: {
-                        if (root.sink && root.sink.audio) {
-                            root.sink.audio.volume = value
-                        }
-                    }
-                }
-            }
-
-            // Mute button
-            Rectangle {
-                width: parent.width
-                height: 48
-
-                radius: Theme.radiusMedium
-
-                color: muteMouse.containsMouse
-                       ? Theme.surfaceVariant
-                       : Theme.surfaceVariant
-
-                Row {
-                    anchors.centerIn: parent
-                    spacing: 10
-
-                    Text {
-                        text: root.sink &&
-                              root.sink.audio &&
-                              root.sink.audio.muted
-                              ? "󰖁"
-                              : "󰕾"
-
-                        color: Theme.accent
-                        font.pixelSize: 20
-                    }
-
-                    Text {
-                        text: root.sink &&
-                              root.sink.audio &&
-                              root.sink.audio.muted
-                              ? "Unmute"
-                              : "Mute"
-
-                        color: Theme.text
-                        font.pixelSize: 13
-                    }
-                }
-
-                MouseArea {
-                    id: muteMouse
-
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    cursorShape: Qt.PointingHandCursor
-
-                    onClicked: {
-                        if (root.sink && root.sink.audio) {
-                            root.sink.audio.muted =
-                                !root.sink.audio.muted
-                        }
-                    }
-                }
-            }
-
-            // Device status
-            Text {
-                width: parent.width
-
-                text: root.sink
-                      ? "Output device connected"
-                      : "No output device detected"
-
-                color: Theme.textSecondary
-                font.pixelSize: 12
             }
         }
     }
