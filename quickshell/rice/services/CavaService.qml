@@ -7,70 +7,70 @@ import Quickshell.Io
 Singleton {
     id: root
 
-    property var values: []
+    readonly property int barCount: 32
 
-    readonly property bool running:
-        cava.running
+    property var values: Array(barCount).fill(0)
+    property bool running: false
+
+    function parseFrame(line) {
+        var text = String(line).trim()
+
+        if (text.length === 0)
+            return
+
+        var parts = text.split(";")
+
+        if (parts.length < barCount)
+            return
+
+        var result = []
+
+        for (var i = 0; i < barCount; ++i) {
+            var value = Number(parts[i])
+
+            if (isNaN(value))
+                value = 0
+
+            result.push(Math.max(0, Math.min(100, value)))
+        }
+
+        values = result
+    }
 
     Process {
         id: cava
 
         command: [
-            "sh",
-            "-c",
-            "cava -p /dev/stdin"
+            "/run/current-system/sw/bin/cava",
+            "-p",
+            "/etc/nixos/quickshell/rice/services/sairex-cava.conf"
         ]
 
-        stdinEnabled: true
+        running: true
 
         stdout: SplitParser {
-            onRead: data => {
-                root.parse(data)
+            splitMarker: "\n"
+
+            onRead: function(data) {
+                root.parseFrame(data)
             }
         }
 
-        stderr: StdioCollector {}
+        stderr: SplitParser {
+            splitMarker: "\n"
 
-        onStarted: {
-            write(
-                "[general]\n" +
-                "bars = 32\n" +
-                "framerate = 30\n" +
-                "\n" +
-                "[output]\n" +
-                "method = raw\n" +
-                "data_format = ascii\n" +
-                "ascii_max_range = 100\n"
-            )
-        }
-    }
-
-    Component.onCompleted: {
-        cava.running = true
-    }
-
-    function parse(data) {
-        if (!data)
-            return
-
-        const values = []
-
-        for (const char of data.trim()) {
-            const value =
-                char.charCodeAt(0)
-
-            values.push(
-                Math.max(
-                    0,
-                    Math.min(
-                        1,
-                        value / 100
-                    )
-                )
-            )
+            onRead: function(data) {
+                console.log("[Sairex CAVA]", data)
+            }
         }
 
-        if (values.length > 0)
-            root.values = values
+        onRunningChanged: {
+            root.running = running
+
+            console.log(
+                "[Sairex CAVA] running:",
+                running
+            )
+        }
     }
 }

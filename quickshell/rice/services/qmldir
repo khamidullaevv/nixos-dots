@@ -1,4 +1,6 @@
+module sairex.services
+
+singleton CavaService 1.0 CavaService.qml
 singleton MprisService 1.0 MprisService.qml
 singleton LyricsService 1.0 LyricsService.qml
-singleton CavaService 1.0 CavaService.qml
 singleton SystemService 1.0 SystemService.qml
