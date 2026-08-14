@@ -211,7 +211,7 @@ Item {
         horizontalCenter: dashboardButton.horizontalCenter
     }
 
-    width: 560
+    width: 1060
 
     height:
         root.appState &&
