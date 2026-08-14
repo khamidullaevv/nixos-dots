@@ -8,36 +8,26 @@ Item {
     id: root
 
     property var appState
-
     property int currentPage: 0
 
     anchors.fill: parent
 
+    Rectangle {
+        id: card
 
-    // =========================================================
-    // DASHBOARD CONTENT
-    // =========================================================
+        anchors.fill: parent
 
-Rectangle {
-    id: card
+        color: Theme.surface
+        radius: Theme.radiusLarge
 
-    anchors.fill: parent
+        border.width: 1
+        border.color: Theme.border
 
-    color: Theme.surface
+        clip: true
 
-    topLeftRadius: 0
-    topRightRadius: 0
-    bottomLeftRadius: 24
-    bottomRightRadius: 24
-
-    border.width: 0
-
-    clip: true
-
-
-        // =====================================================
-        // HEADER
-        // =====================================================
+        // ─────────────────────────────────────────────
+        // Header
+        // ─────────────────────────────────────────────
 
         DashboardHeader {
             id: header
@@ -51,53 +41,50 @@ Rectangle {
             appState: root.appState
         }
 
-
-        // =====================================================
-        // PAGE
-        // =====================================================
+        // ─────────────────────────────────────────────
+        // Page
+        // ─────────────────────────────────────────────
 
         Loader {
             id: pageLoader
 
             anchors {
                 top: header.bottom
-
                 left: parent.left
                 right: parent.right
-
                 bottom: navigation.top
 
-                topMargin: 10
+                topMargin: 8
                 leftMargin: 16
                 rightMargin: 16
-                bottomMargin: 10
+                bottomMargin: 8
             }
 
             sourceComponent: {
-                if (root.currentPage === 0)
+                switch (root.currentPage) {
+                case 0:
                     return homePage
-
-                if (root.currentPage === 1)
+                case 1:
                     return visualizerPage
-
-                return systemPage
+                case 2:
+                    return systemPage
+                default:
+                    return homePage
+                }
             }
         }
 
-
-        // =====================================================
-        // NAVIGATION
-        // =====================================================
+        // ─────────────────────────────────────────────
+        // Navigation
+        // ─────────────────────────────────────────────
 
         DashboardNavigation {
             id: navigation
 
             anchors {
                 bottom: parent.bottom
-
                 horizontalCenter: parent.horizontalCenter
-
-                bottomMargin: 18
+                bottomMargin: 12
             }
 
             currentPage: root.currentPage
@@ -108,10 +95,9 @@ Rectangle {
         }
     }
 
-
-    // =========================================================
-    // PAGES
-    // =========================================================
+    // ─────────────────────────────────────────────────
+    // Pages
+    // ─────────────────────────────────────────────────
 
     Component {
         id: homePage
@@ -119,13 +105,11 @@ Rectangle {
         HomePage {}
     }
 
-
     Component {
         id: visualizerPage
 
         VisualizerPage {}
     }
-
 
     Component {
         id: systemPage

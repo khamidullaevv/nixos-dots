@@ -1,42 +1,104 @@
 import QtQuick
+
 import "../../config"
+import "../../services"
 
 Item {
+    id: root
+
     Rectangle {
         anchors.fill: parent
 
-        radius: 22
+        radius: 18
 
-        color: Theme.surface
+        color: Theme.background
 
+        border.width: 1
+        border.color: Theme.border
+    }
 
-        Column {
-            anchors.centerIn: parent
+    Column {
+        anchors.centerIn: parent
 
-            spacing: 12
+        width: parent.width - 60
 
+        spacing: 22
 
-            Text {
-                anchors.horizontalCenter: parent.horizontalCenter
+        Text {
+            anchors.horizontalCenter: parent.horizontalCenter
 
-                text: "VISUALIZER"
+            text: "AUDIO VISUALIZER"
 
-                color: Theme.accent
+            color: Theme.textSecondary
 
-                font.pixelSize: 20
-                font.bold: true
+            font.pixelSize: 10
+            font.bold: true
+        }
+
+        Row {
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            spacing: 4
+
+            Repeater {
+                model: CavaService.values.length
+
+                Rectangle {
+                    required property int index
+
+                    width: 7
+
+                    height:
+                        Math.max(
+                            5,
+                            CavaService.values[index] *
+                            120
+                        )
+
+                    radius: 4
+
+                    color:
+                        index % 5 === 0
+                        ? Theme.accent
+                        : Theme.surfaceVariant
+
+                    anchors.verticalCenter:
+                        parent.verticalCenter
+
+                    Behavior on height {
+                        NumberAnimation {
+                            duration: 70
+                            easing.type: Easing.OutCubic
+                        }
+                    }
+                }
             }
+        }
 
+        Text {
+            anchors.horizontalCenter: parent.horizontalCenter
 
-            Text {
-                anchors.horizontalCenter: parent.horizontalCenter
+            text:
+                MprisService.hasPlayer
+                ? MprisService.title
+                : "Нет активного трека"
 
-                text: "Coming soon"
+            color: Theme.text
 
-                color: Theme.textSecondary
+            font.pixelSize: 15
+            font.bold: true
 
-                font.pixelSize: 13
-            }
+            elide: Text.ElideRight
+        }
+
+        Text {
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            text: MprisService.artist
+
+            color: Theme.textSecondary
+
+            font.pixelSize: 11
         }
     }
 }

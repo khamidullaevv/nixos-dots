@@ -204,45 +204,42 @@ Item {
      */
 
     Rectangle {
-        id: dashboardPanel
+    id: dashboardPanel
 
-        anchors {
-            top: dashboardButton.bottom
-            horizontalCenter: dashboardButton.horizontalCenter
-        }
-
-        width: 560
-
-        height:
-            root.appState &&
-            root.appState.dashboardOpen
-            ? root.dashboardHeight
-            : 0
-
-        color: Theme.surface
-
-        border.width: 1
-        border.color: Theme.border
-
-        radius: 24
-
-        clip: true
-
-        Dashboard {
-            anchors.fill: parent
-
-            appState: root.appState
-        }
-
-        Behavior on height {
-            NumberAnimation {
-                duration: 180
-
-                easing.type: Easing.OutCubic
-            }
-        }
+    anchors {
+        top: dashboardButton.bottom
+        horizontalCenter: dashboardButton.horizontalCenter
     }
 
+    width: 560
+
+    height:
+        root.appState &&
+        root.appState.dashboardOpen
+        ? root.dashboardHeight
+        : 0
+
+    color: Theme.surface
+
+    border.width: 1
+    border.color: Theme.border
+
+    radius: 24
+
+    clip: true
+
+    Dashboard {
+        anchors.fill: parent
+        appState: root.appState
+    }
+
+    Behavior on height {
+        NumberAnimation {
+            duration: 180
+            easing.type: Easing.OutCubic
+        }
+    }
+}
     /*
      * =========================================================
      * RIGHT SIDE

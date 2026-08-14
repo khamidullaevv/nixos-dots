@@ -1,4 +1,6 @@
 import QtQuick
+import QtQuick.Layouts
+
 import "../../config"
 
 Item {
@@ -6,66 +8,131 @@ Item {
 
     property var appState
 
-    height: 72
+    implicitHeight: 82
 
+    property string currentTime:
+        Qt.formatDateTime(new Date(), "HH:mm")
 
-    Text {
-        anchors {
-            left: parent.left
-            leftMargin: 24
-            verticalCenter: parent.verticalCenter
-        }
+    property string currentDate:
+        Qt.formatDateTime(new Date(), "dddd, d MMMM")
 
-        text: "Dashboard"
+    readonly property string greeting: {
+        const hour = new Date().getHours()
 
-        color: Theme.text
+        if (hour < 5)
+            return "Доброй ночи"
 
-        font.pixelSize: 19
-        font.bold: true
+        if (hour < 12)
+            return "Доброе утро"
+
+        if (hour < 18)
+            return "Добрый день"
+
+        return "Добрый вечер"
     }
 
+    Timer {
+        interval: 1000
+        running: true
+        repeat: true
 
-    Rectangle {
-        width: 36
-        height: 36
+        onTriggered: {
+            root.currentTime =
+                Qt.formatDateTime(new Date(), "HH:mm")
 
-        anchors {
-            right: parent.right
-            rightMargin: 20
-            verticalCenter: parent.verticalCenter
+            root.currentDate =
+                Qt.formatDateTime(new Date(), "dddd, d MMMM")
         }
+    }
 
-        radius: 11
+    RowLayout {
+        anchors.fill: parent
 
-        color: closeMouse.containsMouse
-               ? Theme.surfaceVariant
-               : "transparent"
+        anchors.leftMargin: 20
+        anchors.rightMargin: 20
 
+        spacing: 14
 
-        Text {
-            anchors.centerIn: parent
+        // ─────────────────────────────────────────────
+        // Avatar
+        // ─────────────────────────────────────────────
 
-            text: "×"
+        Rectangle {
+            Layout.preferredWidth: 48
+            Layout.preferredHeight: 48
 
-            color: Theme.textSecondary
+            radius: 15
 
-            font.pixelSize: 22
-        }
+            color: Theme.surfaceVariant
 
+            border.width: 1
+            border.color: Theme.accent
 
-        MouseArea {
-            id: closeMouse
+            Text {
+                anchors.centerIn: parent
 
-            anchors.fill: parent
+                text: "S"
 
-            hoverEnabled: true
+                color: Theme.accent
 
-            cursorShape: Qt.PointingHandCursor
-
-            onClicked: {
-                if (root.appState)
-                    root.appState.dashboardOpen = false
+                font.pixelSize: 17
+                font.bold: true
             }
         }
+
+        // ─────────────────────────────────────────────
+        // Greeting
+        // ─────────────────────────────────────────────
+
+        ColumnLayout {
+            Layout.fillWidth: true
+
+            spacing: 1
+
+            Text {
+                text: root.greeting
+
+                color: Theme.text
+
+                font.pixelSize: 16
+                font.bold: true
+            }
+
+            Text {
+                text: root.currentDate
+
+                color: Theme.textSecondary
+
+                font.pixelSize: 11
+            }
+        }
+
+        // ─────────────────────────────────────────────
+        // Time
+        // ─────────────────────────────────────────────
+
+        Text {
+            text: root.currentTime
+
+            color: Theme.text
+
+            font.pixelSize: 18
+            font.bold: true
+        }
+    }
+
+    Rectangle {
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+
+            leftMargin: 20
+            rightMargin: 20
+        }
+
+        height: 1
+
+        color: Theme.border
     }
 }

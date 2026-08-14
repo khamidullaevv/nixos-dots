@@ -1,4 +1,5 @@
 import QtQuick
+
 import "../../config"
 
 Item {
@@ -8,24 +9,24 @@ Item {
 
     signal pageChanged(int page)
 
-    width: 150
-    height: 44
-
+    width: 156
+    height: 34
 
     Rectangle {
         anchors.fill: parent
 
-        radius: 22
+        radius: 17
 
         color: Theme.surfaceVariant
-    }
 
+        border.width: 1
+        border.color: Theme.border
+    }
 
     Row {
         anchors.centerIn: parent
 
         spacing: 8
-
 
         Repeater {
             model: 3
@@ -33,27 +34,28 @@ Item {
             Rectangle {
                 required property int index
 
-                width: root.currentPage === index
-                       ? 30
-                       : 8
+                width: root.currentPage === index ? 28 : 7
+                height: 7
 
-                height: 8
+                radius: 7
 
-                radius: 8
-
-                color: root.currentPage === index
-                       ? Theme.accent
-                       : Theme.border
-
+                color:
+                    root.currentPage === index
+                    ? Theme.accent
+                    : Theme.border
 
                 Behavior on width {
                     NumberAnimation {
                         duration: 180
-
                         easing.type: Easing.OutCubic
                     }
                 }
 
+                Behavior on color {
+                    ColorAnimation {
+                        duration: 140
+                    }
+                }
 
                 MouseArea {
                     anchors.fill: parent
