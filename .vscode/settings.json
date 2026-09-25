@@ -1,0 +1,4 @@
+{
+    "nixEnvSelector.nixFile": "${workspaceFolder}/configuration.nix",
+    "nixEnvSelector.useFlakes": false
+}
