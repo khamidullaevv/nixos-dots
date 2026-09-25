@@ -1,0 +1,74 @@
+configuration {
+  modi: "drun,run,window";
+  show-icons: true;
+  icon-theme: "Papirus-Dark";
+  font: "JetBrainsMono Nerd Font 12";
+  display-drun: "";
+  display-run: "";
+  display-window: "";
+  drun-display-format: "{name}";
+}
+
+* {
+  bg: #11111bf2;
+  bg-alt: #1e1e2e;
+  fg: #cdd6f4;
+  fg-alt: #7f849c;
+  accent: #cba6f7;
+  accent2: #89b4fa;
+  background-color: transparent;
+  text-color: @fg;
+}
+
+window {
+  width: 600px;
+  background-color: @bg;
+  border: 2px;
+  border-color: @accent;
+  border-radius: 14px;
+}
+
+mainbox {
+  padding: 18px;
+  spacing: 14px;
+  children: [ inputbar, listview ];
+}
+
+inputbar {
+  background-color: @bg-alt;
+  border-radius: 10px;
+  padding: 11px 16px;
+  spacing: 10px;
+  children: [ prompt, entry ];
+}
+prompt {
+  text-color: @accent;
+  font: "JetBrainsMono Nerd Font Bold 12";
+}
+entry {
+  placeholder: "Поиск...";
+  placeholder-color: @fg-alt;
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+  spacing: 4px;
+  scrollbar: false;
+  fixed-height: false;
+}
+
+element {
+  padding: 9px 12px;
+  border-radius: 8px;
+  spacing: 10px;
+}
+element-icon { size: 26px; }
+element-text { vertical-align: 0.5; }
+
+element normal.normal { text-color: @fg; }
+element selected.normal {
+  background-color: @accent;
+  text-color: @bg-alt;
+}
+element alternate.normal { text-color: @fg; }
