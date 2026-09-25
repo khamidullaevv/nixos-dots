@@ -1,0 +1,48 @@
+2026-09-25 22:08:38.786 [info] To enable debug logging, run "GitLens: Enable Debug Logging" or "Developer: Set Log Level..." from the Command Palette
+2026-09-25 22:08:38.786 [info]    [            1] GitLens v19.2.0  activating in VSCodium (1.116.0) on the desktop; mode=production,language='en', logLevel='info', defaultDateLocale='null' (vscodium|someValue.machineId|someValue.sessionId)
+2026-09-25 22:08:38.786 [info]    GitLens first-time install; window.focused=false
+2026-09-25 22:08:38.786 [info]    [            1] GitLens v19.2.0 activated [92ms]
+2026-09-25 22:08:38.786 [info]    [IPC          ] CLI capability published on http://127.0.0.1:42345
+2026-09-25 22:08:38.795 [info]    [   84 →    85] GlCliGitProvider.findGit Git (2.54.0) found in /run/current-system/sw/bin/git [78ms]
+2026-09-25 22:08:38.797 [info]    [   84 →    ba] GlCliGitProvider.repositorySearch(/home/yusufbek/.config/waybar) searching (depth=1)...
+2026-09-25 22:08:38.801 [error]   [GIT          ] [/home/yusufbek/.config/waybar] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree · not a git repository (or any of the parent directories): .git [4ms]
+2026-09-25 22:08:38.840 [info]    WebviewsController.resolveWebviewView(gitlens.views.graph|7c292581-4a28-4720-a44c-06bc30ccb48e): hasRestoreState=false, parentVisible=true
+2026-09-25 22:08:38.879 [error]   [CLI   b5 → cf] undefined ai hook list-sessions --status active,ended --json CLI is not installed [0ms]
+2026-09-25 22:08:38.881 [info]    WebviewsController.resolveWebviewView(gitlens.views.welcome|bac61316-a77d-43ac-80e7-659a1f13e4b0): hasRestoreState=false, parentVisible=true
+2026-09-25 22:08:38.891 [error]   [GIT          ] [/home/yusufbek/.config/waybar] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree · not a git repository (or any of the parent directories): .git [15ms]
+2026-09-25 22:08:38.896 [info]    WebviewController(gitlens.views.welcome|bac61316-a77d-43ac-80e7-659a1f13e4b0): webview.html set (reason=show:loading, length=2364)
+2026-09-25 22:08:39.107 [info]    WebviewController(gitlens.views.welcome|bac61316-a77d-43ac-80e7-659a1f13e4b0): webview.connect #1 (clientId=wv-ws400jvx, clientLoadedAt=1790356119064, sinceLastHtmlSet=210ms, wasAlreadyReady=false, parentVisible=true)
+2026-09-25 22:08:39.712 [info]    WebviewController(gitlens.views.graph|7c292581-4a28-4720-a44c-06bc30ccb48e): webview.html set (reason=show:loading, length=3439)
+2026-09-25 22:08:39.763 [info]    WebviewController(gitlens.welcome|89a34aa3-5667-4d81-a055-b0139925e243): webview.html set (reason=show:loading, length=2354)
+2026-09-25 22:08:39.771 [info]    WebviewController(gitlens.welcome|89a34aa3-5667-4d81-a055-b0139925e243): webview.html set (reason=refresh:apply, length=2354)
+2026-09-25 22:08:40.002 [info]    WebviewController(gitlens.welcome|89a34aa3-5667-4d81-a055-b0139925e243): webview.connect #1 (clientId=wv-k8w3n18c, clientLoadedAt=1790356119952, sinceLastHtmlSet=231ms, wasAlreadyReady=false, parentVisible=true)
+2026-09-25 22:08:40.055 [info]    WebviewController(gitlens.views.graph|7c292581-4a28-4720-a44c-06bc30ccb48e): webview.connect #1 (clientId=wv-8b8e4p5z, clientLoadedAt=1790356119939, sinceLastHtmlSet=343ms, wasAlreadyReady=false, parentVisible=true)
+2026-09-25 22:08:40.071 [error]   [CLI       138] undefined agents list --json CLI is not installed [0ms]
+2026-09-25 22:08:40.071 [error] Error: CLI is not installed   Failed to get agent list from CLI
+2026-09-25 22:08:41.741 [info]    [  139 →   13b] CliBinaryInstaller.install Starting CLI installation (attempt 1/5)
+2026-09-25 22:08:49.248 [info]    [  139 →   13b] CliBinaryInstaller.install CLI installed (version: 3.1.75, path: /home/yusufbek/.config/VSCodium/User/globalStorage/eamodio.gitlens)
+2026-09-25 22:08:49.253 [warning] [  139 →   13b] CliBinaryInstaller.install Failed to delete CLI proxy archive — EntryNotFound (FileSystemError): Unable to delete nonexistent file 'vscode-userdata:/home/yusufbek/.config/VSCodium/User/globalStorage/eamodio.gitlens/gk_3.1.75_linux_amd64.zip'
+2026-09-25 22:08:49.254 [warning] [  139 →   13b] CliBinaryInstaller.install(e=true, t=gk-cli-integration, i=false) returned {"cliVersion":"3.1.75","cliPath":"/home/yusufbek/.config/VSCodium/User/globalStorage/eamodio.gitlens","status":"completed","changed":true} [*7519ms] (slow)
+2026-09-25 22:08:49.255 [warning] [   9a →   139] CliBinaryInstaller.ensureUpdateOrInstall completed [*7521ms] (slow)
+2026-09-25 22:09:23.068 [warning] [   9a →   161] IpcServer.onRequest IPC handler for /ping unauthorized
+2026-09-25 22:09:23.072 [warning] [   9a →   162] IpcServer.onRequest IPC handler for /ping unauthorized
+2026-09-25 22:11:24.880 [info] To enable debug logging, run "GitLens: Enable Debug Logging" or "Developer: Set Log Level..." from the Command Palette
+2026-09-25 22:11:24.880 [info]    [            1] GitLens v19.2.0  activating in VSCodium (1.116.0) on the desktop; mode=production,language='en', logLevel='info', defaultDateLocale='null' (vscodium|someValue.machineId|someValue.sessionId)
+2026-09-25 22:11:24.880 [info]    [            1] GitLens v19.2.0 activated [105ms]
+2026-09-25 22:11:24.880 [info]    [IPC          ] CLI capability published on http://127.0.0.1:41461
+2026-09-25 22:11:24.889 [info]    [   79 →    7a] GlCliGitProvider.findGit Git (2.54.0) found in /run/current-system/sw/bin/git [80ms]
+2026-09-25 22:11:24.891 [info]    [   79 →    a3] GlCliGitProvider.repositorySearch(/etc/nixos) searching (depth=1)...
+2026-09-25 22:11:26.686 [info]    [   cd →    cf] GlCliGitProvider.repositorySearch(/etc/nixos) searching (depth=1)...
+2026-09-25 22:11:26.693 [error]   [GIT          ] [/etc/nixos] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree · not a git repository (or any of the parent directories): .git [6ms]
+2026-09-25 22:11:27.855 [info]    [CLI          ] CLI core version is 3.1.75
+2026-09-25 22:11:28.923 [error]   [GIT          ] [/etc/nixos] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree · not a git repository (or any of the parent directories): .git [5ms]
+2026-09-25 22:11:35.350 [error]   [GIT          ] [/etc/nixos] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree · not a git repository (or any of the parent directories): .git [5ms]
+2026-09-25 22:15:31.615 [info] To enable debug logging, run "GitLens: Enable Debug Logging" or "Developer: Set Log Level..." from the Command Palette
+2026-09-25 22:15:31.615 [info]    [            1] GitLens v19.2.0  activating in VSCodium (1.116.0) on the desktop; mode=production,language='en', logLevel='info', defaultDateLocale='null' (vscodium|someValue.machineId|someValue.sessionId)
+2026-09-25 22:15:31.615 [info]    [            1] GitLens v19.2.0 activated [79ms]
+2026-09-25 22:15:31.615 [info]    [IPC          ] CLI capability published on http://127.0.0.1:38157
+2026-09-25 22:15:31.681 [info]    [   78 →    79] GlCliGitProvider.findGit Git (2.54.0) found in /run/current-system/sw/bin/git [167ms]
+2026-09-25 22:15:31.683 [info]    [   78 →    ac] GlCliGitProvider.repositorySearch(/home/yusufbek/.config) searching (depth=1)...
+2026-09-25 22:15:31.692 [error]   [GIT          ] [/home/yusufbek/.config] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree · not a git repository (or any of the parent directories): .git [9ms]
+2026-09-25 22:15:32.225 [error]   [GIT          ] [/home/yusufbek/.config/btop] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree · not a git repository (or any of the parent directories): .git [5ms]
+2026-09-25 22:15:34.555 [info]    [CLI          ] CLI core version is 3.1.75

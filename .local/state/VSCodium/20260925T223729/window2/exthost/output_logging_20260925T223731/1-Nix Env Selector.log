@@ -1,0 +1,34 @@
+[2026-09-25T17:37:32.075Z] [INFO] Log level: info
+[2026-09-25T17:37:32.076Z] [INFO] Initializing config...
+[2026-09-25T17:37:32.077Z] [INFO] Loaded config: {:workspace-root "/home/yusufbek/Documents/nixos-dots", :nix-packages #js [], :log-level "info", :nix-file "/home/yusufbek/Documents/nixos-dots/configuration.nix", :nix-args nil, :flake-shell nil, :nix-shell-path nil, :use-flakes? false, :suggest-nix? true, :patch-terminals? true}
+[2026-09-25T17:37:32.077Z] [INFO] Running (sync, nix-shell): nix-shell "/home/yusufbek/Documents/nixos-dots/configuration.nix" --run export
+[2026-09-25T17:37:32.136Z] [ERROR] Failed to apply environment on startup
+[2026-09-25T17:37:32.137Z] [ERROR]   Error: Command failed: nix-shell "/home/yusufbek/Documents/nixos-dots/configuration.nix" --run export
+[2026-09-25T17:37:32.137Z] [ERROR]   error:
+[2026-09-25T17:37:32.137Z] [ERROR]          … from call site
+[2026-09-25T17:37:32.137Z] [ERROR]            at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+[2026-09-25T17:37:32.137Z] [ERROR]               1| # /etc/nixos/configuration.nix
+[2026-09-25T17:37:32.137Z] [ERROR]               2| { config, pkgs, ... }:
+[2026-09-25T17:37:32.137Z] [ERROR]                | ^
+[2026-09-25T17:37:32.137Z] [ERROR]               3|
+[2026-09-25T17:37:32.138Z] [ERROR]   
+[2026-09-25T17:37:32.138Z] [ERROR]          error: function 'anonymous lambda' called without required argument 'config'
+[2026-09-25T17:37:32.138Z] [ERROR]          at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+[2026-09-25T17:37:32.138Z] [ERROR]               1| # /etc/nixos/configuration.nix
+[2026-09-25T17:37:32.138Z] [ERROR]               2| { config, pkgs, ... }:
+[2026-09-25T17:37:32.138Z] [ERROR]                | ^
+[2026-09-25T17:37:32.138Z] [ERROR]               3|
+[2026-09-25T17:37:32.138Z] [ERROR]   
+[2026-09-25T17:37:32.138Z] [ERROR]   	at genericNodeError (node:internal/errors:983:15)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at wrappedFn (node:internal/errors:537:14)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at checkExecSyncError (node:child_process:930:11)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at Object.execSync (node:child_process:1002:15)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at Object.<anonymous> (node:electron/js2c/node_init:2:17346)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at ext.nix_env.get_nix_env_sync (/home/yusufbek/.vscode-oss/extensions/arrterian.nix-env-selector-1.3.2-universal/dist/index.js:27686:33)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at activate (/home/yusufbek/.vscode-oss/extensions/arrterian.nix-env-selector-1.3.2-universal/dist/index.js:28188:26)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at YS._callActivateOptional (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:18852)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at YS._callActivate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:18559)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:16471
+[2026-09-25T17:37:32.138Z] [ERROR]   	at async hS._activate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:16285)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at async hS._waitForDepsThenActivate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:16227)
+[2026-09-25T17:37:32.138Z] [ERROR]   	at async hS._initialize (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:15590)

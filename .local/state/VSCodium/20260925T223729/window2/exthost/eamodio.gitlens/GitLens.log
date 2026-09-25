@@ -1,0 +1,34 @@
+2026-09-25 22:37:32.340 [info] To enable debug logging, run "GitLens: Enable Debug Logging" or "Developer: Set Log Level..." from the Command Palette
+2026-09-25 22:37:32.340 [info]    [            1] GitLens v19.2.0  activating in VSCodium (1.116.0) on the desktop; mode=production,language='en', logLevel='info', defaultDateLocale='null' (vscodium|someValue.machineId|someValue.sessionId)
+2026-09-25 22:37:32.340 [info]    [            1] GitLens v19.2.0 activated [116ms]
+2026-09-25 22:37:32.340 [info]    [   77 →    78] GlCliGitProvider.findGit Git (2.54.0) found in /run/current-system/sw/bin/git [56ms]
+2026-09-25 22:37:32.340 [info]    [   77 →    a2] GlCliGitProvider.repositorySearch(/home/yusufbek/Documents/nixos-dots) searching (depth=1)...
+2026-09-25 22:37:32.340 [info]    [GIT      25ms] [/home/yusufbek/Documents/nixos-dots] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree [25ms]
+2026-09-25 22:37:32.340 [info]    [IPC          ] CLI capability published on http://127.0.0.1:44103
+2026-09-25 22:37:32.340 [info]    [   77 →    a2] GlCliGitProvider.repositorySearch(/home/yusufbek/Documents/nixos-dots) found root repository in '/home/yusufbek/Documents/nixos-dots'
+2026-09-25 22:37:32.378 [info]    [GIT      21ms] [/home/yusufbek/Documents/nixos-dots] git for-each-ref --format=%1E%(HEAD)%1D%(refname)%1D%(objectname)%1D%(*objectname)%1D%(upstream)%1D%(upstream:track)%1D%(committerdate:iso8601)%1D%(creatordate:iso8601)%1D%(authordate:iso8601)%1D%(subject)%1D%(worktreepath)%1D refs/heads/ refs/remotes/ refs/tags/ refs/replace/ [21ms]
+2026-09-25 22:37:32.379 [info]    [GIT      22ms] [/home/yusufbek/Documents/nixos-dots] git ls-files -- hypr/hyprland.conf [22ms]
+2026-09-25 22:37:32.383 [info]    [GIT      29ms] [/home/yusufbek/Documents/nixos-dots] git worktree list --porcelain [29ms]
+2026-09-25 22:37:32.383 [info]    [GIT      39ms] [/home/yusufbek/Documents/nixos-dots] git remote -v [39ms]
+2026-09-25 22:37:32.426 [info]    [GIT      45ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^user\.(name|email)$ [45ms]
+2026-09-25 22:37:32.431 [info]    [GIT      58ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex -f /home/yusufbek/Documents/nixos-dots/.git/gk/config . [58ms]
+2026-09-25 22:37:32.490 [info]    [GIT      53ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ [53ms]
+2026-09-25 22:37:32.490 [info]    [GIT      54ms] [/home/yusufbek/Documents/nixos-dots] git config --global --get-all maintenance.repo [54ms]
+2026-09-25 22:37:32.494 [info]    [GIT      58ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^(core\.fsmonitor|core\.untrackedcache|core\.commitgraph|core\.multipackindex|core\.sparsecheckout|core\.sparsecheckoutcone|core\.splitindex|extensions\.refstorage|feature\.manyfiles|index\.sparse|maintenance\.incremental-repack\.auto)$ [58ms]
+2026-09-25 22:37:32.494 [info]    [GIT      67ms] [/home/yusufbek/Documents/nixos-dots] git check-mailmap khamidullaevv <yusufbek090110@gmail.com> [67ms]
+2026-09-25 22:37:32.503 [info]    [GIT:→1       ] (spawn) [/home/yusufbek/Documents/nixos-dots] git blame --root --incremental --encoding=utf-8 -- hypr/hyprland.conf · starting...
+2026-09-25 22:37:32.505 [info]    [GIT      14ms] [/home/yusufbek/Documents/nixos-dots] git worktree list --porcelain [14ms]
+2026-09-25 22:37:32.588 [info]    [GIT:←1   89ms] (spawn) [/home/yusufbek/Documents/nixos-dots] git blame --root --incremental --encoding=utf-8 -- hypr/hyprland.conf [89ms]
+2026-09-25 22:37:32.675 [info]    [GIT      70ms] [/home/yusufbek/Documents/nixos-dots] git log --format=%x1E%H%x1D%aN%x1D%aE%x1D%at%x1D%cN%x1D%cE%x1D%ct%x1D%P%x1D%D%x1D%B%x1D --numstat --raw -M --use-mailmap -m --no-min-parents -n1 4ce09b2f86bb4623bde2fab45da40babf94e4557 -- [70ms]
+2026-09-25 22:37:32.676 [info]    [GIT      86ms] [/home/yusufbek/Documents/nixos-dots] git show --textconv HEAD:./hypr/hyprland.conf -- [86ms]
+2026-09-25 22:37:32.798 [info]    [GIT      29ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ [29ms]
+2026-09-25 22:37:32.798 [info]    [GIT      29ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^(core\.fsmonitor|core\.untrackedcache|core\.commitgraph|core\.multipackindex|core\.sparsecheckout|core\.sparsecheckoutcone|core\.splitindex|extensions\.refstorage|feature\.manyfiles|index\.sparse|maintenance\.incremental-repack\.auto)$ [29ms]
+2026-09-25 22:37:32.798 [info]    [GIT      36ms] [/home/yusufbek/Documents/nixos-dots] git config --type=bool --get core.commitGraph [36ms]
+2026-09-25 22:37:32.807 [info]    [GIT       8ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ [8ms]
+2026-09-25 22:37:32.825 [info]    [   77 →    78] GlCliGitProvider.findGit SCM.onDidOpenRepository(file:///home/yusufbek/Documents/nixos-dots)
+2026-09-25 22:37:32.834 [info]    [GIT      26ms] [/home/yusufbek/Documents/nixos-dots] git commit-graph write --reachable --split --changed-paths --max-new-filters=512 [26ms]
+2026-09-25 22:37:32.867 [info]    [GIT      16ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ [16ms]
+2026-09-25 22:37:32.867 [info]    [GIT      16ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^(core\.fsmonitor|core\.untrackedcache|core\.commitgraph|core\.multipackindex|core\.sparsecheckout|core\.sparsecheckoutcone|core\.splitindex|extensions\.refstorage|feature\.manyfiles|index\.sparse|maintenance\.incremental-repack\.auto)$ [16ms]
+2026-09-25 22:37:33.824 [info]    [   77 →    78] GlCliGitProvider.findGit fireRepositoryOpened: firing 1 opened repo(s) from vscode.git
+2026-09-25 22:37:33.824 [info]    [   79 →   16b] GlCliGitProvider.onDidOpenRepository(e=file:///home/yusufbek/Documents/nixos-dots, source=scm) repository=GlRepository(/home/yusufbek/Documents/nixos-dots|1), opened:true→true (closedByScm cleared)
+2026-09-25 22:37:35.283 [info]    [CLI          ] CLI core version is 3.1.75

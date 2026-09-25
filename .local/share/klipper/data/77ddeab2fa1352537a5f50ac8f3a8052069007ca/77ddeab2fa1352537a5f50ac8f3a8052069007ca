@@ -1,0 +1,112 @@
+-- Hyprland 0.55.4
+-- Minimal working config
+
+hl.monitor({
+    output = "",
+    mode = "preferred",
+    position = "auto",
+    scale = "auto",
+})
+
+hl.config({
+    general = {
+        gaps_in = 0,
+        gaps_out = 0,
+        border_size = 2,
+        layout = "dwindle",
+    },
+
+    decoration = {
+        rounding = 0,
+
+        active_opacity = 1.0,
+        inactive_opacity = 1.0,
+
+        shadow = {
+            enabled = false,
+        },
+
+        blur = {
+            enabled = false,
+        },
+    },
+
+    animations = {
+        enabled = false,
+    },
+
+    input = {
+        kb_layout = "us,ru",
+        kb_options = "grp:win_space_toggle",
+        follow_mouse = 1,
+        sensitivity = 0,
+    },
+
+    misc = {
+        disable_hyprland_logo = true,
+        force_default_wallpaper = -1,
+    },
+})
+
+local terminal = "kitty"
+local launcher = "rofi -show drun"
+
+local mainMod = "SUPER"
+
+-- Terminal
+hl.bind(
+    mainMod .. " + Q",
+    hl.dsp.exec_cmd(terminal)
+)
+
+-- Rofi
+hl.bind(
+    mainMod .. " + R",
+    hl.dsp.exec_cmd(launcher)
+)
+
+-- Close window
+hl.bind(
+    mainMod .. " + C",
+    hl.dsp.window.close()
+)
+
+-- Toggle floating
+hl.bind(
+    mainMod .. " + V",
+    hl.dsp.window.float({ action = "toggle" })
+)
+
+-- Focus
+hl.bind(
+    mainMod .. " + left",
+    hl.dsp.focus({ direction = "left" })
+)
+
+hl.bind(
+    mainMod .. " + right",
+    hl.dsp.focus({ direction = "right" })
+)
+
+hl.bind(
+    mainMod .. " + up",
+    hl.dsp.focus({ direction = "up" })
+)
+
+hl.bind(
+    mainMod .. " + down",
+    hl.dsp.focus({ direction = "down" })
+)
+
+-- Workspaces 1-9
+for i = 1, 9 do
+    hl.bind(
+        mainMod .. " + " .. i,
+        hl.dsp.focus({ workspace = i })
+    )
+
+    hl.bind(
+        mainMod .. " + SHIFT + " .. i,
+        hl.dsp.window.move({ workspace = i })
+    )
+end

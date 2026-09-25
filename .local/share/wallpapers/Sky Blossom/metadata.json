@@ -1,0 +1,15 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "gicalucejo@gmail.com",
+                "Name": "jomada"
+            }
+        ],
+        "Id": "Sky Blossom",
+        "License": "CC-BY-SA-4.0",
+        "Version": "1.0",
+        "Name": "Sky Blossom",
+         "Name[x-test]": "xxSky Blossomxx"
+    }
+}

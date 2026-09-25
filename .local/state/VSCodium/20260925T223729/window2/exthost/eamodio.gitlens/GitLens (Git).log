@@ -1,0 +1,23 @@
+2026-09-25 22:37:32.340 [info] [         25ms] [/home/yusufbek/Documents/nixos-dots] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • completed
+2026-09-25 22:37:32.378 [info] [         21ms] [/home/yusufbek/Documents/nixos-dots] git for-each-ref --format=%1E%(HEAD)%1D%(refname)%1D%(objectname)%1D%(*objectname)%1D%(upstream)%1D%(upstream:track)%1D%(committerdate:iso8601)%1D%(creatordate:iso8601)%1D%(authordate:iso8601)%1D%(subject)%1D%(worktreepath)%1D refs/heads/ refs/remotes/ refs/tags/ refs/replace/ • completed
+2026-09-25 22:37:32.379 [info] [         22ms] [/home/yusufbek/Documents/nixos-dots] git ls-files -- hypr/hyprland.conf • completed
+2026-09-25 22:37:32.383 [info] [         29ms] [/home/yusufbek/Documents/nixos-dots] git worktree list --porcelain • completed
+2026-09-25 22:37:32.383 [info] [         39ms] [/home/yusufbek/Documents/nixos-dots] git remote -v • completed
+2026-09-25 22:37:32.426 [info] [         45ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^user\.(name|email)$ • completed
+2026-09-25 22:37:32.431 [info] [         58ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex -f /home/yusufbek/Documents/nixos-dots/.git/gk/config . • completed
+2026-09-25 22:37:32.490 [info] [         53ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ • completed
+2026-09-25 22:37:32.490 [info] [         54ms] [/home/yusufbek/Documents/nixos-dots] git config --global --get-all maintenance.repo • completed
+2026-09-25 22:37:32.494 [info] [         58ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^(core\.fsmonitor|core\.untrackedcache|core\.commitgraph|core\.multipackindex|core\.sparsecheckout|core\.sparsecheckoutcone|core\.splitindex|extensions\.refstorage|feature\.manyfiles|index\.sparse|maintenance\.incremental-repack\.auto)$ • completed
+2026-09-25 22:37:32.494 [info] [         67ms] [/home/yusufbek/Documents/nixos-dots] git check-mailmap khamidullaevv <yusufbek090110@gmail.com> • completed
+2026-09-25 22:37:32.503 [info] [→1           ] (spawn) [/home/yusufbek/Documents/nixos-dots] git blame --root --incremental --encoding=utf-8 -- hypr/hyprland.conf • starting...
+2026-09-25 22:37:32.505 [info] [         14ms] [/home/yusufbek/Documents/nixos-dots] git worktree list --porcelain • completed
+2026-09-25 22:37:32.588 [info] [←1       89ms] (spawn) [/home/yusufbek/Documents/nixos-dots] git blame --root --incremental --encoding=utf-8 -- hypr/hyprland.conf • completed
+2026-09-25 22:37:32.675 [info] [         70ms] [/home/yusufbek/Documents/nixos-dots] git log --format=%x1E%H%x1D%aN%x1D%aE%x1D%at%x1D%cN%x1D%cE%x1D%ct%x1D%P%x1D%D%x1D%B%x1D --numstat --raw -M --use-mailmap -m --no-min-parents -n1 4ce09b2f86bb4623bde2fab45da40babf94e4557 -- • completed
+2026-09-25 22:37:32.676 [info] [         86ms] [/home/yusufbek/Documents/nixos-dots] git show --textconv HEAD:./hypr/hyprland.conf -- • completed
+2026-09-25 22:37:32.798 [info] [         29ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ • completed
+2026-09-25 22:37:32.798 [info] [         29ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^(core\.fsmonitor|core\.untrackedcache|core\.commitgraph|core\.multipackindex|core\.sparsecheckout|core\.sparsecheckoutcone|core\.splitindex|extensions\.refstorage|feature\.manyfiles|index\.sparse|maintenance\.incremental-repack\.auto)$ • completed
+2026-09-25 22:37:32.798 [info] [         36ms] [/home/yusufbek/Documents/nixos-dots] git config --type=bool --get core.commitGraph • completed
+2026-09-25 22:37:32.807 [info] [          8ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ • completed
+2026-09-25 22:37:32.834 [info] [         26ms] [/home/yusufbek/Documents/nixos-dots] git commit-graph write --reachable --split --changed-paths --max-new-filters=512 • completed
+2026-09-25 22:37:32.867 [info] [         16ms] [/home/yusufbek/Documents/nixos-dots] git config --local --get-regex ^(extensions\.partialclone|remote\..*\.promisor)$ • completed
+2026-09-25 22:37:32.867 [info] [         16ms] [/home/yusufbek/Documents/nixos-dots] git config --get-regex ^(core\.fsmonitor|core\.untrackedcache|core\.commitgraph|core\.multipackindex|core\.sparsecheckout|core\.sparsecheckoutcone|core\.splitindex|extensions\.refstorage|feature\.manyfiles|index\.sparse|maintenance\.incremental-repack\.auto)$ • completed

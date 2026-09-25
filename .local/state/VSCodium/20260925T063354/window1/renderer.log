@@ -1,0 +1,14 @@
+2026-09-25 06:33:55.174 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 06:33:55.407 [info] Started local extension host with pid 6387.
+2026-09-25 06:33:55.424 [info] Started initializing default profile extensions in extensions installation folder. file:///home/yusufbek/.vscode-oss/extensions
+2026-09-25 06:33:55.564 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/yusufbek/.vscode-oss/extensions
+2026-09-25 06:33:55.637 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 06:33:55.752 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 06:33:55.774 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 06:33:58.386 [info] [perf] Render performance baseline is 14ms
+2026-09-25 06:34:07.861 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 06:34:08.000 [info] Started local extension host with pid 6466.
+2026-09-25 06:34:08.275 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 06:34:08.498 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 06:34:08.517 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 06:34:10.647 [info] [perf] Render performance baseline is 13ms

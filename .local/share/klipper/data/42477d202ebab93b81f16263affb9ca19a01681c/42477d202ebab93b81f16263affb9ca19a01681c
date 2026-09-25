@@ -1,0 +1,51 @@
+yusufbek@lenovo-loq /e/nixos> sudo nixos-rebuild switch
+building the system configuration...
+error:
+       … while calling the 'head' builtin
+         at /nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/lib/attrsets.nix:1717:13:
+         1716|           if length values == 1 || pred here (elemAt values 1) (head values) then
+         1717|             head values
+             |             ^
+         1718|           else
+
+       … while evaluating the attribute 'value'
+         at /nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/lib/modules.nix:1167:7:
+         1166|     // {
+         1167|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1168|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `system.build.toplevel':
+
+       … while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/activation/top-level.nix':
+
+       … while evaluating the option `warnings':
+
+       … while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/boot/systemd.nix':
+
+       … while evaluating the option `systemd.services.mandb.serviceConfig':
+
+       … while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/boot/systemd.nix':
+
+       … while evaluating the option `systemd.services.mandb.script':
+
+       … while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/misc/man-db.nix':
+
+       … while evaluating the option `documentation.man.man-db.manualPages':
+
+       … while evaluating the option `environment.systemPackages':
+
+       … while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/services/display-managers/sddm.nix':
+
+       … while evaluating the option `services.displayManager.sddm.package':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: The option `services.displayManager.sddm.package' is defined multiple times while it's expected to be unique.
+
+       Definition values:
+       - In `/etc/nixos/configuration.nix': <derivation sddm-wrapped>
+       - In `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/services/desktop-managers/plasma6.nix': <derivation sddm-wrapped>
+       Use `lib.mkForce value` or `lib.mkDefault value` to change the priority on any of these definitions.
+Command 'nix-build '<nixpkgs/nixos>' --attr config.system.build.toplevel --no-out-link' returned non-zero exit status 1.
+yusufbek@lenovo-loq /e/nixos [1]> 

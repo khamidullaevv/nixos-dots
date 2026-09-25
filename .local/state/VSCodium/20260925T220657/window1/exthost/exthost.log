@@ -1,0 +1,119 @@
+2026-09-25 22:06:58.565 [info] Extension host with pid 2566 started
+2026-09-25 22:06:58.565 [info] Skipping acquiring lock for /home/yusufbek/.config/VSCodium/User/workspaceStorage/1b04f80d9821921c1c2d3ea9d799d163.
+2026-09-25 22:06:58.654 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-09-25 22:06:58.679 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-09-25 22:06:58.691 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+2026-09-25 22:06:58.980 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-09-25 22:06:58.994 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-09-25 22:06:59.036 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-09-25 22:06:59.120 [info] Eager extensions activated
+2026-09-25 22:06:59.161 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:06:59.167 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:08:38.541 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:11:23.423 [info] Extension host terminating: received terminate message from renderer
+2026-09-25 22:11:23.458 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2026-09-25 22:11:23.462 [error] Error: Channel has been closed
+	at n (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:123:3999)
+	at Object.info (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:123:4369)
+	at Logger.info (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:639:112633)
+	at GkCliService.stopIpc (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1120:55587)
+	at GkCliService.dispose (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1120:53421)
+	at /home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1007:69937
+	at Array.forEach (<anonymous>)
+	at Object.dispose (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1007:69918)
+	at lr (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:746)
+	at h$._fn (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:18649)
+	at h$.dispose (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1261)
+	at ise._deactivate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:14892)
+	at file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12178
+	at Array.map (<anonymous>)
+	at ise._deactivateAll (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12166)
+	at ise.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12519)
+	at gO.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:122:1082)
+	at an (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:11834)
+	at jf.value (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:9952)
+	at k._deliver (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3066)
+	at k.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3386)
+	at ya.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10997)
+	at MessagePortMain.<anonymous> (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:8160)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2959)
+	at Object.callbackTrampoline (node:internal/async_hooks:130:17)
+2026-09-25 22:11:23.464 [info] Extension host with pid 2566 exiting with code 0
+2026-09-25 22:11:24.452 [info] Extension host with pid 5071 started
+2026-09-25 22:11:24.452 [info] Skipping acquiring lock for /home/yusufbek/.config/VSCodium/User/workspaceStorage/36ebcff88e2488d76eefe2f3461c0178.
+2026-09-25 22:11:24.480 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-09-25 22:11:24.502 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-09-25 22:11:24.539 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2026-09-25 22:11:24.544 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-09-25 22:11:24.611 [info] Eager extensions activated
+2026-09-25 22:11:24.613 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:11:24.615 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:11:24.630 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:11:26.721 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2026-09-25 22:11:52.197 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:12:04.270 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:12:57.576 [info] ExtensionService#_doActivateExtension arrterian.nix-env-selector, startup: false, activationEvent: '*'
+2026-09-25 22:13:00.048 [info] ExtensionService#_doActivateExtension jnoortheen.nix-ide, startup: false, activationEvent: 'onLanguage:nix'
+2026-09-25 22:15:29.782 [info] Extension host terminating: received terminate message from renderer
+2026-09-25 22:15:29.796 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2026-09-25 22:15:29.799 [error] Error: Channel has been closed
+	at n (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:123:3999)
+	at Object.info (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:123:4369)
+	at Logger.info (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:639:112633)
+	at GkCliService.stopIpc (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1120:55587)
+	at GkCliService.dispose (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1120:53421)
+	at /home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1007:69937
+	at Array.forEach (<anonymous>)
+	at Object.dispose (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1007:69918)
+	at lr (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:746)
+	at h$._fn (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:18649)
+	at h$.dispose (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1261)
+	at ise._deactivate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:14892)
+	at file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12178
+	at Array.map (<anonymous>)
+	at ise._deactivateAll (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12166)
+	at ise.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12519)
+	at gO.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:122:1082)
+	at an (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:11834)
+	at jf.value (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:9952)
+	at k._deliver (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3066)
+	at k.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3386)
+	at ya.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10997)
+	at MessagePortMain.<anonymous> (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:8160)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2959)
+	at Object.callbackTrampoline (node:internal/async_hooks:130:17)
+2026-09-25 22:15:29.801 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+	at QQ (/home/yusufbek/.vscode-oss/extensions/jnoortheen.nix-ide-0.5.13-universal/dist/extension.js:28:44575)
+	at Object._F (/home/yusufbek/.vscode-oss/extensions/jnoortheen.nix-ide-0.5.13-universal/dist/extension.js:28:47938)
+	at ise._deactivate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:14667)
+	at file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12178
+	at Array.map (<anonymous>)
+	at ise._deactivateAll (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12166)
+	at ise.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12519)
+	at gO.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:122:1082)
+	at an (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:11834)
+	at jf.value (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:9952)
+	at k._deliver (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3066)
+	at k.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3386)
+	at ya.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10997)
+	at MessagePortMain.<anonymous> (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:8160)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2959)
+	at Object.callbackTrampoline (node:internal/async_hooks:130:17)
+2026-09-25 22:15:29.801 [info] Extension host with pid 5071 exiting with code 0
+2026-09-25 22:15:30.888 [info] Extension host with pid 6021 started
+2026-09-25 22:15:30.888 [info] Skipping acquiring lock for /home/yusufbek/.config/VSCodium/User/workspaceStorage/a00f7da57646c06510ad974b3601e00b.
+2026-09-25 22:15:31.073 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-09-25 22:15:31.092 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-09-25 22:15:31.103 [info] ExtensionService#_doActivateExtension arrterian.nix-env-selector, startup: false, activationEvent: 'onLanguage'
+2026-09-25 22:15:31.177 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-09-25 22:15:31.190 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-09-25 22:15:31.228 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-09-25 22:15:31.324 [info] Eager extensions activated
+2026-09-25 22:15:31.346 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:15:31.347 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:15:31.361 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:15:31.365 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:15:31.460 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'

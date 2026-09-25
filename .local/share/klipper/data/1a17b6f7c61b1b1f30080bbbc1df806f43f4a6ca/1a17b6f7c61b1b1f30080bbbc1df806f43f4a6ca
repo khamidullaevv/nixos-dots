@@ -1,0 +1,54 @@
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/6gk1dh97m5n50scj3yh0ckn62x605pr9-cargo-1.95.0/share/zsh/site-functions/_cargo' and `/nix/store/1hhj4qidrq0pf7c671ssyalifz4z3sry-rustup-1.29.0/share/zsh/site-functions/_cargo'
+structuredAttrs is enabled
+created 537 symlinks in user environment
+created 6394 symlinks in user environment
+building '/nix/store/q8yj130vgsbj5yky16wwg122y9nfagyk-unit-script-mandb-start.drv'...
+building '/nix/store/zgr56cl1yxf745wsvjxcmxw2cqhb1kn1-unit-mandb.service.drv'...
+created 43797 symlinks in user environment
+install-info: warning: no info dir entry in `/nix/store/4gxmk83r8mgz64j3r6sr2qirdmk790hi-system-path/share/info/gawknotes.info'
+building '/nix/store/cmr76lrp1icyy2xnhxdxrhp44baqycib-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/0y9dcnq1jwd2scyh52wrgc39147jlaxc-dbus-1.drv'...
+building '/nix/store/3dk1lbr4243c5sfq9m5rsjb5mb5i4z9y-unit-accounts-daemon.service.drv'...
+building '/nix/store/d8qa8sdicyi52j4divv9bljgc8fmhhf9-X-Restart-Triggers-dbus-broker.drv'...
+building '/nix/store/najg85d2wixi4jlmzd267ym7fgf3az7b-unit-polkit.service.drv'...
+building '/nix/store/f6v9hqlihm6fbm10a96i8cii7c1rdrbl-unit-dbus-broker.service.drv'...
+building '/nix/store/j2y26f6avr6chd8cfavvs9c5gv206nav-unit-dbus-broker.service.drv'...
+building '/nix/store/81xk8m9zpx701zbxjhmxidkvqrwwibjk-system-units.drv'...
+building '/nix/store/r5zj6svgi4nsiv2mc9isc5kiwm5v7mv9-user-units.drv'...
+building '/nix/store/rg0azamc74cqlrjj8hgxb02rq2g9xwj5-etc.drv'...
+building '/nix/store/xra8k8mf7ggzg99wv60f156dp048k9hh-activate.drv'...
+building '/nix/store/8m99hjpm5rwjks6k8dbylpy25wb7iyxv-nixos-system-lenovo-loq-26.05.10402.1e8bc658fc98.drv'...
+structuredAttrs is enabled
+Checking switch inhibitors... done
+Traceback (most recent call last):
+  File "/nix/store/ba5izkls8h63l7yj6mgw22jzw9rrpkc3-systemd-boot/bin/systemd-boot", line 452, in <module>
+    main()
+    ~~~~^^
+  File "/nix/store/ba5izkls8h63l7yj6mgw22jzw9rrpkc3-systemd-boot/bin/systemd-boot", line 435, in main
+    install_bootloader(args)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/nix/store/ba5izkls8h63l7yj6mgw22jzw9rrpkc3-systemd-boot/bin/systemd-boot", line 400, in install_bootloader
+    raise e
+  File "/nix/store/ba5izkls8h63l7yj6mgw22jzw9rrpkc3-systemd-boot/bin/systemd-boot", line 389, in install_bootloader
+    write_entry(*gen, machine_id, bootspec, current=is_default)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/ba5izkls8h63l7yj6mgw22jzw9rrpkc3-systemd-boot/bin/systemd-boot", line 186, in write_entry
+    initrd = copy_from_file(bootspec.initrd)
+  File "/nix/store/ba5izkls8h63l7yj6mgw22jzw9rrpkc3-systemd-boot/bin/systemd-boot", line 177, in copy_from_file
+    copy_if_not_exists(store_file_path, BOOT_MOUNT_POINT / efi_file_path)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/ba5izkls8h63l7yj6mgw22jzw9rrpkc3-systemd-boot/bin/systemd-boot", line 69, in copy_if_not_exists
+    shutil.copyfile(source, tmppath)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/nix/store/9r02ykx9y35lf4gk6gc30gnag1y8ncp7-python3-3.13.15/lib/python3.13/shutil.py", line 273, in copyfile
+    _fastcopy_sendfile(fsrc, fdst)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/nix/store/9r02ykx9y35lf4gk6gc30gnag1y8ncp7-python3-3.13.15/lib/python3.13/shutil.py", line 164, in _fastcopy_sendfile
+    raise err from None
+  File "/nix/store/9r02ykx9y35lf4gk6gc30gnag1y8ncp7-python3-3.13.15/lib/python3.13/shutil.py", line 150, in _fastcopy_sendfile
+    sent = os.sendfile(outfd, infd, offset, blocksize)
+OSError: [Errno 28] No space left on device: '/nix/store/86yfhlzc5hmn3hv0jpgy264ngzc0jj56-initrd-linux-6.18.52/initrd' -> '/boot/EFI/nixos/86yfhlzc5hmn3hv0jpgy264ngzc0jj56-initrd-linux-6.18.52-initrd.efiogjm4aka.tmp.'
+Failed to install bootloader
+Command 'systemd-run -E LOCALE_ARCHIVE -E NIXOS_INSTALL_BOOTLOADER -E NIXOS_NO_CHECK --collect --no-ask-password --pipe --quiet --service-type=exec --unit=nixos-rebuild-switch-to-configuration /nix/store/h4r6gj82qpvzjh1fjn14j70996xn9nf6-nixos-system-lenovo-loq-26.05.10402.1e8bc658fc98/bin/switch-to-configuration switch' returned non-zero exit status 1.
+
+[yusufbek@nixos:/etc/nixos]$ 

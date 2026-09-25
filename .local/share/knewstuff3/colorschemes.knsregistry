@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="112">
+  <name>Scratchy</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1896006</homepage>
+  <licence></licence>
+  <version>1.2</version>
+  <rating>50</rating>
+  <downloads>89798</downloads>
+  <installedfile>/home/yusufbek/.local/share/color-schemes/Scratchy.colors</installedfile>
+  <id>1896006</id>
+  <releasedate>2026-06-04</releasedate>
+  <summary>&lt;p>Dark color-schemes, based on the catppuccin macchiato color palette.&lt;br />&lt;a href="https://github.com/catppuccin/catppuccin">https://github.com/catppuccin/catppuccin&lt;/a>&lt;br />&lt;br />Two color-schemes, one for Breeze style apps and one semi-transparency theme for Lightly.&lt;br />&lt;br />Scratchy plasma theme: &lt;a href="https://www.pling.com/p/1896013/">https://www.pling.com/p/1896013/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1896006/scratchy-color-logo.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1896006/scratchy-color-logo.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY5NDg5Nzk1OSwidSI6bnVsbCwicyI6ImFmZWFmOGIwYTIxZGM0NGY4OGEyNzM4Yzc5YzdhZjM3NWEzNDY3MGUwMjVjZmRjYjc5ZGQ4NjAxODg4YzFkOWNiZWJkYjlmYTc4MTY3MTY3ZDRiOGNjZWNkNWMwMGJlZDQ1ZmM0NGFmNzQ0MjZjMDI0OWFjMTg3MmE0ODY0OTczIiwidCI6MTc5MDI2MTk2MCwibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6ImIxY2Q5YTkzMjQ1ODQwMGFjOGE4ZTM5NjllOTJhNGQzIiwiaWF0IjoxNzkwMjU4MzYwLCJleHAiOjE3OTA0MzExNjAsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.RU1TN8Gn_renosNZnbG0iZRmgyIqVDK344WOzZNzT4U/Scratchy.colors.tar.gz</payload>
+  <tags>gplv3,kde,linux,colorscheme,plasma,unix,theme</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

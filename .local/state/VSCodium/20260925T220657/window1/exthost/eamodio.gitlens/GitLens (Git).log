@@ -1,0 +1,14 @@
+2026-09-25 22:08:38.801 [error] [          4ms] [/home/yusufbek/.config/waybar] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • FAILED
+Error: fatal: not a git repository (or any of the parent directories): .git
+2026-09-25 22:08:38.891 [error] [         15ms] [/home/yusufbek/.config/waybar] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • FAILED
+Error: fatal: not a git repository (or any of the parent directories): .git
+2026-09-25 22:11:26.693 [error] [          6ms] [/etc/nixos] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • FAILED
+Error: fatal: not a git repository (or any of the parent directories): .git
+2026-09-25 22:11:28.923 [error] [          5ms] [/etc/nixos] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • FAILED
+Error: fatal: not a git repository (or any of the parent directories): .git
+2026-09-25 22:11:35.350 [error] [          5ms] [/etc/nixos] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • FAILED
+Error: fatal: not a git repository (or any of the parent directories): .git
+2026-09-25 22:15:31.692 [error] [          9ms] [/home/yusufbek/.config] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • FAILED
+Error: fatal: not a git repository (or any of the parent directories): .git
+2026-09-25 22:15:32.225 [error] [          5ms] [/home/yusufbek/.config/btop] git rev-parse --show-toplevel --git-dir --git-common-dir --show-superproject-working-tree • FAILED
+Error: fatal: not a git repository (or any of the parent directories): .git

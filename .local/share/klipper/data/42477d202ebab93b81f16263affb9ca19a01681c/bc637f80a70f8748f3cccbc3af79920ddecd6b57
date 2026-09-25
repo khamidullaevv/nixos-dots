@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<span style="font-family:monospace"><span style="color:#54ff54;background-color:#ffffff;">yusufbek</span><span style="color:#000000;background-color:#ffffff;">@lenovo-loq </span><span style="color:#18b218;background-color:#ffffff;">/e/nixos</span><span style="color:#000000;background-color:#ffffff;">&gt; sudo </span><span style="color:#18b2b2;background-color:#ffffff;">nixos-rebuild</span><span style="color:#000000;background-color:#ffffff;"> </span><span style="color:#18b2b2;background-color:#ffffff;">switch</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">building the system configuration...</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">error:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while calling the '</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">head</span><span style="color:#000000;background-color:#ffffff;">' builtin</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#5454ff;background-color:#ffffff;">at </span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/lib/attrsets.nix:1717:13</span><span style="color:#000000;background-color:#ffffff;">:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1716| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if length values == 1 || pred here (elemAt values 1) (head values) then</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1717| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;head values</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">^</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1718| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the attribute '</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">value</span><span style="color:#000000;background-color:#ffffff;">'</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#5454ff;background-color:#ffffff;">at </span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/lib/modules.nix:1167:7</span><span style="color:#000000;background-color:#ffffff;">:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1166| &#160;&#160;&#160;&#160;// {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1167| &#160;&#160;&#160;&#160;&#160;&#160;value = addErrorContext "while evaluating the option `${showOption loc}':" value;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">^</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1168| &#160;&#160;&#160;&#160;&#160;&#160;inherit (res.defsFinal') highestPrio;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `system.build.toplevel':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/activation/top-level.nix':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `warnings':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/boot/systemd.nix':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `systemd.services.mandb.serviceConfig':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/boot/systemd.nix':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `systemd.services.mandb.script':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/misc/man-db.nix':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `documentation.man.man-db.manualPages':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `environment.systemPackages':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/services/display-managers/sddm.nix':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `services.displayManager.sddm.package':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">(stack trace truncated; use '--show-trace' to show the full, detailed trace)</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">error:</span><span style="color:#000000;background-color:#ffffff;"> The option `services.displayManager.sddm.package' is defined multiple times while it's expected to be unique.</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;Definition values:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;- In `/etc/nixos/configuration.nix': &lt;derivation sddm-wrapped&gt;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;- In `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/services/desktop-managers/plasma6.nix': &lt;derivation sddm-wrapped&gt;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;Use `lib.mkForce value` or `lib.mkDefault value` to change the priority on any of these definitions.</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">Command 'nix-build '&lt;nixpkgs/nixos&gt;' --attr config.system.build.toplevel --no-out-link' returned non-zero exit status 1.</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#54ff54;background-color:#ffffff;">yusufbek</span><span style="color:#000000;background-color:#ffffff;">@lenovo-loq </span><span style="color:#18b218;background-color:#ffffff;">/e/nixos</span><span style="color:#000000;background-color:#ffffff;"> </span><span style="color:#b21818;background-color:#ffffff;">[</span><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">1</span><span style="color:#b21818;background-color:#ffffff;">]</span><span style="color:#000000;background-color:#ffffff;">&gt; </span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br></span></body>
+</html>

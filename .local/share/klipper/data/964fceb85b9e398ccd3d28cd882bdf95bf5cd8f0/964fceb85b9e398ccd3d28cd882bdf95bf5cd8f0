@@ -1,0 +1,34 @@
+[yusufbek@nixos:/etc/nixos]$ sudo nixos-rebuild switch 
+building the system configuration...
+error:
+       … while calling the 'derivationStrict' builtin
+         at «nix-internal»/derivation-internal.nix:37:12:
+           36|
+           37|   strict = derivationStrict drvAttrs;
+             |            ^
+           38|
+
+       … while evaluating derivation 'nixos-system-lenovo-loq-26.05.10402.1e8bc658fc98'
+         whose name attribute is located at /nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/pkgs/stdenv/generic/make-derivation.nix:647:11
+
+       … while evaluating attribute 'buildCommand' of derivation 'nixos-system-lenovo-loq-26.05.10402.1e8bc658fc98'
+         at /nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/activation/top-level.nix:63:7:
+           62|       allowSubstitutes = false;
+           63|       buildCommand = systemBuilder;
+             |       ^
+           64|
+
+       … while evaluating the option `environment.etc.fonts.source':
+
+       … while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/config/fonts/fontconfig.nix':
+
+       … while evaluating the option `fonts.packages':
+
+       … while evaluating definitions from `/etc/nixos/configuration.nix':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: 'noto-fonts-emoji' has been renamed to/replaced by 'noto-fonts-color-emoji'
+Command 'nix-build '<nixpkgs/nixos>' --attr config.system.build.toplevel --no-out-link' returned non-zero exit status 1.
+
+[yusufbek@nixos:/etc/nixos]$ 

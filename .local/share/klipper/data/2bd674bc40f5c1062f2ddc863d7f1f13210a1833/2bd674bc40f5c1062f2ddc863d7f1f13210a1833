@@ -1,0 +1,197 @@
+yusufbek@lenovo-loq /e/nixos> cat configuration.nix 
+# /etc/nixos/configuration.nix
+{ config, pkgs, ... }:
+
+{
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
+# Bootloader & Kernel
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 5; 
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  # Networking & Locale
+  networking.hostName = "lenovo-loq";
+  networking.networkmanager.enable = true;
+
+  time.timeZone = "Asia/Tashkent";
+
+  i18n.defaultLocale = "ru_RU.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "ru_RU.UTF-8";
+    LC_IDENTIFICATION = "ru_RU.UTF-8";
+    LC_MEASUREMENT = "ru_RU.UTF-8";
+    LC_MONETARY = "ru_RU.UTF-8";
+    LC_NAME = "ru_RU.UTF-8";
+    LC_NUMERIC = "ru_RU.UTF-8";
+    LC_PAPER = "ru_RU.UTF-8";
+    LC_TELEPHONE = "ru_RU.UTF-8";
+    LC_TIME = "ru_RU.UTF-8";
+  };
+
+  # Graphics & Hardware (Lenovo LOQ 15IAX9 - Intel i5-12450HX + RTX 3050 6GB)
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    powerManagement.finegrained = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    # PRIME Offload configuration
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      # Verified PCI IDs for Lenovo LOQ 15IAX9
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
+
+  # Audio & Peripherals
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+  services.printing.enable = true;
+
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  # Display Manager & Desktop Environments
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "catppuccin-mocha";
+  };
+
+  services.desktopManager.plasma6.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
+  };
+
+  # Power Management
+  services.power-profiles-daemon.enable = false;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 60;
+    };
+  };
+
+  # System & User Settings
+  nixpkgs.config.allowUnfree = true;
+  virtualisation.docker.enable = true;
+
+  users.users.yusufbek = {
+    isNormalUser = true;
+    description = "Yusufbek";
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" "audio" ];
+    shell = pkgs.fish;
+  };
+
+  programs.fish.enable = true;
+
+  # Packages
+  environment.systemPackages = with pkgs; [
+    # UI & SDDM Theme
+    catppuccin-sddm
+    libsForQt5.qt5.qtquickcontrols2
+    libsForQt5.qt5.qtgraphicaleffects
+    catppuccin-gtk
+    papirus-icon-theme
+    loupe
+
+    # Hyprland Ecosystem
+    waybar
+    rofi
+    dunst
+    hyprpaper
+    hyprlock
+    hypridle
+    kitty
+    foot
+    grim
+    slurp
+    wl-clipboard
+    brightnessctl
+    pavucontrol
+
+    # Development (Rust, Python, Next.js / Node.js)
+    rustup
+    cargo
+    rustc
+    gcc
+    python3
+    poetry
+    pipenv
+    nodejs_22
+    pnpm
+    yarn
+    docker-compose
+    postgresql
+    redis
+
+    # Editors & Applications
+    vscodium
+    pkgs.jetbrains.pycharm 
+    obsidian
+    firefox
+    telegram-desktop
+    spotify-player
+
+    # CLI Utilities
+    git
+    gh
+    curl
+    wget
+    fastfetch
+    htop
+    btop
+    unzip
+    ripgrep
+    fd
+    bat
+    eza
+  ];
+
+  # Fonts
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    roboto
+    noto-fonts-color-emoji
+  ];
+
+  # Nix Flakes & System Version
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  system.stateVersion = "26.05";
+}
+yusufbek@lenovo-loq /e/nixos> 

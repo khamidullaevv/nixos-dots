@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Development
+Comment=Python IDE with complete set of tools for productive development with Python programming language. In addition, the IDE provides high-class capabilities for professional Web development with Django framework and Google App Engine. It has powerful coding assistance, navigation, a lot of refactoring features, tight integration with various Version Control Systems, Unit testing and powerful Debugger.
+Exec=pycharm
+GenericName=Python IDE from JetBrains
+Icon=pycharm
+Name=PyCharm
+StartupWMClass=jetbrains-pycharm
+Type=Application
+Version=1.5

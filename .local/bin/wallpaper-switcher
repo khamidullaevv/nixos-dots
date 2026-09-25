@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
+
+mapfile -t wallpapers < <(
+    find "$WALLPAPER_DIR" -type f \
+    \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) \
+    | sort
+)
+
+[ ${#wallpapers[@]} -eq 0 ] && exit 1
+
+entries=""
+
+for wallpaper in "${wallpapers[@]}"; do
+    name="$(basename "$wallpaper")"
+    entries+="$name\0icon\x1f$wallpaper\n"
+done
+
+selected="$(
+    printf '%b' "$entries" |
+    rofi \
+        -dmenu \
+        -show-icons \
+        -i \
+        -p "" \
+        -theme-str '
+            window {
+                width: 900px;
+                location: north;
+                anchor: north;
+                y-offset: 80px;
+            }
+
+            mainbox {
+                children: [listview];
+            }
+
+            listview {
+                columns: 5;
+                lines: 1;
+                spacing: 12px;
+            }
+
+            element {
+                orientation: vertical;
+                padding: 8px;
+            }
+
+            element-icon {
+                size: 150px;
+            }
+
+            element-text {
+                enabled: false;
+            }
+        '
+)"
+
+[ -z "$selected" ] && exit 0
+
+for wallpaper in "${wallpapers[@]}"; do
+    if [ "$(basename "$wallpaper")" = "$selected" ]; then
+        awww img "$wallpaper" \
+            --transition-type fade \
+            --transition-duration 0.5
+        break
+    fi
+done

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="299">
+  <name>Spirited Away</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/2214972</homepage>
+  <licence></licence>
+  <version>1.0</version>
+  <rating>50</rating>
+  <downloads>40039</downloads>
+  <installedfile>/home/yusufbek/.local/share/wallpapers/Spirited Away/*</installedfile>
+  <id>2214972</id>
+  <releasedate>2026-06-04</releasedate>
+  <summary>&lt;p>New wallpaper. Suggested for the global theme Scratchy.&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1898344/">https://store.kde.org/p/1898344/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2214972/spirit.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2214972/spirit.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyODY3MjY2NiwidSI6bnVsbCwicyI6Ijc0ZGVmZjQ4NDgyMjk2NzE4ZmNjNTAwZGVlYzAyYWZmMzFmZDZkMjkwNzM3ZmQ2OGYxYWVhZWY0MTRiOGM4MjViMWEzMWE0MGVhYzQ2MjM1YjY3ZmUwOGM1ZjlkNDMyMmRmZmU4NDk2NDA1ZjVjZDkxOTgwNGViYTFlZjY0OGY1IiwidCI6MTc5MDI2MTk3MywibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6IjczYWU3OTdmMDJlNWRkYTUxMmU4Y2JlNzc1OTcwM2E2IiwiaWF0IjoxNzkwMjU4MzczLCJleHAiOjE3OTA0MzExNzMsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.Xf9zVZ04b4PiMW-pX9D40W6EczNKTU5eFYBgS0q6xAk/Spirited-Away.tar.gz</payload>
+  <tags>plasma,artwork,wallpaper,kde,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="299">
+  <name>Sky Blossom</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/2331253</homepage>
+  <licence></licence>
+  <version>1.0</version>
+  <rating>50</rating>
+  <downloads>20937</downloads>
+  <installedfile>/home/yusufbek/.local/share/wallpapers/Sky Blossom/*</installedfile>
+  <id>2331253</id>
+  <releasedate>2026-06-04</releasedate>
+  <summary>&lt;p>Sky Blossom. &lt;br />New wallpaper added to the Scratchy and Itchy theme.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2331253/wallpapersb.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2331253/wallpapersb.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc2NDQxNzgyNCwidSI6bnVsbCwicyI6ImJjZTM2OGEwZjEwYjM5NzQwZDljNTYzMzg4Y2MxNjY4MDAwNTdiZjEzZTgxZDU1ZDMxOTFhMDcyYzkzOTdmNGMxNDBmZWEzNGI3OTdmNmE0M2M4OTdhM2U0OGU1ZDIzOGVjM2I5ZDE5OGJiMzA1MDdmMTlkM2U2MDQzNmY5YmM5IiwidCI6MTc5MDI2MTk3NiwibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6IjNiZGY3ODk4NzVkNGQ1MzZiMmNjNGJkYmYwMmRmMGJmIiwiaWF0IjoxNzkwMjU4Mzc2LCJleHAiOjE3OTA0MzExNzYsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.DP7NMRMAYDw0tfVxk2p18i_P4iCbLmI4d8uKPm5AbiM/Sky-Blossom.tar.gz</payload>
+  <tags>plasma,cc0,artwork,kde,wallpaper</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="299">
+  <name>Scratchy v2</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/2055751</homepage>
+  <licence></licence>
+  <version>2.1</version>
+  <rating>58</rating>
+  <downloads>46335</downloads>
+  <installedfile>/home/yusufbek/.local/share/wallpapers/Scratchy-V2/*</installedfile>
+  <id>2055751</id>
+  <releasedate>2026-06-04</releasedate>
+  <summary>&lt;p>New wallpaper. Suggested for the global theme Scratchy.&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1898344/">https://store.kde.org/p/1898344/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2055751/logo.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2055751/logo.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyODY3Mjk4MiwidSI6bnVsbCwicyI6IjkyOGYwZmZhYWU2NjI5OTc4OTUwN2I2ODNlYTYyYTlhNDg5ZTY2YzZhZWVkN2Y3NmJiZWUwMDA5OThkODU4NzY5N2U0ZTIzOGFiZWRjYWY2YzM4MTQxNGY3ODY1ZDU5M2I2YjkzOThjYjJjMDAwMDliNDRkODE5NDYzMDIwOTQ3IiwidCI6MTc5MDI2MTk2OCwibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6ImM2NjBhYTQ0YmE5NzVjODhiZTlkYzEyMTI5OTYzYjBmIiwiaWF0IjoxNzkwMjU4MzY4LCJleHAiOjE3OTA0MzExNjgsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.uj9xv-Q5v_JAil-7N_AVgI35oe0CUqXYJJXtIY8OvmA/Scratchy-V2.tar.gz</payload>
+  <tags>gplv3,kde,artwork,original-product,plasma,wallpaper</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="299">
+  <name>Scratchy</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1896012</homepage>
+  <licence></licence>
+  <version>1.1</version>
+  <rating>50</rating>
+  <downloads>42974</downloads>
+  <installedfile>/home/yusufbek/.local/share/wallpapers/Scratchy/*</installedfile>
+  <id>1896012</id>
+  <releasedate>2026-06-04</releasedate>
+  <summary>&lt;p>Wallpaper for Scratchy plasma theme.&lt;br />&lt;br />Scratchy plasma theme: &lt;a href="https://www.pling.com/p/1896013/">https://www.pling.com/p/1896013/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1896012/scratchy-pling.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1896012/scratchy-pling.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyODY3MzQzMywidSI6bnVsbCwicyI6IjA5MWE5NGQyMWFiZTExMzYzMmFkYmQzZWE1NDM1NmUyYWEyNTM5OGFlOTM2YTVmNDYwZDUxYmNlOTJhNDlkNTk0YjJlM2JiNzA5YTI5MWRjMmU0ZDMwOGFmMzc2YzI5Y2M2NzI4ZGU0NzNjZDg3OTc2M2Y4YWE1ODMzNDNjNDMwIiwidCI6MTc5MDI2MTk3MCwibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6Ijk0OGNjYTBmZTYyZTJmNWFhMDQ4OWQ3ZDBhMzg3YzhmIiwiaWF0IjoxNzkwMjU4MzcwLCJleHAiOjE3OTA0MzExNzAsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.xP_QPsYO55FdxtLTALVChzWThUuKDgK_ynxlRpVFp_k/Scratchy.tar.gz</payload>
+  <tags>plasma,original-product,artwork,wallpaper,gplv3,kde</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

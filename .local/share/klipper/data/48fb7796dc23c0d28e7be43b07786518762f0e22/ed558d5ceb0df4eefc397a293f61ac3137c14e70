@@ -1,0 +1,4 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">  <span class="hljs-comment"># Bootloader &amp; Kernel</span>
+  boot.loader.systemd-boot.<span class="hljs-attr">enable</span> = <span class="hljs-literal">true</span>;
+  boot.loader.systemd-boot.<span class="hljs-attr">configurationLimit</span> = <span class="hljs-number">5</span>; <span class="hljs-comment"># Keeps only the last 5 generations</span>
+  boot.loader.efi.<span class="hljs-attr">canTouchEfiVariables</span> = <span class="hljs-literal">true</span>;

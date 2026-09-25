@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="716">
+  <name>Lain login spashscreen</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>bermer</author>
+  <homepage>https://store.kde.org/p/2124792</homepage>
+  <licence></licence>
+  <version>2.0.1</version>
+  <rating>64</rating>
+  <downloads>31390</downloads>
+  <installedfile>/home/yusufbek/.local/share/plasma/look-and-feel/Lain/</installedfile>
+  <id>2124792</id>
+  <releasedate>2026-09-03</releasedate>
+  <summary>&lt;p>Fix packaging, sorry guys&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/img/00/00/76/30/98/2124792/plasma-d1.gif</preview>
+  <previewBig>https://images.pling.com/img/00/00/76/30/98/2124792/plasma-d1.gif</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc4ODQ0Mjc0MiwidSI6bnVsbCwicyI6IjgwMDkwNTZiNmE3NDJiNWY3NTBhZWI4Y2QwM2VhMjExMzIzM2YxNzcxZWMwMTc4NjVlZDQ1YmZiNzA3MGY3N2RjYzdhYjE4ZDRjNmNkOTIxNjBhMmIyM2JjZDg3ZDUxOGYzMmM5OWIxODFkYjBjYzllYjJhYmVlZDhlNzU0ZmFiIiwidCI6MTc5MDI2MTkyMCwibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6IjAwYTYzOGVjNmM1OTMwN2I5MDQ2MzZjNGI2ZGE1OGEyIiwiaWF0IjoxNzkwMjU4MzIwLCJleHAiOjE3OTA0MzExMjAsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.AdRzFDHG4jHES3RqPppW529x3vez6qYuvOFrhvnTWNU/Lain.tar.gz</payload>
+  <tags>efi,plasma,plasma##majorversion=6,theme,unix,kde,gplv3,linux,animation</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

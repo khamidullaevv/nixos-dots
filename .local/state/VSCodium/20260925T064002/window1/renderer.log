@@ -1,0 +1,6 @@
+2026-09-25 06:40:02.626 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 06:40:02.975 [info] Started local extension host with pid 18061.
+2026-09-25 06:40:03.166 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 06:40:03.678 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 06:40:03.705 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 06:40:05.648 [info] [perf] Render performance baseline is 13ms

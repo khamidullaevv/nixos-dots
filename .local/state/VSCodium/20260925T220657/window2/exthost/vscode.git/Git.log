@@ -1,0 +1,349 @@
+2026-09-25 22:07:03.539 [info] [main] Log level: Info
+2026-09-25 22:07:03.539 [info] [main] Validating found git in: "git"
+2026-09-25 22:07:03.539 [info] [main] Using git "2.54.0" from "git"
+2026-09-25 22:07:03.539 [info] [Model][doInitialScan] Initial repository scan started
+2026-09-25 22:07:03.539 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-09-25 22:08:50.539 [info] > git clone https://github.com/khamidullaevv/nixos-dots.git /home/yusufbek/Documents/nixos-dots --progress [4528ms]
+2026-09-25 22:08:50.539 [info] Cloning into '/home/yusufbek/Documents/nixos-dots'...
+remote: Enumerating objects: 648, done.        
+remote: Counting objects:   0% (1/321)        remote: Counting objects:   1% (4/321)        remote: Counting objects:   2% (7/321)        remote: Counting objects:   3% (10/321)        remote: Counting objects:   4% (13/321)        remote: Counting objects:   5% (17/321)        remote: Counting objects:   6% (20/321)        remote: Counting objects:   7% (23/321)        remote: Counting objects:   8% (26/321)        remote: Counting objects:   9% (29/321)        remote: Counting objects:  10% (33/321)        remote: Counting objects:  11% (36/321)        remote: Counting objects:  12% (39/321)        remote: Counting objects:  13% (42/321)        remote: Counting objects:  14% (45/321)        remote: Counting objects:  15% (49/321)        remote: Counting objects:  16% (52/321)        remote: Counting objects:  17% (55/321)        remote: Counting objects:  18% (58/321)        remote: Counting objects:  19% (61/321)        remote: Counting objects:  20% (65/321)        remote: Counting objects:  21% (68/321)        remote: Counting objects:  22% (71/321)        remote: Counting objects:  23% (74/321)        remote: Counting objects:  24% (78/321)        remote: Counting objects:  25% (81/321)        remote: Counting objects:  26% (84/321)        remote: Counting objects:  27% (87/321)        remote: Counting objects:  28% (90/321)        remote: Counting objects:  29% (94/321)        remote: Counting objects:  30% (97/321)        remote: Counting objects:  31% (100/321)        remote: Counting objects:  32% (103/321)        remote: Counting objects:  33% (106/321)        remote: Counting objects:  34% (110/321)        remote: Counting objects:  35% (113/321)        remote: Counting objects:  36% (116/321)        remote: Counting objects:  37% (119/321)        remote: Counting objects:  38% (122/321)        remote: Counting objects:  39% (126/321)        remote: Counting objects:  40% (129/321)        remote: Counting objects:  41% (132/321)        remote: Counting objects:  42% (135/321)        remote: Counting objects:  43% (139/321)        remote: Counting objects:  44% (142/321)        remote: Counting objects:  45% (145/321)        remote: Counting objects:  46% (148/321)        remote: Counting objects:  47% (151/321)        remote: Counting objects:  48% (155/321)        remote: Counting objects:  49% (158/321)        remote: Counting objects:  50% (161/321)        remote: Counting objects:  51% (164/321)        remote: Counting objects:  52% (167/321)        remote: Counting objects:  53% (171/321)        remote: Counting objects:  54% (174/321)        remote: Counting objects:  55% (177/321)        remote: Counting objects:  56% (180/321)        remote: Counting objects:  57% (183/321)        remote: Counting objects:  58% (187/321)        remote: Counting objects:  59% (190/321)        remote: Counting objects:  60% (193/321)        remote: Counting objects:  61% (196/321)        remote: Counting objects:  62% (200/321)        remote: Counting objects:  63% (203/321)        remote: Counting objects:  64% (206/321)        remote: Counting objects:  65% (209/321)        remote: Counting objects:  66% (212/321)        remote: Counting objects:  67% (216/321)        remote: Counting objects:  68% (219/321)        remote: Counting objects:  69% (222/321)        remote: Counting objects:  70% (225/321)        remote: Counting objects:  71% (228/321)        remote: Counting objects:  72% (232/321)        remote: Counting objects:  73% (235/321)        remote: Counting objects:  74% (238/321)        remote: Counting objects:  75% (241/321)        remote: Counting objects:  76% (244/321)        remote: Counting objects:  77% (248/321)        remote: Counting objects:  78% (251/321)        remote: Counting objects:  79% (254/321)        remote: Counting objects:  80% (257/321)        remote: Counting objects:  81% (261/321)        remote: Counting objects:  82% (264/321)        remote: Counting objects:  83% (267/321)        remote: Counting objects:  84% (270/321)        remote: Counting objects:  85% (273/321)        remote: Counting objects:  86% (277/321)        remote: Counting objects:  87% (280/321)        remote: Counting objects:  88% (283/321)        remote: Counting objects:  89% (286/321)        remote: Counting objects:  90% (289/321)        remote: Counting objects:  91% (293/321)        remote: Counting objects:  92% (296/321)        remote: Counting objects:  93% (299/321)        remote: Counting objects:  94% (302/321)        remote: Counting objects:  95% (305/321)        remote: Counting objects:  96% (309/321)        remote: Counting objects:  97% (312/321)        remote: Counting objects:  98% (315/321)        remote: Counting objects:  99% (318/321)        remote: Counting objects: 100% (321/321)        remote: Counting objects: 100% (321/321), done.        
+remote: Compressing objects:   0% (1/236)        remote: Compressing objects:   1% (3/236)        remote: Compressing objects:   2% (5/236)        remote: Compressing objects:   3% (8/236)        remote: Compressing objects:   4% (10/236)        remote: Compressing objects:   5% (12/236)        remote: Compressing objects:   6% (15/236)        remote: Compressing objects:   7% (17/236)        remote: Compressing objects:   8% (19/236)        remote: Compressing objects:   9% (22/236)        remote: Compressing objects:  10% (24/236)        remote: Compressing objects:  11% (26/236)        remote: Compressing objects:  12% (29/236)        remote: Compressing objects:  13% (31/236)        remote: Compressing objects:  14% (34/236)        remote: Compressing objects:  15% (36/236)        remote: Compressing objects:  16% (38/236)        remote: Compressing objects:  17% (41/236)        remote: Compressing objects:  18% (43/236)        remote: Compressing objects:  19% (45/236)        remote: Compressing objects:  20% (48/236)        remote: Compressing objects:  21% (50/236)        remote: Compressing objects:  22% (52/236)        remote: Compressing objects:  23% (55/236)        remote: Compressing objects:  24% (57/236)        remote: Compressing objects:  25% (59/236)        remote: Compressing objects:  26% (62/236)        remote: Compressing objects:  27% (64/236)        remote: Compressing objects:  28% (67/236)        remote: Compressing objects:  29% (69/236)        remote: Compressing objects:  30% (71/236)        remote: Compressing objects:  31% (74/236)        remote: Compressing objects:  32% (76/236)        remote: Compressing objects:  33% (78/236)        remote: Compressing objects:  34% (81/236)        remote: Compressing objects:  35% (83/236)        remote: Compressing objects:  36% (85/236)        remote: Compressing objects:  37% (88/236)        remote: Compressing objects:  38% (90/236)        remote: Compressing objects:  39% (93/236)        remote: Compressing objects:  40% (95/236)        remote: Compressing objects:  41% (97/236)        remote: Compressing objects:  42% (100/236)        remote: Compressing objects:  43% (102/236)        remote: Compressing objects:  44% (104/236)        remote: Compressing objects:  45% (107/236)        remote: Compressing objects:  46% (109/236)        remote: Compressing objects:  47% (111/236)        remote: Compressing objects:  48% (114/236)        remote: Compressing objects:  49% (116/236)        remote: Compressing objects:  50% (118/236)        remote: Compressing objects:  51% (121/236)        remote: Compressing objects:  52% (123/236)        remote: Compressing objects:  53% (126/236)        remote: Compressing objects:  54% (128/236)        remote: Compressing objects:  55% (130/236)        remote: Compressing objects:  56% (133/236)        remote: Compressing objects:  57% (135/236)        remote: Compressing objects:  58% (137/236)        remote: Compressing objects:  59% (140/236)        remote: Compressing objects:  60% (142/236)        remote: Compressing objects:  61% (144/236)        remote: Compressing objects:  62% (147/236)        remote: Compressing objects:  63% (149/236)        remote: Compressing objects:  64% (152/236)        remote: Compressing objects:  65% (154/236)        remote: Compressing objects:  66% (156/236)        remote: Compressing objects:  67% (159/236)        remote: Compressing objects:  68% (161/236)        remote: Compressing objects:  69% (163/236)        remote: Compressing objects:  70% (166/236)        remote: Compressing objects:  71% (168/236)        remote: Compressing objects:  72% (170/236)        remote: Compressing objects:  73% (173/236)        remote: Compressing objects:  74% (175/236)        remote: Compressing objects:  75% (177/236)        remote: Compressing objects:  76% (180/236)        remote: Compressing objects:  77% (182/236)        remote: Compressing objects:  78% (185/236)        remote: Compressing objects:  79% (187/236)        remote: Compressing objects:  80% (189/236)        remote: Compressing objects:  81% (192/236)        remote: Compressing objects:  82% (194/236)        remote: Compressing objects:  83% (196/236)        remote: Compressing objects:  84% (199/236)        remote: Compressing objects:  85% (201/236)        remote: Compressing objects:  86% (203/236)        remote: Compressing objects:  87% (206/236)        remote: Compressing objects:  88% (208/236)        remote: Compressing objects:  89% (211/236)        remote: Compressing objects:  90% (213/236)        remote: Compressing objects:  91% (215/236)        remote: Compressing objects:  92% (218/236)        remote: Compressing objects:  93% (220/236)        remote: Compressing objects:  94% (222/236)        remote: Compressing objects:  95% (225/236)        remote: Compressing objects:  96% (227/236)        remote: Compressing objects:  97% (229/236)        remote: Compressing objects:  98% (232/236)        remote: Compressing objects:  99% (234/236)        remote: Compressing objects: 100% (236/236)        remote: Compressing objects: 100% (236/236), done.        
+Receiving objects:   0% (1/648)Receiving objects:   1% (7/648)Receiving objects:   2% (13/648)Receiving objects:   3% (20/648)Receiving objects:   4% (26/648)Receiving objects:   5% (33/648)Receiving objects:   6% (39/648)Receiving objects:   7% (46/648)Receiving objects:   8% (52/648)Receiving objects:   9% (59/648)Receiving objects:  10% (65/648)Receiving objects:  11% (72/648)Receiving objects:  12% (78/648)Receiving objects:  13% (85/648)Receiving objects:  14% (91/648)Receiving objects:  15% (98/648)Receiving objects:  16% (104/648)Receiving objects:  17% (111/648)Receiving objects:  18% (117/648)Receiving objects:  19% (124/648)Receiving objects:  20% (130/648)Receiving objects:  21% (137/648)Receiving objects:  22% (143/648)Receiving objects:  23% (150/648)Receiving objects:  24% (156/648)Receiving objects:  25% (162/648)Receiving objects:  26% (169/648)Receiving objects:  27% (175/648)Receiving objects:  28% (182/648)Receiving objects:  29% (188/648)Receiving objects:  30% (195/648)Receiving objects:  31% (201/648)Receiving objects:  32% (208/648)Receiving objects:  33% (214/648)Receiving objects:  34% (221/648)Receiving objects:  35% (227/648)Receiving objects:  36% (234/648)Receiving objects:  37% (240/648)Receiving objects:  38% (247/648)Receiving objects:  39% (253/648)Receiving objects:  40% (260/648)Receiving objects:  41% (266/648)Receiving objects:  42% (273/648)Receiving objects:  43% (279/648)Receiving objects:  44% (286/648)Receiving objects:  45% (292/648)Receiving objects:  46% (299/648)Receiving objects:  47% (305/648)Receiving objects:  48% (312/648)Receiving objects:  49% (318/648)Receiving objects:  50% (324/648)Receiving objects:  51% (331/648)Receiving objects:  52% (337/648)Receiving objects:  53% (344/648)Receiving objects:  54% (350/648)Receiving objects:  55% (357/648)Receiving objects:  56% (363/648)Receiving objects:  57% (370/648)Receiving objects:  58% (376/648)Receiving objects:  59% (383/648)Receiving objects:  60% (389/648)Receiving objects:  61% (396/648)Receiving objects:  62% (402/648)Receiving objects:  63% (409/648)Receiving objects:  64% (415/648)Receiving objects:  65% (422/648)Receiving objects:  66% (428/648)Receiving objects:  67% (435/648)Receiving objects:  68% (441/648)Receiving objects:  69% (448/648)Receiving objects:  70% (454/648)Receiving objects:  71% (461/648)Receiving objects:  72% (467/648)Receiving objects:  73% (474/648)Receiving objects:  74% (480/648)Receiving objects:  75% (486/648)Receiving objects:  76% (493/648)Receiving objects:  77% (499/648)Receiving objects:  78% (506/648)Receiving objects:  79% (512/648)Receiving objects:  80% (519/648)Receiving objects:  81% (525/648)Receiving objects:  82% (532/648)Receiving objects:  83% (538/648)Receiving objects:  84% (545/648)Receiving objects:  85% (551/648)Receiving objects:  86% (558/648), 108.01 KiB | 193.00 KiB/sReceiving objects:  87% (564/648), 108.01 KiB | 193.00 KiB/sReceiving objects:  88% (571/648), 108.01 KiB | 193.00 KiB/sReceiving objects:  89% (577/648), 108.01 KiB | 193.00 KiB/sReceiving objects:  90% (584/648), 108.01 KiB | 193.00 KiB/sReceiving objects:  90% (584/648), 220.01 KiB | 169.00 KiB/sReceiving objects:  90% (586/648), 2.19 MiB | 1.23 MiB/s    remote: Total 648 (delta 107), reused 256 (delta 55), pack-reused 327 (from 1)        
+Receiving objects:  91% (590/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  92% (597/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  93% (603/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  94% (610/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  95% (616/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  96% (623/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  97% (629/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  98% (636/648), 2.19 MiB | 1.23 MiB/sReceiving objects:  99% (642/648), 2.19 MiB | 1.23 MiB/sReceiving objects: 100% (648/648), 2.19 MiB | 1.23 MiB/sReceiving objects: 100% (648/648), 4.43 MiB | 2.15 MiB/s, done.
+Resolving deltas:   0% (0/240)Resolving deltas:   1% (3/240)Resolving deltas:   2% (5/240)Resolving deltas:   3% (8/240)Resolving deltas:   4% (10/240)Resolving deltas:   5% (12/240)Resolving deltas:   6% (15/240)Resolving deltas:   7% (17/240)Resolving deltas:   8% (20/240)Resolving deltas:   9% (22/240)Resolving deltas:  10% (24/240)Resolving deltas:  11% (27/240)Resolving deltas:  12% (29/240)Resolving deltas:  13% (32/240)Resolving deltas:  15% (36/240)Resolving deltas:  16% (39/240)Resolving deltas:  17% (41/240)Resolving deltas:  18% (44/240)Resolving deltas:  19% (46/240)Resolving deltas:  20% (48/240)Resolving deltas:  21% (51/240)Resolving deltas:  22% (53/240)Resolving deltas:  23% (56/240)Resolving deltas:  24% (58/240)Resolving deltas:  25% (60/240)Resolving deltas:  26% (63/240)Resolving deltas:  27% (65/240)Resolving deltas:  28% (69/240)Resolving deltas:  29% (70/240)Resolving deltas:  30% (73/240)Resolving deltas:  32% (78/240)Resolving deltas:  33% (80/240)Resolving deltas:  34% (82/240)Resolving deltas:  35% (84/240)Resolving deltas:  37% (91/240)Resolving deltas:  38% (92/240)Resolving deltas:  40% (96/240)Resolving deltas:  41% (99/240)Resolving deltas:  42% (101/240)Resolving deltas:  43% (104/240)Resolving deltas:  44% (106/240)Resolving deltas:  45% (108/240)Resolving deltas:  46% (111/240)Resolving deltas:  47% (113/240)Resolving deltas:  48% (116/240)Resolving deltas:  49% (118/240)Resolving deltas:  50% (120/240)Resolving deltas:  51% (123/240)Resolving deltas:  52% (126/240)Resolving deltas:  53% (128/240)Resolving deltas:  54% (131/240)Resolving deltas:  55% (132/240)Resolving deltas:  56% (135/240)Resolving deltas:  57% (137/240)Resolving deltas:  58% (141/240)Resolving deltas:  59% (142/240)Resolving deltas:  60% (144/240)Resolving deltas:  61% (147/240)Resolving deltas:  62% (149/240)Resolving deltas:  63% (153/240)Resolving deltas:  64% (154/240)Resolving deltas:  65% (157/240)Resolving deltas:  66% (160/240)Resolving deltas:  67% (163/240)Resolving deltas:  68% (164/240)Resolving deltas:  69% (167/240)Resolving deltas:  70% (168/240)Resolving deltas:  71% (171/240)Resolving deltas:  72% (173/240)Resolving deltas:  73% (177/240)Resolving deltas:  74% (179/240)Resolving deltas:  75% (181/240)Resolving deltas:  76% (183/240)Resolving deltas:  77% (185/240)Resolving deltas:  78% (188/240)Resolving deltas:  79% (190/240)Resolving deltas:  80% (192/240)Resolving deltas:  81% (196/240)Resolving deltas:  82% (197/240)Resolving deltas:  83% (200/240)Resolving deltas:  84% (202/240)Resolving deltas:  85% (204/240)Resolving deltas:  86% (207/240)Resolving deltas:  87% (209/240)Resolving deltas:  88% (213/240)Resolving deltas:  89% (214/240)Resolving deltas:  90% (217/240)Resolving deltas:  92% (221/240)Resolving deltas:  93% (224/240)Resolving deltas:  94% (226/240)Resolving deltas:  95% (228/240)Resolving deltas:  96% (231/240)Resolving deltas:  97% (234/240)Resolving deltas:  98% (236/240)Resolving deltas:  99% (238/240)Resolving deltas: 100% (240/240)Resolving deltas: 100% (240/240), done.
+2026-09-25 22:08:55.831 [info] [main] Log level: Info
+2026-09-25 22:08:55.831 [info] [main] Validating found git in: "git"
+2026-09-25 22:08:55.831 [info] [main] Using git "2.54.0" from "git"
+2026-09-25 22:08:55.831 [info] [Model][doInitialScan] Initial repository scan started
+2026-09-25 22:08:55.831 [info] > git rev-parse --show-toplevel [3ms]
+2026-09-25 22:08:55.831 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [2ms]
+2026-09-25 22:08:55.841 [info] [Model][openRepository] Opened repository (path): /home/yusufbek/Documents/nixos-dots
+2026-09-25 22:08:55.841 [info] [Model][openRepository] Opened repository (real path): /home/yusufbek/Documents/nixos-dots
+2026-09-25 22:08:55.841 [info] [Model][openRepository] Opened repository (kind): repository
+2026-09-25 22:08:55.861 [info] > git rev-parse --show-toplevel [12ms]
+2026-09-25 22:08:55.862 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-09-25 22:08:55.862 [info] > git config --get commit.template [16ms]
+2026-09-25 22:08:55.869 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:08:55.872 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:08:55.873 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2026-09-25 22:08:55.882 [info] > git status -z -uall [5ms]
+2026-09-25 22:08:55.883 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:08:55.895 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2026-09-25 22:08:55.899 [info] > git config --get commit.template [5ms]
+2026-09-25 22:08:55.899 [info] > git config --get --local branch.main.vscode-merge-base [1ms]
+2026-09-25 22:08:55.899 [warning] [Git][config] git config failed: Failed to execute git
+2026-09-25 22:08:55.906 [info] > git reflog main --grep-reflog=branch: Created from *. [4ms]
+2026-09-25 22:08:55.910 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2026-09-25 22:08:55.913 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:08:55.914 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [4ms]
+2026-09-25 22:08:55.917 [info] > git rev-parse refs/remotes/origin/main [4ms]
+2026-09-25 22:08:55.924 [info] > git status -z -uall [4ms]
+2026-09-25 22:08:55.925 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [8ms]
+2026-09-25 22:08:55.929 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2026-09-25 22:08:55.931 [info] > git config --add --local branch.main.vscode-merge-base origin/main [3ms]
+2026-09-25 22:08:55.939 [info] > git config --get commit.template [4ms]
+2026-09-25 22:08:55.939 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2026-09-25 22:08:55.942 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:08:55.943 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2026-09-25 22:08:55.950 [info] > git status -z -uall [3ms]
+2026-09-25 22:08:55.951 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2026-09-25 22:08:55.960 [info] > git merge-base refs/heads/main refs/remotes/origin/main [3ms]
+2026-09-25 22:08:55.965 [info] > git merge-base refs/heads/main refs/remotes/origin/main [5ms]
+2026-09-25 22:08:55.969 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 41d2563b125d107ead994c79b700dc2135c10416...refs/remotes/origin/main -- [5ms]
+2026-09-25 22:08:55.970 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 41d2563b125d107ead994c79b700dc2135c10416...refs/remotes/origin/main -- [1ms]
+2026-09-25 22:08:56.375 [info] > git check-ignore -v -z --stdin [3ms]
+2026-09-25 22:08:57.077 [info] > git config --get commit.template [6ms]
+2026-09-25 22:08:57.078 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:08:57.084 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:08:57.087 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2026-09-25 22:08:57.097 [info] > git status -z -uall [6ms]
+2026-09-25 22:08:57.098 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:09:03.621 [info] > git check-ignore -v -z --stdin [3ms]
+2026-09-25 22:09:12.080 [info] > git config --get commit.template [2ms]
+2026-09-25 22:09:12.085 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:09:12.088 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:09:12.089 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2026-09-25 22:09:12.099 [info] > git status -z -uall [6ms]
+2026-09-25 22:09:12.101 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-09-25 22:09:15.644 [info] > git check-ignore -v -z --stdin [4ms]
+2026-09-25 22:09:17.128 [info] > git config --get commit.template [11ms]
+2026-09-25 22:09:17.130 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:09:17.136 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:09:17.137 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2026-09-25 22:09:17.147 [info] > git status -z -uall [5ms]
+2026-09-25 22:09:17.149 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-09-25 22:09:22.165 [info] > git config --get commit.template [5ms]
+2026-09-25 22:09:22.166 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:09:22.169 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:09:22.170 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2026-09-25 22:09:22.177 [info] > git status -z -uall [4ms]
+2026-09-25 22:09:22.178 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:09:22.991 [info] > git check-ignore -v -z --stdin [1ms]
+2026-09-25 22:09:34.043 [info] > git config --get commit.template [8ms]
+2026-09-25 22:09:34.044 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:09:34.050 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:09:34.051 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2026-09-25 22:09:34.062 [info] > git status -z -uall [7ms]
+2026-09-25 22:09:34.063 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:09:39.085 [info] > git config --get commit.template [9ms]
+2026-09-25 22:09:39.087 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:09:39.092 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:09:39.094 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2026-09-25 22:09:39.107 [info] > git status -z -uall [8ms]
+2026-09-25 22:09:39.109 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2026-09-25 22:09:50.213 [info] > git config --get commit.template [9ms]
+2026-09-25 22:09:50.215 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:09:50.222 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:09:50.224 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2026-09-25 22:09:50.236 [info] > git status -z -uall [6ms]
+2026-09-25 22:09:50.237 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:10:20.547 [info] > git config --get commit.template [7ms]
+2026-09-25 22:10:20.549 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:10:20.556 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/yusufbek/Documents/nixos-dots/.git/refs/remotes/origin/main'
+2026-09-25 22:10:20.558 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2026-09-25 22:10:20.573 [info] > git status -z -uall [8ms]
+2026-09-25 22:10:20.577 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2026-09-25 22:10:20.593 [info] > git merge-base refs/heads/main refs/remotes/origin/main [6ms]
+2026-09-25 22:10:20.607 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 41d2563b125d107ead994c79b700dc2135c10416...refs/remotes/origin/main -- [3ms]
+2026-09-25 22:11:01.161 [info] > git config --get commit.template [12ms]
+2026-09-25 22:11:01.163 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:11:01.177 [info] > git status -z -uall [6ms]
+2026-09-25 22:11:01.179 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:11:01.189 [info] > git merge-base refs/heads/main refs/remotes/origin/main [4ms]
+2026-09-25 22:11:01.196 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 8d33f00feef3edd77dc4c225d1bf11e06487f06b...refs/remotes/origin/main -- [2ms]
+2026-09-25 22:11:33.896 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:11:33.910 [info] > git show --textconv :configuration.nix [6ms]
+2026-09-25 22:11:33.915 [info] > git ls-files --stage -- configuration.nix [6ms]
+2026-09-25 22:11:33.918 [info] > git hash-object -t tree /dev/null [4ms]
+2026-09-25 22:11:33.918 [warning] [GitFileSystemProvider][readFile] File not found - git:/home/yusufbek/Documents/nixos-dots/configuration.nix.git?%7B%22path%22%3A%22%2Fhome%2Fyusufbek%2FDocuments%2Fnixos-dots%2Fconfiguration.nix%22%2C%22ref%22%3A%22%22%7D
+2026-09-25 22:11:33.920 [info] > git hash-object -t tree /dev/null [2ms]
+2026-09-25 22:11:33.920 [warning] [GitFileSystemProvider][stat] File not found - git:/home/yusufbek/Documents/nixos-dots/configuration.nix.git?%7B%22path%22%3A%22%2Fhome%2Fyusufbek%2FDocuments%2Fnixos-dots%2Fconfiguration.nix%22%2C%22ref%22%3A%22%22%7D
+2026-09-25 22:11:36.158 [info] > git config --get commit.template [8ms]
+2026-09-25 22:11:36.159 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2026-09-25 22:11:36.170 [info] > git status -z -uall [6ms]
+2026-09-25 22:11:36.171 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:11:37.297 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:11:37.317 [info] > git show --textconv :hardware-configuration.nix [9ms]
+2026-09-25 22:11:37.318 [warning] [GitFileSystemProvider][readFile] File not found - git:/home/yusufbek/Documents/nixos-dots/hardware-configuration.nix.git?%7B%22path%22%3A%22%2Fhome%2Fyusufbek%2FDocuments%2Fnixos-dots%2Fhardware-configuration.nix%22%2C%22ref%22%3A%22%22%7D
+2026-09-25 22:11:37.319 [info] > git ls-files --stage -- hardware-configuration.nix [4ms]
+2026-09-25 22:11:37.319 [warning] [GitFileSystemProvider][stat] File not found - git:/home/yusufbek/Documents/nixos-dots/hardware-configuration.nix.git?%7B%22path%22%3A%22%2Fhome%2Fyusufbek%2FDocuments%2Fnixos-dots%2Fhardware-configuration.nix%22%2C%22ref%22%3A%22%22%7D
+2026-09-25 22:11:41.194 [info] > git config --get commit.template [9ms]
+2026-09-25 22:11:41.195 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:11:41.210 [info] > git status -z -uall [8ms]
+2026-09-25 22:11:41.213 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2026-09-25 22:13:14.345 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:13:14.440 [info] > git config --get commit.template [12ms]
+2026-09-25 22:13:14.442 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2026-09-25 22:13:14.457 [info] > git status -z -uall [5ms]
+2026-09-25 22:13:14.459 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:13:17.556 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:13:19.474 [info] > git config --get commit.template [2ms]
+2026-09-25 22:13:19.484 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:13:19.501 [info] > git status -z -uall [9ms]
+2026-09-25 22:13:19.502 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:13:24.520 [info] > git config --get commit.template [8ms]
+2026-09-25 22:13:24.521 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:13:24.535 [info] > git status -z -uall [8ms]
+2026-09-25 22:13:24.537 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-09-25 22:13:24.857 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:13:24.900 [info] > git show --textconv :configuration.nix [34ms]
+2026-09-25 22:13:24.901 [info] > git show --textconv HEAD:configuration.nix [27ms]
+2026-09-25 22:13:24.901 [info] > git ls-files --stage -- configuration.nix [16ms]
+2026-09-25 22:13:24.911 [warning] [GitFileSystemProvider][readFile] File not found - git:/home/yusufbek/Documents/nixos-dots/configuration.nix.git?%7B%22path%22%3A%22%2Fhome%2Fyusufbek%2FDocuments%2Fnixos-dots%2Fconfiguration.nix%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-09-25 22:13:24.914 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [4ms]
+2026-09-25 22:13:24.915 [info] > git ls-tree -l HEAD -- configuration.nix [18ms]
+2026-09-25 22:13:24.915 [warning] [GitFileSystemProvider][stat] File not found - git:/home/yusufbek/Documents/nixos-dots/configuration.nix.git?%7B%22path%22%3A%22%2Fhome%2Fyusufbek%2FDocuments%2Fnixos-dots%2Fconfiguration.nix%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-09-25 22:13:42.905 [info] > git config --get commit.template [9ms]
+2026-09-25 22:13:42.908 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2026-09-25 22:13:42.923 [info] > git status -z -uall [7ms]
+2026-09-25 22:13:42.925 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:13:42.934 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2026-09-25 22:13:42.941 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 8d33f00feef3edd77dc4c225d1bf11e06487f06b...refs/remotes/origin/main -- [1ms]
+2026-09-25 22:13:43.000 [info] > git ls-files --stage -- configuration.nix [2ms]
+2026-09-25 22:13:43.015 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [3ms]
+2026-09-25 22:13:43.029 [info] > git show --textconv :configuration.nix [4ms]
+2026-09-25 22:13:43.240 [info] > git check-ignore -v -z --stdin [3ms]
+2026-09-25 22:15:17.783 [info] > git config --get commit.template [4ms]
+2026-09-25 22:15:17.807 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [13ms]
+2026-09-25 22:15:17.819 [info] > git status -z -uall [6ms]
+2026-09-25 22:15:17.819 [info] > git ls-files --stage -- configuration.nix [13ms]
+2026-09-25 22:15:17.824 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [6ms]
+2026-09-25 22:15:17.832 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [9ms]
+2026-09-25 22:15:17.833 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2026-09-25 22:15:17.844 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 1c3bdd8cfc2fe0fbd1fbe39853d51c2f35b0160e...refs/remotes/origin/main -- [5ms]
+2026-09-25 22:15:17.846 [info] > git show --textconv :configuration.nix [3ms]
+2026-09-25 22:16:01.457 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:16:02.012 [info] > git config --get commit.template [4ms]
+2026-09-25 22:16:02.013 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2026-09-25 22:16:02.024 [info] > git status -z -uall [7ms]
+2026-09-25 22:16:02.025 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:16:02.341 [info] > git check-ignore -v -z --stdin [4ms]
+2026-09-25 22:16:05.184 [info] > git ls-files --stage -- configuration.nix [3ms]
+2026-09-25 22:16:05.194 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [2ms]
+2026-09-25 22:16:05.207 [info] > git show --textconv :configuration.nix [2ms]
+2026-09-25 22:16:06.925 [info] > git ls-files --stage -- configuration.nix [3ms]
+2026-09-25 22:16:06.935 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [3ms]
+2026-09-25 22:16:06.946 [info] > git show --textconv :configuration.nix [3ms]
+2026-09-25 22:16:07.051 [info] > git config --get commit.template [12ms]
+2026-09-25 22:16:07.052 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2026-09-25 22:16:07.067 [info] > git status -z -uall [7ms]
+2026-09-25 22:16:07.068 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:16:07.385 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:16:23.714 [info] > git config --get commit.template [10ms]
+2026-09-25 22:16:23.716 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:16:23.727 [info] > git status -z -uall [4ms]
+2026-09-25 22:16:23.729 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:16:23.737 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2026-09-25 22:16:23.744 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 1c3bdd8cfc2fe0fbd1fbe39853d51c2f35b0160e...refs/remotes/origin/main -- [2ms]
+2026-09-25 22:16:23.807 [info] > git ls-files --stage -- configuration.nix [2ms]
+2026-09-25 22:16:23.817 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [3ms]
+2026-09-25 22:16:23.831 [info] > git show --textconv :configuration.nix [4ms]
+2026-09-25 22:16:24.045 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:16:33.260 [info] > git config --get commit.template [15ms]
+2026-09-25 22:16:33.288 [info] > git ls-files --stage -- configuration.nix [22ms]
+2026-09-25 22:16:33.295 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [11ms]
+2026-09-25 22:16:33.297 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [3ms]
+2026-09-25 22:16:33.310 [info] > git status -z -uall [7ms]
+2026-09-25 22:16:33.318 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [9ms]
+2026-09-25 22:16:33.329 [info] > git show --textconv :configuration.nix [11ms]
+2026-09-25 22:16:33.331 [info] > git merge-base refs/heads/main refs/remotes/origin/main [3ms]
+2026-09-25 22:16:33.337 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% eea833ecbc31fb3b90a0421946ed0f950faef165...refs/remotes/origin/main -- [1ms]
+2026-09-25 22:16:35.315 [info] > git check-ignore -v -z --stdin [1ms]
+2026-09-25 22:16:38.311 [info] > git ls-files --stage -- configuration.nix [3ms]
+2026-09-25 22:16:38.322 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [3ms]
+2026-09-25 22:16:38.340 [info] > git show --textconv :configuration.nix [9ms]
+2026-09-25 22:16:38.347 [info] > git config --get commit.template [7ms]
+2026-09-25 22:16:38.348 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:16:38.358 [info] > git status -z -uall [5ms]
+2026-09-25 22:16:38.359 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2026-09-25 22:16:38.676 [info] > git check-ignore -v -z --stdin [3ms]
+2026-09-25 22:16:39.586 [info] > git ls-files --stage -- configuration.nix [3ms]
+2026-09-25 22:16:39.596 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [3ms]
+2026-09-25 22:16:39.606 [info] > git show --textconv :configuration.nix [2ms]
+2026-09-25 22:16:43.381 [info] > git config --get commit.template [10ms]
+2026-09-25 22:16:43.382 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:16:43.399 [info] > git status -z -uall [8ms]
+2026-09-25 22:16:43.401 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-09-25 22:16:43.739 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:16:48.163 [info] > git ls-files --stage -- configuration.nix [3ms]
+2026-09-25 22:16:48.171 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [2ms]
+2026-09-25 22:16:48.184 [info] > git show --textconv :configuration.nix [3ms]
+2026-09-25 22:16:48.446 [info] > git config --get commit.template [8ms]
+2026-09-25 22:16:48.448 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2026-09-25 22:16:48.462 [info] > git status -z -uall [7ms]
+2026-09-25 22:16:48.463 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:16:48.475 [info] > git merge-base refs/heads/main refs/remotes/origin/main [4ms]
+2026-09-25 22:16:48.483 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% eea833ecbc31fb3b90a0421946ed0f950faef165...refs/remotes/origin/main -- [2ms]
+2026-09-25 22:16:48.777 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:17:00.176 [info] > git config --get commit.template [14ms]
+2026-09-25 22:17:00.205 [info] > git ls-files --stage -- configuration.nix [19ms]
+2026-09-25 22:17:00.211 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2026-09-25 22:17:00.213 [info] > git cat-file -s 84a1d0251f5729a3ed1b67d0ef28f0acf6188f07 [2ms]
+2026-09-25 22:17:00.226 [info] > git status -z -uall [6ms]
+2026-09-25 22:17:00.233 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [7ms]
+2026-09-25 22:17:00.242 [info] > git show --textconv :configuration.nix [10ms]
+2026-09-25 22:17:00.244 [info] > git merge-base refs/heads/main refs/remotes/origin/main [3ms]
+2026-09-25 22:17:00.250 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% ef2d76cad75f18e2c058b3a185fc18466f1e4aa2...refs/remotes/origin/main -- [1ms]
+2026-09-25 22:17:14.918 [info] > git check-ignore -v -z --stdin [3ms]
+2026-09-25 22:17:14.932 [info] > git show --textconv :hardware-configuration.nix [6ms]
+2026-09-25 22:17:14.932 [info] > git ls-files --stage -- hardware-configuration.nix [1ms]
+2026-09-25 22:17:14.939 [info] > git cat-file -s bfca1bf09034b1d93600ee35396730a9144dc545 [2ms]
+2026-09-25 22:17:15.822 [info] > git check-ignore -v -z --stdin [3ms]
+2026-09-25 22:17:18.006 [info] > git config --get commit.template [7ms]
+2026-09-25 22:17:18.006 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2026-09-25 22:17:18.016 [info] > git status -z -uall [5ms]
+2026-09-25 22:17:18.017 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2026-09-25 22:17:18.337 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:17:19.314 [info] > git check-ignore -v -z --stdin [1ms]
+2026-09-25 22:17:21.957 [info] > git ls-files --stage -- hardware-configuration.nix [2ms]
+2026-09-25 22:17:21.964 [info] > git cat-file -s bfca1bf09034b1d93600ee35396730a9144dc545 [2ms]
+2026-09-25 22:17:21.976 [info] > git show --textconv :hardware-configuration.nix [2ms]
+2026-09-25 22:17:23.043 [info] > git config --get commit.template [11ms]
+2026-09-25 22:17:23.044 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:17:23.060 [info] > git status -z -uall [8ms]
+2026-09-25 22:17:23.061 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-09-25 22:17:23.353 [info] > git ls-files --stage -- hardware-configuration.nix [2ms]
+2026-09-25 22:17:23.362 [info] > git cat-file -s bfca1bf09034b1d93600ee35396730a9144dc545 [2ms]
+2026-09-25 22:17:23.378 [info] > git show --textconv :hardware-configuration.nix [8ms]
+2026-09-25 22:17:23.378 [info] > git check-ignore -v -z --stdin [1ms]
+2026-09-25 22:17:28.076 [info] > git config --get commit.template [7ms]
+2026-09-25 22:17:28.077 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:17:28.089 [info] > git status -z -uall [7ms]
+2026-09-25 22:17:28.092 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-09-25 22:17:28.411 [info] > git check-ignore -v -z --stdin [3ms]
+2026-09-25 22:17:43.505 [info] > git config --get commit.template [10ms]
+2026-09-25 22:17:43.506 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:17:43.519 [info] > git status -z -uall [6ms]
+2026-09-25 22:17:43.521 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:17:43.529 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2026-09-25 22:17:43.536 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% ef2d76cad75f18e2c058b3a185fc18466f1e4aa2...refs/remotes/origin/main -- [2ms]
+2026-09-25 22:17:43.600 [info] > git ls-files --stage -- hardware-configuration.nix [2ms]
+2026-09-25 22:17:43.610 [info] > git cat-file -s bfca1bf09034b1d93600ee35396730a9144dc545 [3ms]
+2026-09-25 22:17:43.622 [info] > git show --textconv :hardware-configuration.nix [2ms]
+2026-09-25 22:17:43.838 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:18:19.533 [info] > git config --get commit.template [22ms]
+2026-09-25 22:18:19.537 [info] > git ls-files --stage -- hardware-configuration.nix [7ms]
+2026-09-25 22:18:19.554 [info] > git cat-file -s bfca1bf09034b1d93600ee35396730a9144dc545 [8ms]
+2026-09-25 22:18:19.555 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:18:19.574 [info] > git show --textconv :hardware-configuration.nix [13ms]
+2026-09-25 22:18:19.575 [info] > git status -z -uall [8ms]
+2026-09-25 22:18:19.576 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:18:19.589 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2026-09-25 22:18:19.596 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 969fc447b87b9f902c5f73da680d1381f674d888...refs/remotes/origin/main -- [2ms]
+2026-09-25 22:26:12.078 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:26:12.493 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:26:12.510 [info] > git show --textconv :hypr/hypridle.conf [6ms]
+2026-09-25 22:26:12.511 [info] > git ls-files --stage -- hypr/hypridle.conf [1ms]
+2026-09-25 22:26:12.518 [info] > git cat-file -s 72688da30d2f78cb49684f1345b76637da29f842 [3ms]
+2026-09-25 22:26:12.891 [info] > git check-ignore -v -z --stdin [1ms]
+2026-09-25 22:26:12.903 [info] > git show --textconv :hypr/hyprland.conf [4ms]
+2026-09-25 22:26:12.904 [info] > git ls-files --stage -- hypr/hyprland.conf [1ms]
+2026-09-25 22:26:12.908 [info] > git cat-file -s 330ca9ec7ca1d5f966ac24d58f4d6f7b582dc7e5 [1ms]
+2026-09-25 22:26:13.360 [info] > git blame --root --incremental 969fc447b87b9f902c5f73da680d1381f674d888 -- hypr/hyprland.conf [2ms]
+2026-09-25 22:26:14.176 [info] > git check-ignore -v -z --stdin [4ms]
+2026-09-25 22:26:16.063 [info] > git config --get commit.template [9ms]
+2026-09-25 22:26:16.064 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-09-25 22:26:16.080 [info] > git status -z -uall [8ms]
+2026-09-25 22:26:16.081 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:26:16.395 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:26:17.425 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:26:21.111 [info] > git config --get commit.template [13ms]
+2026-09-25 22:26:21.113 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:26:21.131 [info] > git status -z -uall [8ms]
+2026-09-25 22:26:21.132 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-09-25 22:26:24.564 [info] > git ls-files --stage -- hypr/hyprland.conf [2ms]
+2026-09-25 22:26:24.573 [info] > git cat-file -s 330ca9ec7ca1d5f966ac24d58f4d6f7b582dc7e5 [3ms]
+2026-09-25 22:26:24.585 [info] > git show --textconv :hypr/hyprland.conf [3ms]
+2026-09-25 22:26:25.902 [info] > git ls-files --stage -- hypr/hyprland.conf [2ms]
+2026-09-25 22:26:25.911 [info] > git cat-file -s 3841e1b4ea4f2e98fd18d86b6fa244e30510c122 [3ms]
+2026-09-25 22:26:25.927 [info] > git show --textconv :hypr/hyprland.conf [4ms]
+2026-09-25 22:26:26.153 [info] > git check-ignore -v -z --stdin [11ms]
+2026-09-25 22:26:26.155 [info] > git config --get commit.template [2ms]
+2026-09-25 22:26:26.165 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:26:26.176 [info] > git status -z -uall [5ms]
+2026-09-25 22:26:26.177 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2026-09-25 22:26:26.494 [info] > git check-ignore -v -z --stdin [2ms]
+2026-09-25 22:26:26.513 [info] > git show --textconv HEAD:hypr/hyprland.conf [8ms]
+2026-09-25 22:26:26.515 [info] > git ls-tree -l HEAD -- hypr/hyprland.conf [3ms]
+2026-09-25 22:26:47.157 [info] > git config --get commit.template [8ms]
+2026-09-25 22:26:47.158 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-09-25 22:26:47.170 [info] > git status -z -uall [5ms]
+2026-09-25 22:26:47.173 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-09-25 22:26:47.187 [info] > git blame --root --incremental 4ce09b2f86bb4623bde2fab45da40babf94e4557 -- hypr/hyprland.conf [6ms]
+2026-09-25 22:26:47.191 [info] > git merge-base refs/heads/main refs/remotes/origin/main [5ms]
+2026-09-25 22:26:47.198 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 969fc447b87b9f902c5f73da680d1381f674d888...refs/remotes/origin/main -- [2ms]
+2026-09-25 22:26:47.261 [info] > git ls-files --stage -- hypr/hyprland.conf [9ms]
+2026-09-25 22:26:47.267 [info] > git ls-tree -l HEAD -- hypr/hyprland.conf [7ms]
+2026-09-25 22:26:47.268 [info] > git cat-file -s 3841e1b4ea4f2e98fd18d86b6fa244e30510c122 [2ms]
+2026-09-25 22:26:47.278 [info] > git show --textconv HEAD:hypr/hyprland.conf [6ms]
+2026-09-25 22:26:47.279 [info] > git show --textconv :hypr/hyprland.conf [2ms]
+2026-09-25 22:26:47.497 [info] > git check-ignore -v -z --stdin [4ms]
+2026-09-25 22:26:55.560 [info] > git config --get commit.template [15ms]
+2026-09-25 22:26:55.589 [info] > git ls-files --stage -- hypr/hyprland.conf [21ms]
+2026-09-25 22:26:55.595 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [7ms]
+2026-09-25 22:26:55.596 [info] > git cat-file -s 3841e1b4ea4f2e98fd18d86b6fa244e30510c122 [2ms]
+2026-09-25 22:26:55.608 [info] > git status -z -uall [6ms]
+2026-09-25 22:26:55.613 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [6ms]
+2026-09-25 22:26:55.622 [info] > git show --textconv :hypr/hyprland.conf [9ms]
+2026-09-25 22:26:55.623 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2026-09-25 22:26:55.630 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 4ce09b2f86bb4623bde2fab45da40babf94e4557...refs/remotes/origin/main -- [2ms]

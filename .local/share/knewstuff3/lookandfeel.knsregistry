@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="722">
+  <name>Scratchy</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1898344</homepage>
+  <licence></licence>
+  <version>2.0</version>
+  <rating>76</rating>
+  <downloads>101690</downloads>
+  <installedfile>/home/yusufbek/.local/share/plasma/look-and-feel/Scratchy/</installedfile>
+  <id>1898344</id>
+  <releasedate>2026-06-04</releasedate>
+  <summary>&lt;p>Dark theme, based on the catppuccin macchiato color palette.&lt;br />&lt;a href="https://github.com/catppuccin/catppuccin">https://github.com/catppuccin/catppuccin&lt;/a>&lt;br />&lt;br />Plasma theme: &lt;a href="https://store.kde.org/p/1896013/">https://store.kde.org/p/1896013/&lt;/a>&lt;br />Aurorae window decoration: &lt;a href="https://store.kde.org/p/1896009">https://store.kde.org/p/1896009&lt;/a>&lt;br />Color-schemes: &lt;a href="https://store.kde.org/p/1896006">https://store.kde.org/p/1896006&lt;/a>&lt;br />Konsole color-scheme: &lt;a href="https://store.kde.org/p/1896005">https://store.kde.org/p/1896005&lt;/a>&lt;br />Wallpaper: &lt;a href="https://store.kde.org/p/1896012">https://store.kde.org/p/1896012&lt;/a>&lt;br />New wallpaper: &lt;a href="https://store.kde.org/p/2055751">https://store.kde.org/p/2055751&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1898344/logo.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1898344/logo.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc2NDQxNzk2MSwidSI6bnVsbCwicyI6IjkxMDdkY2QwZTUzNTkyOGJmMWI3MmJlN2Y4Yjc5ZTI3MjFkNjc4YjAxZTBkNDFmYTA1ZDc1ZThiMjAwY2Y2MzQ5ZWExOGQxMTZjOTNlMmI3ZDI5NTU5YjNmMTU3NThmOWQ4Mjk5NGU2ZGY0ODZiMTUyYmYwZmQ3Yzk5ODBlN2E4IiwidCI6MTc5MDI2MTk1OCwibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6ImUwYzg0ZWNiZmU3MTI4ODNmOGQwYjFhYTUyZGE0MDdmIiwiaWF0IjoxNzkwMjU4MzU4LCJleHAiOjE3OTA0MzExNTgsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0._CdECtlbhXI66vwkN6zxMx0IyLXyDz1gXwmLraIW60Y/Scratchy.tar.gz</payload>
+  <tags>plasma##majorversion=6,plasma,kde,mit-license,linux,unix,theme</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

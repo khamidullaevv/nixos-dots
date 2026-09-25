@@ -1,0 +1,20 @@
+2026-09-25 22:37:30.308 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:37:30.911 [info] Started local extension host with pid 17649.
+2026-09-25 22:37:31.291 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:37:32.242 [error] [Extension Host] error:
+       … from call site
+         at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+            1| # /etc/nixos/configuration.nix
+            2| { config, pkgs, ... }:
+             | ^
+            3|
+
+       error: function 'anonymous lambda' called without required argument 'config'
+       at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+            1| # /etc/nixos/configuration.nix
+            2| { config, pkgs, ... }:
+             | ^
+            3|
+2026-09-25 22:37:33.172 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 22:37:33.239 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 22:37:33.622 [info] [perf] Render performance baseline is 16ms

@@ -1,0 +1,36 @@
+2026-09-25 22:37:32.795 [info] [main] Log level: Info
+2026-09-25 22:37:32.796 [info] [main] Validating found git in: "git"
+2026-09-25 22:37:32.796 [info] [main] Using git "2.54.0" from "git"
+2026-09-25 22:37:32.796 [info] [Model][doInitialScan] Initial repository scan started
+2026-09-25 22:37:32.796 [info] > git rev-parse --show-toplevel [31ms]
+2026-09-25 22:37:32.796 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [5ms]
+2026-09-25 22:37:32.825 [info] [Model][openRepository] Opened repository (path): /home/yusufbek/Documents/nixos-dots
+2026-09-25 22:37:32.825 [info] [Model][openRepository] Opened repository (real path): /home/yusufbek/Documents/nixos-dots
+2026-09-25 22:37:32.825 [info] [Model][openRepository] Opened repository (kind): repository
+2026-09-25 22:37:32.837 [info] > git rev-parse --show-toplevel [3ms]
+2026-09-25 22:37:32.837 [info] > git config --get commit.template [7ms]
+2026-09-25 22:37:32.848 [info] > git rev-parse --show-toplevel [6ms]
+2026-09-25 22:37:32.862 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [15ms]
+2026-09-25 22:37:32.867 [info] > git rev-parse --show-toplevel [6ms]
+2026-09-25 22:37:32.887 [info] > git status -z -uall [5ms]
+2026-09-25 22:37:32.887 [info] > git rev-parse --show-toplevel [11ms]
+2026-09-25 22:37:32.901 [info] > git rev-parse --show-toplevel [10ms]
+2026-09-25 22:37:32.901 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [15ms]
+2026-09-25 22:37:32.922 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [13ms]
+2026-09-25 22:37:32.930 [info] > git config --get --local branch.main.vscode-merge-base [4ms]
+2026-09-25 22:37:32.935 [info] > git config --get commit.template [13ms]
+2026-09-25 22:37:32.936 [info] > git rev-parse --show-toplevel [20ms]
+2026-09-25 22:37:32.950 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [14ms]
+2026-09-25 22:37:32.971 [info] > git merge-base refs/heads/main refs/remotes/origin/main [16ms]
+2026-09-25 22:37:32.978 [info] > git rev-parse --show-toplevel [29ms]
+2026-09-25 22:37:32.978 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-09-25 22:37:32.981 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 4ce09b2f86bb4623bde2fab45da40babf94e4557...refs/remotes/origin/main -- [4ms]
+2026-09-25 22:37:32.982 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [12ms]
+2026-09-25 22:37:32.998 [info] > git status -z -uall [9ms]
+2026-09-25 22:37:33.010 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [15ms]
+2026-09-25 22:37:33.168 [info] > git check-ignore -v -z --stdin [1ms]
+2026-09-25 22:37:33.210 [info] > git show --textconv :hypr/hyprland.conf [8ms]
+2026-09-25 22:37:33.211 [info] > git ls-files --stage -- hypr/hyprland.conf [2ms]
+2026-09-25 22:37:33.217 [info] > git cat-file -s 3841e1b4ea4f2e98fd18d86b6fa244e30510c122 [2ms]
+2026-09-25 22:37:33.245 [info] > git blame --root --incremental 4ce09b2f86bb4623bde2fab45da40babf94e4557 -- hypr/hyprland.conf [2ms]
+2026-09-25 22:37:33.349 [info] > git check-ignore -v -z --stdin [2ms]

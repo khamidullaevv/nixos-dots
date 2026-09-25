@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<span style="font-family:monospace"><span style="font-weight:bold;color:#54ff54;background-color:#ffffff;">[yusufbek@nixos:/etc/nixos]$</span><span style="color:#000000;background-color:#ffffff;"> sudo nixos-rebuild switch </span><span style="color:#000000;background-color:#ffffff;">&#160;</span><br><span style="color:#000000;background-color:#ffffff;">building the system configuration...</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">error:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while calling the '</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">derivationStrict</span><span style="color:#000000;background-color:#ffffff;">' builtin</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#5454ff;background-color:#ffffff;">at </span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">«nix-internal»/derivation-internal.nix:37:12</span><span style="color:#000000;background-color:#ffffff;">:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;36|</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;37| &#160;&#160;strict = derivationStrict drvAttrs;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">^</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;38|</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating derivation '</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">nixos-system-lenovo-loq-26.05.10402.1e8bc658fc98</span><span style="color:#000000;background-color:#ffffff;">'</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;whose name attribute is located at </span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/pkgs/stdenv/generic/make-derivation.nix:647:11</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating attribute '</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">buildCommand</span><span style="color:#000000;background-color:#ffffff;">' of derivation '</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">nixos-system-lenovo-loq-26.05.10402.1e8bc658fc98</span><span style="color:#000000;background-color:#ffffff;">'</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#5454ff;background-color:#ffffff;">at </span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/system/activation/top-level.nix:63:7</span><span style="color:#000000;background-color:#ffffff;">:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;62| &#160;&#160;&#160;&#160;&#160;&#160;allowSubstitutes = false;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;63| &#160;&#160;&#160;&#160;&#160;&#160;buildCommand = systemBuilder;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">^</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;64|</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `environment.etc.fonts.source':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating definitions from `/nix/store/1s65fclqh332xxcd5pci5pxs377v005w-nixos-26.05.10402.1e8bc658fc98/nixos/nixos/modules/config/fonts/fontconfig.nix':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating the option `fonts.packages':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;… while evaluating definitions from `/etc/nixos/configuration.nix':</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff54ff;background-color:#ffffff;">(stack trace truncated; use '--show-trace' to show the full, detailed trace)</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;</span><span style="font-weight:bold;color:#ff5454;background-color:#ffffff;">error:</span><span style="color:#000000;background-color:#ffffff;"> 'noto-fonts-emoji' has been renamed to/replaced by 'noto-fonts-color-emoji'</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">Command 'nix-build '&lt;nixpkgs/nixos&gt;' --attr config.system.build.toplevel --no-out-link' returned non-zero exit status 1.</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="font-weight:bold;color:#54ff54;background-color:#ffffff;">[yusufbek@nixos:/etc/nixos]$</span><span style="color:#000000;background-color:#ffffff;"> </span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br></span></body>
+</html>

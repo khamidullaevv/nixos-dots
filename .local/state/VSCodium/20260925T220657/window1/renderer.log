@@ -1,0 +1,18 @@
+2026-09-25 22:06:57.742 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:06:58.126 [info] Started local extension host with pid 2566.
+2026-09-25 22:06:58.479 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:06:59.168 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 22:06:59.184 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 22:07:00.862 [info] [perf] Render performance baseline is 19ms
+2026-09-25 22:11:23.764 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:11:23.966 [info] Started local extension host with pid 5071.
+2026-09-25 22:11:24.145 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:11:24.712 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 22:11:24.727 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 22:11:26.743 [info] [perf] Render performance baseline is 15ms
+2026-09-25 22:15:30.110 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:15:30.366 [info] Started local extension host with pid 6021.
+2026-09-25 22:15:30.797 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:15:31.197 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 22:15:31.365 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 22:15:33.071 [info] [perf] Render performance baseline is 20ms

@@ -1,0 +1,17 @@
+2026-09-25 22:07:02.640 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:07:02.877 [info] Started local extension host with pid 2801.
+2026-09-25 22:07:03.223 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:07:03.546 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 22:07:03.572 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 22:07:05.545 [info] [perf] Render performance baseline is 24ms
+2026-09-25 22:08:46.031 [error] [Extension Host] (node:2801) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2026-09-25 22:08:52.087 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:08:52.285 [info] Started local extension host with pid 3657.
+2026-09-25 22:08:52.671 [error] Ignoring terminal.integrated.initialHint.copilotCli as terminal.integrated.initialHint is true
+2026-09-25 22:08:53.093 [error] Unable to create workbench contribution 'workbench.contrib.agentHostTerminal'. [createInstance] BWe depends on UNKNOWN service remoteAgentHostService.
+2026-09-25 22:08:53.136 [error] Unable to create workbench contribution 'workbench.contrib.startupPageRunner'. [createInstance] X2e depends on UNKNOWN service onboardingService.
+2026-09-25 22:08:54.994 [info] [perf] Render performance baseline is 21ms
+2026-09-25 22:10:17.075 [error] An unknown error occurred. Please consult the log for more details.
+2026-09-25 22:10:51.385 [error] An unknown error occurred. Please consult the log for more details.
+2026-09-25 22:25:02.673 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted

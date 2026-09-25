@@ -1,0 +1,25 @@
+2026-09-25 22:08:36.200 [info] Getting Manifest... eamodio.gitlens
+2026-09-25 22:08:37.101 [info] Installing extension: eamodio.gitlens {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json","path":"/home/yusufbek/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isBuiltin":false,"isApplicationScoped":false,"productVersion":{"version":"1.116.02821","date":"2026-04-15T00:28:13Z"}}
+2026-09-25 22:08:38.231 [info] Extracted extension to file:///home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal: eamodio.gitlens
+2026-09-25 22:08:38.252 [info] Renamed to /home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal
+2026-09-25 22:08:38.310 [info] Extension installed successfully: eamodio.gitlens vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json
+2026-09-25 22:11:50.518 [info] Getting Manifest... pkief.material-icon-theme
+2026-09-25 22:11:51.107 [info] Installing extension: pkief.material-icon-theme {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json","path":"/home/yusufbek/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isBuiltin":false,"isApplicationScoped":false,"productVersion":{"version":"1.116.02821","date":"2026-04-15T00:28:13Z"}}
+2026-09-25 22:11:52.102 [info] Extracted extension to file:///home/yusufbek/.vscode-oss/extensions/pkief.material-icon-theme-5.38.1-universal: pkief.material-icon-theme
+2026-09-25 22:11:52.129 [info] Renamed to /home/yusufbek/.vscode-oss/extensions/pkief.material-icon-theme-5.38.1-universal
+2026-09-25 22:11:52.159 [info] Extension installed successfully: pkief.material-icon-theme vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json
+2026-09-25 22:12:03.519 [info] Getting Manifest... catppuccin.catppuccin-vsc
+2026-09-25 22:12:03.810 [info] Installing extension: catppuccin.catppuccin-vsc {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json","path":"/home/yusufbek/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isBuiltin":false,"isApplicationScoped":false,"productVersion":{"version":"1.116.02821","date":"2026-04-15T00:28:13Z"}}
+2026-09-25 22:12:04.192 [info] Extracted extension to file:///home/yusufbek/.vscode-oss/extensions/catppuccin.catppuccin-vsc-3.19.0-universal: catppuccin.catppuccin-vsc
+2026-09-25 22:12:04.196 [info] Renamed to /home/yusufbek/.vscode-oss/extensions/catppuccin.catppuccin-vsc-3.19.0-universal
+2026-09-25 22:12:04.224 [info] Extension installed successfully: catppuccin.catppuccin-vsc vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json
+2026-09-25 22:12:56.017 [info] Getting Manifest... arrterian.nix-env-selector
+2026-09-25 22:12:56.300 [info] Installing extension: arrterian.nix-env-selector {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json","path":"/home/yusufbek/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isBuiltin":false,"isApplicationScoped":false,"productVersion":{"version":"1.116.02821","date":"2026-04-15T00:28:13Z"}}
+2026-09-25 22:12:57.510 [info] Extracted extension to file:///home/yusufbek/.vscode-oss/extensions/arrterian.nix-env-selector-1.3.2-universal: arrterian.nix-env-selector
+2026-09-25 22:12:57.513 [info] Renamed to /home/yusufbek/.vscode-oss/extensions/arrterian.nix-env-selector-1.3.2-universal
+2026-09-25 22:12:57.535 [info] Extension installed successfully: arrterian.nix-env-selector vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json
+2026-09-25 22:12:59.114 [info] Getting Manifest... jnoortheen.nix-ide
+2026-09-25 22:12:59.356 [info] Installing extension: jnoortheen.nix-ide {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json","path":"/home/yusufbek/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isBuiltin":false,"isApplicationScoped":false,"productVersion":{"version":"1.116.02821","date":"2026-04-15T00:28:13Z"}}
+2026-09-25 22:12:59.775 [info] Extracted extension to file:///home/yusufbek/.vscode-oss/extensions/jnoortheen.nix-ide-0.5.13-universal: jnoortheen.nix-ide
+2026-09-25 22:12:59.779 [info] Renamed to /home/yusufbek/.vscode-oss/extensions/jnoortheen.nix-ide-0.5.13-universal
+2026-09-25 22:12:59.800 [info] Extension installed successfully: jnoortheen.nix-ide vscode-userdata:/home/yusufbek/.vscode-oss/extensions/extensions.json

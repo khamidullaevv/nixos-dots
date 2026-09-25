@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<span style="font-family:monospace"><span style="color:#54ff54;background-color:#ffffff;">yusufbek</span><span style="color:#000000;background-color:#ffffff;">@lenovo-loq </span><span style="color:#18b218;background-color:#ffffff;">/e/nixos</span><span style="color:#000000;background-color:#ffffff;">&gt; cat </span><span style="text-decoration:underline;color:#18b2b2;background-color:#ffffff;">configuration.nix</span><span style="color:#000000;background-color:#ffffff;"> </span><span style="color:#000000;background-color:#ffffff;">&#160;</span><br><span style="color:#000000;background-color:#ffffff;"># /etc/nixos/configuration.nix</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">{ config, pkgs, ... }:</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">{</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;imports = [</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;./hardware-configuration.nix</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;];</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"># Bootloader &amp; Kernel</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;boot.loader.systemd-boot.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;boot.loader.systemd-boot.configurationLimit = 5; </span><span style="color:#000000;background-color:#ffffff;">&#160;</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;boot.loader.efi.canTouchEfiVariables = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Networking &amp; Locale</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;networking.hostName = "lenovo-loq";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;networking.networkmanager.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;time.timeZone = "Asia/Tashkent";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;i18n.defaultLocale = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;i18n.extraLocaleSettings = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_ADDRESS = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_IDENTIFICATION = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_MEASUREMENT = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_MONETARY = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_NAME = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_NUMERIC = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_PAPER = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_TELEPHONE = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;LC_TIME = "ru_RU.UTF-8";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Graphics &amp; Hardware (Lenovo LOQ 15IAX9 - Intel i5-12450HX + RTX 3050 6GB)</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;hardware.graphics = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;enable32Bit = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.xserver.videoDrivers = [ "nvidia" ];</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;hardware.nvidia = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;modesetting.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;powerManagement.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;powerManagement.finegrained = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;open = false;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;nvidiaSettings = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;package = config.boot.kernelPackages.nvidiaPackages.stable;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;# PRIME Offload configuration</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;prime = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;offload = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;enableOffloadCmd = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;# Verified PCI IDs for Lenovo LOQ 15IAX9</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;intelBusId = "PCI:0:2:0";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;nvidiaBusId = "PCI:1:0:0";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Audio &amp; Peripherals</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;hardware.bluetooth.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;hardware.bluetooth.powerOnBoot = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.blueman.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.printing.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;security.rtkit.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.pipewire = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;alsa.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;alsa.support32Bit = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;pulse.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;jack.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Display Manager &amp; Desktop Environments</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.displayManager.sddm = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;wayland.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;theme = "catppuccin-mocha";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.desktopManager.plasma6.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;programs.hyprland = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;xwayland.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;xdg.portal = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;extraPortals = [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Power Management</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.power-profiles-daemon.enable = false;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;services.tlp = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;settings = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;CPU_SCALING_GOVERNOR_ON_AC = "performance";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;CPU_SCALING_GOVERNOR_ON_BAT = "powersave";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;CPU_ENERGY_PERF_POLICY_ON_BAT = "power";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;CPU_MIN_PERF_ON_BAT = 0;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;&#160;&#160;CPU_MAX_PERF_ON_BAT = 60;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# System &amp; User Settings</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;nixpkgs.config.allowUnfree = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;virtualisation.docker.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;users.users.yusufbek = {</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;isNormalUser = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;description = "Yusufbek";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;extraGroups = [ "networkmanager" "wheel" "docker" "video" "audio" ];</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;shell = pkgs.fish;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;};</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;programs.fish.enable = true;</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Packages</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;environment.systemPackages = with pkgs; [</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;# UI &amp; SDDM Theme</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;catppuccin-sddm</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;libsForQt5.qt5.qtquickcontrols2</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;libsForQt5.qt5.qtgraphicaleffects</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;catppuccin-gtk</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;papirus-icon-theme</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;loupe</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;# Hyprland Ecosystem</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;waybar</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;rofi</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;dunst</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;hyprpaper</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;hyprlock</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;hypridle</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;kitty</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;foot</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;grim</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;slurp</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;wl-clipboard</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;brightnessctl</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;pavucontrol</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;# Development (Rust, Python, Next.js / Node.js)</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;rustup</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;cargo</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;rustc</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;gcc</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;python3</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;poetry</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;pipenv</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;nodejs_22</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;pnpm</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;yarn</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;docker-compose</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;postgresql</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;redis</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;# Editors &amp; Applications</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;vscodium</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;pkgs.jetbrains.pycharm </span><span style="color:#000000;background-color:#ffffff;">&#160;</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;obsidian</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;firefox</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;telegram-desktop</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;spotify-player</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;# CLI Utilities</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;git</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;gh</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;curl</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;wget</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;fastfetch</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;htop</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;btop</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;unzip</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;ripgrep</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;fd</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;bat</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;eza</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;];</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Fonts</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;fonts.packages = with pkgs; [</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;nerd-fonts.jetbrains-mono</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;nerd-fonts.fira-code</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;roboto</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;&#160;&#160;noto-fonts-color-emoji</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;];</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;# Nix Flakes &amp; System Version</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;nix.settings.experimental-features = [ "nix-command" "flakes" ];</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;"> &#160;system.stateVersion = "26.05";</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#000000;background-color:#ffffff;">}</span><span style="color:#000000;background-color:#ffffff;">
+</span><br><span style="color:#54ff54;background-color:#ffffff;">yusufbek</span><span style="color:#000000;background-color:#ffffff;">@lenovo-loq </span><span style="color:#18b218;background-color:#ffffff;">/e/nixos</span><span style="color:#000000;background-color:#ffffff;">&gt; </span><br><span style="color:#000000;background-color:#ffffff;">
+</span><br></span></body>
+</html>

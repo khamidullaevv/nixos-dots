@@ -1,0 +1,3 @@
+git clone https://github.com/subha279/NixOS.git ~/NixOS
+cd ~/NixOS
+./setup.sh

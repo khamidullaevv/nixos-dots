@@ -1,0 +1,2 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">  boot.loader.systemd-boot.<span class="hljs-attr">enable</span> = <span class="hljs-literal">true</span>;
+  boot.loader.efi.<span class="hljs-attr">canTouchEfiVariables</span> = <span class="hljs-literal">true</span>;

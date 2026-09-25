@@ -1,0 +1,67 @@
+2026-09-25 22:07:03.336 [info] Extension host with pid 2801 started
+2026-09-25 22:07:03.354 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-09-25 22:07:03.378 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-09-25 22:07:03.415 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-09-25 22:07:03.420 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-09-25 22:07:03.460 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-09-25 22:07:03.546 [info] Eager extensions activated
+2026-09-25 22:07:03.547 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:07:03.549 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:08:38.570 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:08:51.786 [info] Extension host terminating: received terminate message from renderer
+2026-09-25 22:08:51.806 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2026-09-25 22:08:51.812 [error] Error: Channel has been closed
+	at n (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:123:3999)
+	at Object.info (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:123:4369)
+	at Logger.info (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:639:112633)
+	at GkCliService.stopIpc (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1120:55587)
+	at GkCliService.dispose (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1120:53421)
+	at /home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1007:69937
+	at Array.forEach (<anonymous>)
+	at Object.dispose (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/gitlens.js:1007:69918)
+	at lr (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:746)
+	at h$._fn (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:18649)
+	at h$.dispose (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1261)
+	at ise._deactivate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:14892)
+	at file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12178
+	at Array.map (<anonymous>)
+	at ise._deactivateAll (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12166)
+	at ise.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:12519)
+	at gO.terminate (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:122:1082)
+	at an (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:11834)
+	at jf.value (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:9952)
+	at k._deliver (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3066)
+	at k.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3386)
+	at ya.fire (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10997)
+	at MessagePortMain.<anonymous> (file:///nix/store/4h5gq2bj1j1009ykglrnqjriklxjdhkp-vscodium-1.116.02821/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:455:8160)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2959)
+	at Object.callbackTrampoline (node:internal/async_hooks:130:17)
+2026-09-25 22:08:51.813 [info] Extension host with pid 2801 exiting with code 0
+2026-09-25 22:08:52.758 [info] Extension host with pid 3657 started
+2026-09-25 22:08:52.758 [info] Skipping acquiring lock for /home/yusufbek/.config/VSCodium/User/workspaceStorage/d89001c6ce8d7b54c1fd6eef952a0c22.
+2026-09-25 22:08:52.815 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-09-25 22:08:52.834 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-09-25 22:08:52.872 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2026-09-25 22:08:52.878 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-09-25 22:08:52.926 [info] Eager extensions activated
+2026-09-25 22:08:52.930 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:08:52.933 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:08:52.946 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:08:55.727 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2026-09-25 22:09:07.159 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-09-25 22:09:07.168 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-09-25 22:09:07.247 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-09-25 22:09:24.763 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2026-09-25 22:09:49.150 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2026-09-25 22:10:51.383 [error] Error: 'github' authentication is required for this operation
+	at GlGitHubGitProvider.r (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/integrations.js:917:40722)
+2026-09-25 22:10:51.425 [error] Error: 'github' authentication is required for this operation
+	at GlGitHubGitProvider.r (/home/yusufbek/.vscode-oss/extensions/eamodio.gitlens-19.2.0-universal/dist/integrations.js:917:40722)
+2026-09-25 22:11:52.303 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:12:04.334 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2026-09-25 22:12:57.617 [info] ExtensionService#_doActivateExtension arrterian.nix-env-selector, startup: false, activationEvent: '*'
+2026-09-25 22:13:00.097 [info] ExtensionService#_doActivateExtension jnoortheen.nix-ide, startup: false, activationEvent: 'onLanguage:nix'
+2026-09-25 22:17:14.677 [warning] TextEditor is closed/disposed
+2026-09-25 22:26:12.260 [warning] TextEditor is closed/disposed
+2026-09-25 22:26:12.654 [warning] TextEditor is closed/disposed

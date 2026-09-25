@@ -1,0 +1,54 @@
+[2026-09-25T17:12:57.663Z] [INFO] Log level: info
+[2026-09-25T17:12:57.663Z] [INFO] Initializing config...
+[2026-09-25T17:12:57.664Z] [INFO] Loaded config: {:workspace-root "/home/yusufbek/Documents/nixos-dots", :nix-packages #js [], :log-level "info", :nix-file nil, :nix-args nil, :flake-shell nil, :nix-shell-path nil, :use-flakes? false, :suggest-nix? true, :patch-terminals? true}
+[2026-09-25T17:13:09.963Z] [INFO] User chose to select Nix environment
+[2026-09-25T17:13:09.964Z] [INFO] Running action: Select environment
+[2026-09-25T17:13:13.224Z] [INFO] Applying nix-shell: /home/yusufbek/Documents/nixos-dots/configuration.nix
+[2026-09-25T17:13:13.304Z] [INFO] Loading environment (nix-config=/home/yusufbek/Documents/nixos-dots/configuration.nix, packages=0)
+[2026-09-25T17:13:13.305Z] [INFO] Running (nix-shell): nix-shell "/home/yusufbek/Documents/nixos-dots/configuration.nix" --run export
+[2026-09-25T17:13:13.337Z] [ERROR] nix command failed
+[2026-09-25T17:13:13.338Z] [ERROR]   Error: error:
+[2026-09-25T17:13:13.338Z] [ERROR]          … from call site
+[2026-09-25T17:13:13.338Z] [ERROR]            at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+[2026-09-25T17:13:13.338Z] [ERROR]               1| # /etc/nixos/configuration.nix
+[2026-09-25T17:13:13.338Z] [ERROR]               2| { config, pkgs, ... }:
+[2026-09-25T17:13:13.338Z] [ERROR]                | ^
+[2026-09-25T17:13:13.338Z] [ERROR]               3|
+[2026-09-25T17:13:13.338Z] [ERROR]   
+[2026-09-25T17:13:13.338Z] [ERROR]          error: function 'anonymous lambda' called without required argument 'config'
+[2026-09-25T17:13:13.338Z] [ERROR]          at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+[2026-09-25T17:13:13.338Z] [ERROR]               1| # /etc/nixos/configuration.nix
+[2026-09-25T17:13:13.338Z] [ERROR]               2| { config, pkgs, ... }:
+[2026-09-25T17:13:13.338Z] [ERROR]                | ^
+[2026-09-25T17:13:13.338Z] [ERROR]               3|
+[2026-09-25T17:13:13.338Z] [ERROR]   
+[2026-09-25T17:13:13.338Z] [ERROR]   	at /home/yusufbek/.vscode-oss/extensions/arrterian.nix-env-selector-1.3.2-universal/dist/index.js:27703:7
+[2026-09-25T17:13:13.338Z] [ERROR]   	at ChildProcess.exithandler (node:child_process:424:5)
+[2026-09-25T17:13:13.338Z] [ERROR]   	at ChildProcess.emit (node:events:519:28)
+[2026-09-25T17:13:13.338Z] [ERROR]   	at maybeClose (node:internal/child_process:1101:16)
+[2026-09-25T17:13:13.338Z] [ERROR]   	at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+[2026-09-25T17:13:13.338Z] [ERROR]   	at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+[2026-09-25T17:13:13.338Z] [ERROR] Failed to load environment
+[2026-09-25T17:13:13.338Z] [ERROR]   Error: Command failed: nix-shell "/home/yusufbek/Documents/nixos-dots/configuration.nix" --run export
+[2026-09-25T17:13:13.338Z] [ERROR]   error:
+[2026-09-25T17:13:13.338Z] [ERROR]          … from call site
+[2026-09-25T17:13:13.338Z] [ERROR]            at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+[2026-09-25T17:13:13.338Z] [ERROR]               1| # /etc/nixos/configuration.nix
+[2026-09-25T17:13:13.338Z] [ERROR]               2| { config, pkgs, ... }:
+[2026-09-25T17:13:13.338Z] [ERROR]                | ^
+[2026-09-25T17:13:13.338Z] [ERROR]               3|
+[2026-09-25T17:13:13.338Z] [ERROR]   
+[2026-09-25T17:13:13.338Z] [ERROR]          error: function 'anonymous lambda' called without required argument 'config'
+[2026-09-25T17:13:13.338Z] [ERROR]          at /home/yusufbek/Documents/nixos-dots/configuration.nix:2:1:
+[2026-09-25T17:13:13.338Z] [ERROR]               1| # /etc/nixos/configuration.nix
+[2026-09-25T17:13:13.338Z] [ERROR]               2| { config, pkgs, ... }:
+[2026-09-25T17:13:13.338Z] [ERROR]                | ^
+[2026-09-25T17:13:13.338Z] [ERROR]               3|
+[2026-09-25T17:13:13.338Z] [ERROR]   
+[2026-09-25T17:13:13.338Z] [ERROR]   	at genericNodeError (node:internal/errors:983:15)
+[2026-09-25T17:13:13.338Z] [ERROR]   	at wrappedFn (node:internal/errors:537:14)
+[2026-09-25T17:13:13.338Z] [ERROR]   	at ChildProcess.exithandler (node:child_process:417:12)
+[2026-09-25T17:13:13.338Z] [ERROR]   	at ChildProcess.emit (node:events:519:28)
+[2026-09-25T17:13:13.339Z] [ERROR]   	at maybeClose (node:internal/child_process:1101:16)
+[2026-09-25T17:13:13.339Z] [ERROR]   	at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+[2026-09-25T17:13:13.339Z] [ERROR]   	at Process.callbackTrampoline (node:internal/async_hooks:130:17)
