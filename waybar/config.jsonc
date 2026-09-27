@@ -1,12 +1,13 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 34,
+  "height": 38,
   "spacing": 0,
 
   "modules-left": [
     "custom/distro",
     "hyprland/workspaces",
+    "hyprland/language",
     "hyprland/window"
   ],
 
@@ -32,17 +33,17 @@
   },
 
   "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "█",
-      "default": "▌",
-      "empty": "·",
-      "urgent": "█"
-    },
+    "format": "{name}",
     "on-click": "activate",
     "persistent-workspaces": {
       "*": 5
     }
+  },
+
+  "hyprland/language": {
+    "format": "󰌌 {}",
+    "format-en": "US",
+    "format-ru": "RU"
   },
 
   "hyprland/window": {
@@ -115,7 +116,7 @@
   },
 
   "tray": {
-    "spacing": 8,
-    "icon-size": 15
+    "spacing": 10,
+    "icon-size": 18
   }
 }

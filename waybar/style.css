@@ -1,50 +1,34 @@
-@define-color rosewater #f5e0dc;
-@define-color pink #f5c2e7;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color peach #fab387;
-@define-color yellow #f9e2af;
-@define-color green #a6e3a1;
-@define-color teal #94e2d5;
-@define-color sapphire #74c7ec;
-@define-color blue #89b4fa;
-@define-color lavender #b4befe;
-
 @define-color text #cdd6f4;
-@define-color subtext1 #bac2de;
-@define-color overlay1 #7f849c;
 @define-color overlay0 #6c7086;
-
-@define-color surface1 #45475a;
 @define-color surface0 #313244;
-
-@define-color base #1e1e2e;
 @define-color mantle #181825;
 @define-color crust #11111b;
+@define-color accent #cba6f7;
+@define-color red #f38ba8;
 
 /* ─────────────── GLOBAL ─────────────── */
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 800;
     border: none;
     border-radius: 0;
     min-height: 0;
 }
 
-/* ─────────────── WAYBAR MAIN BAR ─────────────── */
+/* ─────────────── MAIN BAR ─────────────── */
 
 window#waybar {
     background: @crust;
     color: @text;
-    border-bottom: 2px solid @surface0;
 }
 
-/* ─────────────── MODULE CONTAINERS ─────────────── */
+/* ─────────────── SOLID MONOCHROME MODULES ─────────────── */
 
 #custom-distro,
 #workspaces,
+#language,
 #window,
 #custom-cava,
 #clock,
@@ -56,42 +40,33 @@ window#waybar {
 #battery,
 #tray {
     background: @mantle;
-    margin: 4px 3px;
-    padding: 0 12px;
-    border-radius: 6px;
-    border: 1px solid @surface0;
+    color: @text;
+    margin: 0;
+    padding: 0 14px;
 }
 
-/* ─────────────── DISTRO ─────────────── */
+/* ─────────────── HUGE NIXOS ICON ─────────────── */
 
 #custom-distro {
-    color: @mauve;
-    font-size: 16px;
-    padding-left: 12px;
-    padding-right: 14px;
-    background: @surface0;
-    border: 1px solid @mauve;
-}
-
-#custom-distro:hover {
-    background: @mauve;
     color: @crust;
+    background: @accent;
+    font-size: 24px;
+    padding: 0 18px;
 }
 
 /* ─────────────── WORKSPACES ─────────────── */
 
 #workspaces {
-    padding: 0 4px;
+    padding: 0;
     background: @mantle;
 }
 
 #workspaces button {
     color: @overlay0;
     background: transparent;
-    padding: 0 6px;
-    margin: 3px 2px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    padding: 0 12px;
+    border-radius: 0;
+    transition: none;
 }
 
 #workspaces button:hover {
@@ -101,8 +76,8 @@ window#waybar {
 
 #workspaces button.active {
     color: @crust;
-    background: @mauve;
-    font-weight: 800;
+    background: @accent;
+    font-weight: 900;
 }
 
 #workspaces button.urgent {
@@ -110,102 +85,58 @@ window#waybar {
     background: @red;
 }
 
-/* ─────────────── WINDOW ─────────────── */
+/* ─────────────── KEYBOARD LANGUAGE ─────────────── */
+
+#language {
+    color: @accent;
+    background: @mantle;
+    padding: 0 14px;
+    font-weight: 900;
+}
+
+/* ─────────────── WINDOW TITLE ─────────────── */
 
 #window {
-    color: @text;
-    background: transparent;
-    border: none;
-    padding-left: 8px;
-}
-
-#window.empty {
     color: @overlay0;
-}
-
-/* ─────────────── CAVA ─────────────── */
-
-#custom-cava {
-    color: @pink;
-    border-color: #313244;
+    background: transparent;
+    padding-left: 14px;
 }
 
 /* ─────────────── CLOCK ─────────────── */
 
 #clock {
-    color: @mauve;
-    border: 1px solid @mauve;
-    background: @surface0;
+    color: @crust;
+    background: @accent;
+    font-weight: 900;
+    padding: 0 18px;
 }
 
-/* ─────────────── HARDWARE MONITORS ─────────────── */
+/* ─────────────── SYSTEM ALERTS ─────────────── */
 
-#cpu {
-    color: @sapphire;
-}
-
-#memory {
-    color: @peach;
-}
-
-#temperature {
-    color: @teal;
-}
-
-#temperature.critical {
-    color: @red;
-    border-color: @red;
-}
-
-/* ─────────────── NETWORK ─────────────── */
-
-#network {
-    color: @blue;
-}
-
-#network.disconnected {
-    color: @red;
-    border-color: @red;
-}
-
-/* ─────────────── AUDIO ─────────────── */
-
-#pulseaudio {
-    color: @lavender;
+#temperature.critical,
+#network.disconnected,
+#battery.critical {
+    color: @crust;
+    background: @red;
 }
 
 #pulseaudio.muted {
     color: @overlay0;
 }
 
-/* ─────────────── BATTERY ─────────────── */
-
-#battery {
-    color: @green;
-}
-
-#battery.warning {
-    color: @yellow;
-}
-
-#battery.critical {
-    color: @red;
-    border-color: @red;
-}
-
 /* ─────────────── TRAY & TOOLTIPS ─────────────── */
 
 #tray {
-    padding: 0 10px;
+    padding: 0 14px;
+    background: @mantle;
 }
 
 tooltip {
-    background: @mantle;
-    border: 1px solid @mauve;
-    border-radius: 8px;
+    background: @crust;
     padding: 8px;
 }
 
 tooltip label {
     color: @text;
+    font-size: 13px;
 }
