@@ -19,32 +19,29 @@
 @define-color surface0 #313244;
 
 @define-color base #1e1e2e;
+@define-color mantle #181825;
 @define-color crust #11111b;
-
 
 /* ─────────────── GLOBAL ─────────────── */
 
 * {
-    font-family: "JetBrainsMono Nerd Font", "Inter", sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 700;
     border: none;
     border-radius: 0;
     min-height: 0;
 }
 
-
-/* ─────────────── WAYBAR ─────────────── */
+/* ─────────────── WAYBAR MAIN BAR ─────────────── */
 
 window#waybar {
     background: @crust;
     color: @text;
-
+    border-bottom: 2px solid @surface0;
 }
 
-
-/* ─────────────── COMMON ─────────────── */
+/* ─────────────── MODULE CONTAINERS ─────────────── */
 
 #custom-distro,
 #workspaces,
@@ -58,44 +55,43 @@ window#waybar {
 #pulseaudio,
 #battery,
 #tray {
-    background: transparent;
-    margin: 0;
-    padding: 0 11px;
+    background: @mantle;
+    margin: 4px 3px;
+    padding: 0 12px;
+    border-radius: 6px;
+    border: 1px solid @surface0;
 }
-
 
 /* ─────────────── DISTRO ─────────────── */
 
 #custom-distro {
-    color: @blue;
-
-    font-size: 17px;
-
-    padding-left: 14px;
-    padding-right: 12px;
-
-    border-right: 1px solid @surface0;
+    color: @mauve;
+    font-size: 16px;
+    padding-left: 12px;
+    padding-right: 14px;
+    background: @surface0;
+    border: 1px solid @mauve;
 }
 
 #custom-distro:hover {
-    color: @mauve;
+    background: @mauve;
+    color: @crust;
 }
-
 
 /* ─────────────── WORKSPACES ─────────────── */
 
 #workspaces {
-    padding: 0 6px;
+    padding: 0 4px;
+    background: @mantle;
 }
 
 #workspaces button {
     color: @overlay0;
     background: transparent;
-
-    padding: 0 8px;
-    margin: 4px 2px;
-
+    padding: 0 6px;
+    margin: 3px 2px;
     border-radius: 4px;
+    transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
@@ -104,58 +100,45 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @base;
+    color: @crust;
     background: @mauve;
-
-    font-weight: 700;
+    font-weight: 800;
 }
 
 #workspaces button.urgent {
-    color: @base;
+    color: @crust;
     background: @red;
 }
-
 
 /* ─────────────── WINDOW ─────────────── */
 
 #window {
-    color: @subtext1;
-    font-weight: 500;
+    color: @text;
+    background: transparent;
+    border: none;
+    padding-left: 8px;
 }
 
 #window.empty {
     color: @overlay0;
 }
 
-
 /* ─────────────── CAVA ─────────────── */
 
 #custom-cava {
     color: @pink;
-
-    font-size: 14px;
-    letter-spacing: 1px;
-
-    padding-left: 15px;
-    padding-right: 15px;
+    border-color: #313244;
 }
-
 
 /* ─────────────── CLOCK ─────────────── */
 
 #clock {
-    color: @lavender;
-
-    font-weight: 700;
-
-    padding-left: 14px;
-    padding-right: 14px;
-
-    border-left: 1px solid @surface0;
+    color: @mauve;
+    border: 1px solid @mauve;
+    background: @surface0;
 }
 
-
-/* ─────────────── SYSTEM ─────────────── */
+/* ─────────────── HARDWARE MONITORS ─────────────── */
 
 #cpu {
     color: @sapphire;
@@ -166,36 +149,34 @@ window#waybar {
 }
 
 #temperature {
-    color: @yellow;
+    color: @teal;
 }
 
 #temperature.critical {
     color: @red;
-    font-weight: 700;
+    border-color: @red;
 }
-
 
 /* ─────────────── NETWORK ─────────────── */
 
 #network {
-    color: @teal;
+    color: @blue;
 }
 
 #network.disconnected {
     color: @red;
+    border-color: @red;
 }
-
 
 /* ─────────────── AUDIO ─────────────── */
 
 #pulseaudio {
-    color: @blue;
+    color: @lavender;
 }
 
 #pulseaudio.muted {
     color: @overlay0;
 }
-
 
 /* ─────────────── BATTERY ─────────────── */
 
@@ -209,42 +190,20 @@ window#waybar {
 
 #battery.critical {
     color: @red;
-    font-weight: 700;
+    border-color: @red;
 }
 
-#battery.charging {
-    color: @green;
-}
-
-
-/* ─────────────── TRAY ─────────────── */
+/* ─────────────── TRAY & TOOLTIPS ─────────────── */
 
 #tray {
-    padding-left: 12px;
-    padding-right: 14px;
-
-    border-left: 1px solid @surface0;
+    padding: 0 10px;
 }
-
-#tray > .passive {
-    opacity: 0.6;
-}
-
-#tray > .needs-attention {
-    background: @red;
-    color: @base;
-}
-
-
-/* ─────────────── TOOLTIPS ─────────────── */
 
 tooltip {
-    background: @base;
-
-    border: 1px solid @surface1;
-    border-radius: 6px;
-
-    padding: 6px;
+    background: @mantle;
+    border: 1px solid @mauve;
+    border-radius: 8px;
+    padding: 8px;
 }
 
 tooltip label {
